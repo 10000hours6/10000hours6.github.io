@@ -45,5 +45,32 @@
   
   
   
+  <entry>
+    <title>dnsip</title>
+    <link href="/2024/02/06/network/dns/dnsip/"/>
+    <url>/2024/02/06/network/dns/dnsip/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>记录常用的 DNS IP，便于使用配置</p><h2 id="阿里云DNS"><a href="#阿里云DNS" class="headerlink" title="阿里云DNS"></a>阿里云DNS</h2><p>nameserver 223.5.5.5<br>nameserver 223.6.6.6<br>nameserver 2400:3200::1<br>nameserver 2400:3200:baba::1</p><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] 阿里云公共DNS<br><a href="https://alidns.com/">https://alidns.com/</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>network</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>dns</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
