@@ -72,5 +72,59 @@
   
   
   
+  <entry>
+    <title>dns_record_operation</title>
+    <link href="/2024/02/06/network/dns/dns_record_operation/"/>
+    <url>/2024/02/06/network/dns/dns_record_operation/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>对常见的DNS记录及操作学习总结</p><h1 id="A记录"><a href="#A记录" class="headerlink" title="A记录"></a>A记录</h1><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>主机名称，域名对应的IPv4地址</p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><h3 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h3><h4 id="nslookup-domain"><a href="#nslookup-domain" class="headerlink" title="nslookup domain"></a>nslookup domain</h4><p>nslookup 不指定参数，默认查询A记录</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-string">➜</span>  <span class="hljs-string">~</span> <span class="hljs-string">nslookup</span> <span class="hljs-string">baidu.com</span><br><span class="hljs-attr">Server:</span><span class="hljs-number">2408</span><span class="hljs-string">:8409:1890:930d:dd4d:ca4d:dc8a:cc02</span><br><span class="hljs-attr">Address:</span><span class="hljs-number">2408</span><span class="hljs-string">:8409:1890:930d:dd4d:ca4d:dc8a:cc02#53</span><br><br><span class="hljs-attr">Non-authoritative answer:</span><br><span class="hljs-attr">Name:</span><span class="hljs-string">baidu.com</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">39.156</span><span class="hljs-number">.66</span><span class="hljs-number">.10</span><br><span class="hljs-attr">Name:</span><span class="hljs-string">baidu.com</span><br><span class="hljs-attr">Address:</span> <span class="hljs-number">110.242</span><span class="hljs-number">.68</span><span class="hljs-number">.66</span><br></code></pre></td></tr></table></figure><h4 id="host-t-A-domain"><a href="#host-t-A-domain" class="headerlink" title="host -t A domain"></a>host -t A domain</h4><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">➜  ~ host -t A <span class="hljs-keyword">baidu.com</span><br><span class="hljs-keyword"></span><span class="hljs-keyword">baidu.com </span>has <span class="hljs-keyword">address </span><span class="hljs-number">39</span>.<span class="hljs-number">156</span>.<span class="hljs-number">66</span>.<span class="hljs-number">10</span><br><span class="hljs-keyword">baidu.com </span>has <span class="hljs-keyword">address </span><span class="hljs-number">110</span>.<span class="hljs-number">242</span>.<span class="hljs-number">68</span>.<span class="hljs-number">66</span><br></code></pre></td></tr></table></figure><h1 id="AAAA记录"><a href="#AAAA记录" class="headerlink" title="AAAA记录"></a>AAAA记录</h1><p>IPv6版本的A记录，域名对应的IPv6地址</p><h2 id="操作-1"><a href="#操作-1" class="headerlink" title="操作"></a>操作</h2><h3 id="查询-1"><a href="#查询-1" class="headerlink" title="查询"></a>查询</h3><h4 id="nslookup-type-AAAA-domain"><a href="#nslookup-type-AAAA-domain" class="headerlink" title="nslookup -type&#x3D;AAAA domain"></a>nslookup -type&#x3D;AAAA domain</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs vim">➜  ~ nslookup -<span class="hljs-built_in">type</span>=AAAA www.weibo.<span class="hljs-keyword">cn</span> <br>Server:<span class="hljs-number">2408</span>:<span class="hljs-number">8409</span>:<span class="hljs-number">1801</span>:<span class="hljs-number">5</span>eb<span class="hljs-variable">a:9c9e</span>:<span class="hljs-number">5813</span>:ea08:<span class="hljs-number">23</span>f9<br>Address:<span class="hljs-number">2408</span>:<span class="hljs-number">8409</span>:<span class="hljs-number">1801</span>:<span class="hljs-number">5</span>eb<span class="hljs-variable">a:9c9e</span>:<span class="hljs-number">5813</span>:ea08:<span class="hljs-number">23</span>f9#<span class="hljs-number">53</span><br><br>Non-authoritative answer:<br>www.weibo.<span class="hljs-keyword">cn</span>canonical name = weibo.<span class="hljs-keyword">cn</span>.<br>weibo.<span class="hljs-keyword">cn</span><span class="hljs-built_in">has</span> AAAA address <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1023</span>:<span class="hljs-number">3</span>::<span class="hljs-number">20</span><br>weibo.<span class="hljs-keyword">cn</span><span class="hljs-built_in">has</span> AAAA address <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1013</span>:<span class="hljs-number">3</span>::<span class="hljs-number">17</span><br>weibo.<span class="hljs-keyword">cn</span><span class="hljs-built_in">has</span> AAAA address <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1013</span>:<span class="hljs-number">3</span>::<span class="hljs-number">18</span><br><br>Authoritative answers can <span class="hljs-keyword">be</span> found from:<br></code></pre></td></tr></table></figure><h4 id="host-t-AAAA-domain"><a href="#host-t-AAAA-domain" class="headerlink" title="host -t AAAA domain"></a>host -t AAAA domain</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs stylus">➜  ~ host -t AAAA www<span class="hljs-selector-class">.weibo</span><span class="hljs-selector-class">.cn</span><br>www<span class="hljs-selector-class">.weibo</span><span class="hljs-selector-class">.cn</span> is an alias <span class="hljs-keyword">for</span> weibo<span class="hljs-selector-class">.cn</span>.<br>weibo<span class="hljs-selector-class">.cn</span> has IPv6 <span class="hljs-selector-tag">address</span> <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1013</span>:<span class="hljs-number">3</span>::<span class="hljs-number">17</span><br>weibo<span class="hljs-selector-class">.cn</span> has IPv6 <span class="hljs-selector-tag">address</span> <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1023</span>:<span class="hljs-number">3</span>::<span class="hljs-number">20</span><br>weibo<span class="hljs-selector-class">.cn</span> has IPv6 <span class="hljs-selector-tag">address</span> <span class="hljs-number">2400</span>:<span class="hljs-number">89</span>c0:<span class="hljs-number">1013</span>:<span class="hljs-number">3</span>::<span class="hljs-number">18</span><br></code></pre></td></tr></table></figure><h1 id="NS记录"><a href="#NS记录" class="headerlink" title="NS记录"></a>NS记录</h1><h2 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h2><p>域名服务器记录，也就是该记录指定由那台域名服务器解析域名</p><h2 id="操作-2"><a href="#操作-2" class="headerlink" title="操作"></a>操作</h2><h3 id="查询-2"><a href="#查询-2" class="headerlink" title="查询"></a>查询</h3><h4 id="nslookup-type-NS-domain"><a href="#nslookup-type-NS-domain" class="headerlink" title="nslookup -type&#x3D;NS domain"></a>nslookup -type&#x3D;NS domain</h4><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs stylus">➜  ~ nslookup -type=NS baidu<span class="hljs-selector-class">.com</span><br>Server:<span class="hljs-number">2408</span>:<span class="hljs-number">8409</span>:<span class="hljs-number">1890</span>:<span class="hljs-number">930</span>d:dd4d:ca4d:dc8a:cc02<br>Address:<span class="hljs-number">2408</span>:<span class="hljs-number">8409</span>:<span class="hljs-number">1890</span>:<span class="hljs-number">930</span>d:dd4d:ca4d:dc8a:cc02#<span class="hljs-number">53</span><br><br>Non-authoritative answer:<br>baidu<span class="hljs-selector-class">.com</span>nameserver = ns3<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.com</span>.<br>baidu<span class="hljs-selector-class">.com</span>nameserver = ns4<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.com</span>.<br>baidu<span class="hljs-selector-class">.com</span>nameserver = dns<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.com</span>.<br>baidu<span class="hljs-selector-class">.com</span>nameserver = ns7<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.com</span>.<br>baidu<span class="hljs-selector-class">.com</span>nameserver = ns2<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.com</span>.<br><br>Authoritative answers can be found from:<br></code></pre></td></tr></table></figure><h3 id="host-t-NS-domain"><a href="#host-t-NS-domain" class="headerlink" title="#### host -t NS domain"></a>#### host -t NS domain</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>network</category>
+      
+      <category>dns</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>dns</tag>
+      
+      <tag>network</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>hexo_command</title>
+    <link href="/2024/02/06/hexoblog/hexo_command/"/>
+    <url>/2024/02/06/hexoblog/hexo_command/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+    
+    
+    <categories>
+      
+      <category>hexo</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>
