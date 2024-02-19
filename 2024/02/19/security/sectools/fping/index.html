@@ -16,24 +16,23 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="背景使用 burpsuite 测试过程中Proxy模块需要将数据包中的中文字符匹配验证或者匹配替换，用于验证漏洞或者隐藏身份 例如：将请求中的“信息安全”替换掉 123456789101112131415161718POST &#x2F;api&#x2F;v1&#x2F;log HTTP&#x2F;1.1Host: aidesign.test.comCookie: Apache&#x3D;5867067965663.845.17071207">
+    <meta name="description" content="背景日常工作过程中，需要批量探测部分IP是否存活 原理send ICMP ECHO_REQUEST packets to network hosts 通过发送 ICMP 数据包进行探测存活 安装MacOSbrew install fping  RedHatyum install fping  dnf install fping Ubuntuapt install fping 语法fping 选">
 <meta property="og:type" content="article">
-<meta property="og:title" content="proxy_match_replace_chinese">
-<meta property="og:url" content="https://10000hours6.github.io/2024/02/06/security/sectools/burpsuite/proxy_match_replace_chinese/index.html">
+<meta property="og:title" content="fping">
+<meta property="og:url" content="https://10000hours6.github.io/2024/02/19/security/sectools/fping/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="背景使用 burpsuite 测试过程中Proxy模块需要将数据包中的中文字符匹配验证或者匹配替换，用于验证漏洞或者隐藏身份 例如：将请求中的“信息安全”替换掉 123456789101112131415161718POST &#x2F;api&#x2F;v1&#x2F;log HTTP&#x2F;1.1Host: aidesign.test.comCookie: Apache&#x3D;5867067965663.845.17071207">
+<meta property="og:description" content="背景日常工作过程中，需要批量探测部分IP是否存活 原理send ICMP ECHO_REQUEST packets to network hosts 通过发送 ICMP 数据包进行探测存活 安装MacOSbrew install fping  RedHatyum install fping  dnf install fping Ubuntuapt install fping 语法fping 选">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-19T09:15:17.497Z">
+<meta property="article:published_time" content="2024-02-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-19T09:19:58.835Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="security">
 <meta property="article:tag" content="sectools">
-<meta property="article:tag" content="burpsuite">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>proxy_match_replace_chinese - 10000hours</title>
+  <title>fping - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="proxy_match_replace_chinese"></span>
+            <span id="subtitle" data-typed-text="fping"></span>
           
         </div>
 
@@ -210,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-06 00:00" pubdate>
-          2024年2月6日 凌晨
+        <time datetime="2024-02-19 00:00" pubdate>
+          2024年2月19日 凌晨
         </time>
       </span>
     
@@ -222,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          767 字
+          239 字
         
       </span>
     
@@ -233,7 +232,7 @@
         
         
         
-          7 分钟
+          2 分钟
         
       </span>
     
@@ -270,12 +269,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">proxy_match_replace_chinese</h1>
+            <h1 id="seo-header">fping</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-02-19T17:15:17+08:00
+                    本文最后更新于 2024-02-19T17:19:58+08:00
                   
                   
 
@@ -287,39 +286,34 @@
                 
                 <span id="more"></span>
 
+<h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>日常工作过程中，需要批量探测部分IP是否存活</p>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>send ICMP ECHO_REQUEST packets to network hosts</p>
+<p>通过发送 ICMP 数据包进行探测存活</p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h2><p>brew install fping </p>
+<h2 id="RedHat"><a href="#RedHat" class="headerlink" title="RedHat"></a>RedHat</h2><p>yum install fping </p>
+<p>dnf install fping</p>
+<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h2><p>apt install fping</p>
+<h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><p>fping 选项 语法</p>
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="a"><a href="#a" class="headerlink" title="-a"></a>-a</h3><p>显示活动主机列表</p>
+<h3 id="u"><a href="#u" class="headerlink" title="-u"></a>-u</h3><p>显示不可达主机列表</p>
+<h3 id="g"><a href="#g" class="headerlink" title="-g"></a>-g</h3><p>制定CIDR地址或者IP地址范围</p>
+<h3 id="f"><a href="#f" class="headerlink" title="-f"></a>-f</h3><p>从文件中读取要扫描的IP地址列表</p>
+<h3 id="t"><a href="#t" class="headerlink" title="-t"></a>-t</h3><p>设置超时时间（等待响应的最大时间），默认 500ms</p>
+<h3 id="r"><a href="#r" class="headerlink" title="-r"></a>-r</h3><p>设置重试次数，默认 3 次</p>
+<h3 id="s"><a href="#s" class="headerlink" title="-s"></a>-s</h3><p>启用统计信息</p>
+<h3 id="q"><a href="#q" class="headerlink" title="-q"></a>-q</h3><p>只显示有响应的IP地址，不显示错误信息</p>
+<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><h2 id="探测单个IP地址存活性"><a href="#探测单个IP地址存活性" class="headerlink" title="探测单个IP地址存活性"></a>探测单个IP地址存活性</h2><p>fping 10.191.5.21</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">➜  /tmp fping <span class="hljs-number">10</span>.<span class="hljs-number">191</span>.<span class="hljs-number">5</span>.<span class="hljs-number">21</span><br><span class="hljs-number">10.191.5.21</span> is unreachable<br></code></pre></td></tr></table></figure>
 
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>使用 burpsuite 测试过程中Proxy模块需要将数据包中的中文字符匹配验证或者匹配替换，用于验证漏洞或者隐藏身份</p>
-<p>例如：将请求中的“信息安全”替换掉</p>
-<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/v1/log</span> <span class="hljs-meta">HTTP/1.1</span><br><span class="hljs-attribute">Host</span><span class="hljs-punctuation">: </span>aidesign.test.com<br><span class="hljs-attribute">Cookie</span><span class="hljs-punctuation">: </span>Apache=5867067965663.845.1707120756994; _ut=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImVtYWlsIjoiaGFpbmluZzMiLCJuaWNrIjoi5L2Z5rW35a6BIiwicm9sZXMiOnt9LCJvcmdhbml6YXRpb24iOlsi5L-h5oGv5a6J5YWoIl0sIm9yZ2FuaXphdGlvbnQzIjpbIuaWsOa1qumbhuWbol_lvq7ljZpf5b6u5Y2aQ09P57uE57uHIl0sImlwIjoiMTAuMjIyLjI4LjUiLCJ0aWNrZXQiOiJTVC0xMDQxOTg1LXB3RHlpZmFYM20xZjZhcmlZTnVVIiwic2VydmljZSI6Imh0dHAlM0ElMkYlMkZpLmZlLnNpbmEuY24lMkZ2ZXJpZnklMkZhdXRoJTNGYmFja3VybCUzRGh0dHAlMjUzQSUyNTJGJTI1MkZhaWRlc2lnbi53ZWliby5jb20lMjUyRiIsImxvZ2luVGltZSI6MTcwNzEyMDc3NDE2MH0sImlhdCI6MTcwNzEyMDc3NCwiZXhwIjoxNzA3MjA3MTc0fQ.G5OAkK1kN3-jCqY5728OtGlEmcF37of6YZfxep--Meg<br><span class="hljs-attribute">User-Agent</span><span class="hljs-punctuation">: </span>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0<br><span class="hljs-attribute">Accept</span><span class="hljs-punctuation">: </span>application/json,  */*<br><span class="hljs-attribute">Accept-Language</span><span class="hljs-punctuation">: </span>zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2<br><span class="hljs-attribute">Accept-Encoding</span><span class="hljs-punctuation">: </span>gzip, deflate<br><span class="hljs-attribute">Content-Type</span><span class="hljs-punctuation">: </span>application/json<br><span class="hljs-attribute">Content-Length</span><span class="hljs-punctuation">: </span>238<br><span class="hljs-attribute">Origin</span><span class="hljs-punctuation">: </span>https://aidesign.test.com<br><span class="hljs-attribute">Referer</span><span class="hljs-punctuation">: </span>https://aidesign.test.com/<br><span class="hljs-attribute">Sec-Fetch-Dest</span><span class="hljs-punctuation">: </span>empty<br><span class="hljs-attribute">Sec-Fetch-Mode</span><span class="hljs-punctuation">: </span>cors<br><span class="hljs-attribute">Sec-Fetch-Site</span><span class="hljs-punctuation">: </span>same-origin<br><span class="hljs-attribute">Te</span><span class="hljs-punctuation">: </span>trailers<br><span class="hljs-attribute">Connection</span><span class="hljs-punctuation">: </span>close<br><br><span class="language-json"><span class="hljs-punctuation">&#123;</span><span class="hljs-attr">&quot;_type&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;report&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;action&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;_exposure&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;ek&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;promptcreator&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;et&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;promptcreator&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;pk&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;187522&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;data&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">&#123;</span><span class="hljs-attr">&quot;ts&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">1707120897000</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;user&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;test&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;dept&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;test_信息安全&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;page&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;image&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;code&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;home&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;;&quot;</span><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">&#125;</span></span><br></code></pre></td></tr></table></figure>
+<h2 id="探测文件列表中IP地址存活性"><a href="#探测文件列表中IP地址存活性" class="headerlink" title="探测文件列表中IP地址存活性"></a>探测文件列表中IP地址存活性</h2><p>fping -f iplist.txt</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">➜  /tmp fping -f iplist.txt<br><span class="hljs-number">10.182.14.148</span> is alive<br><span class="hljs-number">10.191.5.21</span> is unreachable<br><span class="hljs-number">10.191.5.22</span> is unreachable<br></code></pre></td></tr></table></figure>
 
-<h2 id="自动匹配解决方案"><a href="#自动匹配解决方案" class="headerlink" title="自动匹配解决方案"></a>自动匹配解决方案</h2><h3 id="匹配验证解决方案"><a href="#匹配验证解决方案" class="headerlink" title="匹配验证解决方案"></a>匹配验证解决方案</h3><p>将要匹配的中文转换为十六进制\x格式（大小写不影响），使用正则 Regex 匹配</p>
-<p>中文转换为十六进制可以使用线上工具转换，也可以直接从请求包Hex格式中提取，提取的格式增加0x即可</p>
-<p>例如：</p>
-<p>字符串：信息安全  </p>
-<p>十六进制：E4 BF A1 E6 81 AF E5 AE 89 E5 85 A8  \xE4\xBF\xA1\xE6\x81\xAF\xE5\xAE\x89\xE5\x85\xA8</p>
-<h3 id="匹配替换解决方案"><a href="#匹配替换解决方案" class="headerlink" title="匹配替换解决方案"></a>匹配替换解决方案</h3><h4 id="中文替换为中文（未验证成功）"><a href="#中文替换为中文（未验证成功）" class="headerlink" title="中文替换为中文（未验证成功）"></a>中文替换为中文（未验证成功）</h4><p>测试过程中发现如果要将中文替换为中文，使用十六进制格式可以匹配到，但是替换不了</p>
-<p>信息安全-&gt;总裁办</p>
-<p>失败的测试过程：</p>
-<p>1、替换字符转为十六进制</p>
-<p>信息安全-&gt;总裁办</p>
-<p>\xE4\xBF\xA1\xE6\x81\xAF\xE5\xAE\x89\xE5\x85\xA8-&gt;\xE6\x80\xBB\xE8\xA3\x81\xE5\x8A\x9E</p>
-<p>现象：</p>
-<p>burpsuite 请求“信息安全”字段直接替换为十六进制字符串\xE6\x80\xBB\xE8\xA3\x81\xE5\x8A\x9E</p>
-<p>2、替换字符转为unicode字符</p>
-<p>信息安全-&gt;总裁办</p>
-<p>\xE4\xBF\xA1\xE6\x81\xAF\xE5\xAE\x89\xE5\x85\xA8-&gt;\u603b\u88c1\u529e</p>
-<p>现象：</p>
-<p>burpsuite 请求“信息安全”字段替换为去除\的字符串u603bu88c1u529e</p>
-<p>3、替换字符直接设置为中文</p>
-<p>信息安全-&gt;总裁办</p>
-<p>\xE4\xBF\xA1\xE6\x81\xAF\xE5\xAE\x89\xE5\x85\xA8-&gt;总裁办</p>
-<p>现象：</p>
-<p>burpsuite 请求“信息安全”字段被替换为乱码字符，查看hex值发现乱码字符为 3B C1</p>
-<h4 id="中文替换为非中文"><a href="#中文替换为非中文" class="headerlink" title="中文替换为非中文"></a>中文替换为非中文</h4><p>中文替换为英文、数字等，只需要将匹配的中文转换为十六进制\x格式，英文和数字等不需要转换</p>
-<p>信息安全-&gt;test</p>
-<p>\xE4\xBF\xA1\xE6\x81\xAF\xE5\xAE\x89\xE5\x85\xA8-&gt;test</p>
-<h2 id="手动匹配解决方案"><a href="#手动匹配解决方案" class="headerlink" title="手动匹配解决方案"></a>手动匹配解决方案</h2><p>匹配替换，无论是替换为中文还是非中文字符，拦截直接修改为对应字符就行</p>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] http替换内容为中文的解决方案 Mi_Bo 2018-05-18 16:54:56<br>链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Mi_Bo/article/details/80366592">https://blog.csdn.net/Mi_Bo/article/details/80366592</a><br>[2] Match and Replace does not seem to work correctly with CJK characters Jackpot Sep 07, 2023 12:24PM UTC<br><a target="_blank" rel="noopener" href="https://forum.portswigger.net/thread/match-and-replace-does-not-seem-to-work-correctly-with-cjk-characters-89ec4112">https://forum.portswigger.net/thread/match-and-replace-does-not-seem-to-work-correctly-with-cjk-characters-89ec4112</a></p>
+<h2 id="只显示存活主机列表"><a href="#只显示存活主机列表" class="headerlink" title="只显示存活主机列表"></a>只显示存活主机列表</h2><p>fping -a -f iplist.txt</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">➜  /tmp fping -f iplist.txt -a<br><span class="hljs-number">10.182.14.148</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="探测局域网CIDR内存活主机"><a href="#探测局域网CIDR内存活主机" class="headerlink" title="探测局域网CIDR内存活主机"></a>探测局域网CIDR内存活主机</h2><p>fping -a -g ip端</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">root@iZbp1191gh7vw52537lyxrZ:~# fping -a -g <span class="hljs-number">172</span>.<span class="hljs-number">16</span>.<span class="hljs-number">24</span>.<span class="hljs-number">0</span>/<span class="hljs-number">24</span><br><span class="hljs-number">172.16.24.136</span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -346,13 +340,6 @@
   <a href="/categories/security/sectools/" class="category-chain-item">sectools</a>
   
   
-    <span>></span>
-    
-  <a href="/categories/security/sectools/burpsuite/" class="category-chain-item">burpsuite</a>
-  
-  
-
-  
 
   
 
@@ -371,8 +358,6 @@
       
         <a href="/tags/sectools/" class="print-no-link">#sectools</a>
       
-        <a href="/tags/burpsuite/" class="print-no-link">#burpsuite</a>
-      
     </div>
   
 </div>
@@ -383,8 +368,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>proxy_match_replace_chinese</div>
-      <div>https://10000hours6.github.io/2024/02/06/security/sectools/burpsuite/proxy_match_replace_chinese/</div>
+      <div>fping</div>
+      <div>https://10000hours6.github.io/2024/02/19/security/sectools/fping/</div>
     </div>
     <div class="license-meta">
       
@@ -396,7 +381,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月6日</div>
+          <div>2024年2月19日</div>
         </div>
       
       
@@ -421,18 +406,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/" title="一万小时定律">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">一万小时定律</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/06/network/dns/dnsip/" title="dnsip">
-                        <span class="hidden-mobile">dnsip</span>
+                      <a href="/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/" title="一万小时定律">
+                        <span class="hidden-mobile">一万小时定律</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
