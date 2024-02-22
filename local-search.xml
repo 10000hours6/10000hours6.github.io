@@ -4,6 +4,166 @@
   
   
   <entry>
+    <title>alibaba_Sentinel_base</title>
+    <link href="/2024/02/21/security/secvulns/alibaba%20Sentinel/alibaba_Sentinel_base/"/>
+    <url>/2024/02/21/security/secvulns/alibaba%20Sentinel/alibaba_Sentinel_base/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>secvulns</category>
+      
+      <category>yunweivulns</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>secvulns</tag>
+      
+      <tag>yunweivulns</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Alibaba_Sentinel_SSRF_CVE-2021-44139</title>
+    <link href="/2024/02/21/security/secvulns/alibaba%20Sentinel/Alibaba_Sentinel_SSRF_CVE-2021-44139/"/>
+    <url>/2024/02/21/security/secvulns/alibaba%20Sentinel/Alibaba_Sentinel_SSRF_CVE-2021-44139/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="漏洞名称"><a href="#漏洞名称" class="headerlink" title="漏洞名称"></a>漏洞名称</h2><p>alibaba hashicorp sentinel 服务端请求伪造（ssrf）</p><h2 id="漏洞简介"><a href="#漏洞简介" class="headerlink" title="漏洞简介"></a>漏洞简介</h2><p>Alibaba开源限流熔断组件Sentinel中的管控平台sentinel-dashboard存在认证前SSRF漏洞，恶意用户无需认证即可通过该接口进行SSRF攻击。</p><h2 id="漏洞编号"><a href="#漏洞编号" class="headerlink" title="漏洞编号"></a>漏洞编号</h2><p>CVE-2021-44139</p><h2 id="漏洞级别"><a href="#漏洞级别" class="headerlink" title="漏洞级别"></a>漏洞级别</h2><p>高危</p><h2 id="漏洞影响范围"><a href="#漏洞影响范围" class="headerlink" title="漏洞影响范围"></a>漏洞影响范围</h2><p>1.8.2版本</p><h2 id="漏洞修复"><a href="#漏洞修复" class="headerlink" title="漏洞修复"></a>漏洞修复</h2><p>升级到最新版本</p><h2 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h2><h3 id="漏洞环境搭建"><a href="#漏洞环境搭建" class="headerlink" title="漏洞环境搭建"></a>漏洞环境搭建</h3><h3 id="漏洞验证"><a href="#漏洞验证" class="headerlink" title="漏洞验证"></a>漏洞验证</h3><h2 id="漏洞挖掘"><a href="#漏洞挖掘" class="headerlink" title="漏洞挖掘"></a>漏洞挖掘</h2><h3 id="服务指纹"><a href="#服务指纹" class="headerlink" title="服务指纹"></a>服务指纹</h3><p>title：Sentinel Dashboard</p><h3 id="服务查询"><a href="#服务查询" class="headerlink" title="服务查询"></a>服务查询</h3><h4 id="fofa-info"><a href="#fofa-info" class="headerlink" title="fofa.info"></a>fofa.info</h4><p>“title: Sentinel Dashboard”</p><h3 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h3><p>payload:</p><p>h__p:&#x2F;&#x2F;ip&#x2F;registry&#x2F;machine?app&#x3D;40bdb&amp;appType&#x3D;0&amp;version&#x3D;0&amp;hostname&#x3D;VbxGe&amp;ip&#x3D;attackip&amp;port&#x3D;0</p><h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] Report a Sentinel Security Vulnerability about SSRF #2451 threedr3am Nov 18, 2021<br>链接：<a href="https://github.com/alibaba/Sentinel/issues/2451">https://github.com/alibaba/Sentinel/issues/2451</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>secvulns</category>
+      
+      <category>yunweivulns</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>secvulns</tag>
+      
+      <tag>yunweivulns</tag>
+      
+      <tag>ssrf</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2024/02/20/yunwei/commands/iotop/"/>
+    <url>/2024/02/20/yunwei/commands/iotop/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>docker_install</title>
+    <link href="/2024/02/20/yunwei/applications/docker/docker_install/"/>
+    <url>/2024/02/20/yunwei/applications/docker/docker_install/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><h3 id="ubuntu"><a href="#ubuntu" class="headerlink" title="ubuntu"></a>ubuntu</h3><h3 id="redhat"><a href="#redhat" class="headerlink" title="redhat"></a>redhat</h3><h3 id="mac"><a href="#mac" class="headerlink" title="mac"></a>mac</h3><h3 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h3><h2 id="uninstall"><a href="#uninstall" class="headerlink" title="uninstall"></a>uninstall</h2><h3 id="ubuntu-1"><a href="#ubuntu-1" class="headerlink" title="ubuntu"></a>ubuntu</h3><h3 id="redhat-1"><a href="#redhat-1" class="headerlink" title="redhat"></a>redhat</h3><h3 id="mac-1"><a href="#mac-1" class="headerlink" title="mac"></a>mac</h3><h3 id="windows-1"><a href="#windows-1" class="headerlink" title="windows"></a>windows</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>applications</category>
+      
+      <category>docker</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>applications</tag>
+      
+      <tag>docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>docker_command</title>
+    <link href="/2024/02/20/yunwei/applications/docker/docker_command/"/>
+    <url>/2024/02/20/yunwei/applications/docker/docker_command/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><p>命令基于 mac Docker Desktop 4.11.1 (84025) </p><h1 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h1><h2 id="查询镜像"><a href="#查询镜像" class="headerlink" title="查询镜像"></a>查询镜像</h2><h3 id="docker-search"><a href="#docker-search" class="headerlink" title="docker search"></a>docker search</h3><p><strong>docker search [OPTIONS] TEAM</strong></p><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>默认官方 Docker Hub （hub.docker.com）查找镜像</p><h4 id="OPTIONS"><a href="#OPTIONS" class="headerlink" title="OPTIONS"></a>OPTIONS</h4><h5 id="f-–filter-filter"><a href="#f-–filter-filter" class="headerlink" title="-f –filter filter"></a>-f –filter filter</h5><p>Filter output based on conditions provided 根据过滤条件过滤镜像</p><h5 id="–no-trunc"><a href="#–no-trunc" class="headerlink" title="–no-trunc"></a>–no-trunc</h5><p>Don’t truncate output 不截断输出，也就是显示完整的镜像描述</p><h5 id="–limit-ini"><a href="#–limit-ini" class="headerlink" title="–limit ini"></a>–limit ini</h5><p>Max number of search results (default 25) 搜索结果的最大数目(默认25个)</p><h5 id="–format-string"><a href="#–format-string" class="headerlink" title="–format string"></a>–format string</h5><p>Pretty-print search using a Go template</p><h4 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h4><p>查找镜像名包含memcached且收藏数大于10的镜像</p><p>docker search -f stars&#x3D;10 memcached –no-trunc</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">➜  /tmp docker <span class="hljs-keyword">search</span> -f stars=<span class="hljs-number">10</span> memcached <span class="hljs-comment">--no-trunc</span><br><span class="hljs-type">NAME</span>                       DESCRIPTION                                                                       STARS     OFFICIAL   AUTOMATED<br>memcached                  Free &amp; <span class="hljs-keyword">open</span> source, high-performance, distributed memory <span class="hljs-keyword">object</span> caching <span class="hljs-keyword">system</span>.   <span class="hljs-number">2135</span>      [OK]       <br>bitnami/memcached          Bitnami Memcached Docker Image                                                    <span class="hljs-number">32</span>                   [OK]<br>sylvainlasnier/memcached   Memcached docker images based <span class="hljs-keyword">on</span> Ubuntu <span class="hljs-number">14.10</span>. It <span class="hljs-keyword">is</span> small <span class="hljs-keyword">and</span> basic.             <span class="hljs-number">28</span>                   [OK]<br>rapidfort/memcached-ib     RapidFort optimized, hardened image <span class="hljs-keyword">for</span> Memcached IronBank                        <span class="hljs-number">12</span>                   <br>rapidfort/memcached        RapidFort optimized, hardened image <span class="hljs-keyword">for</span> Memcached                                 <span class="hljs-number">11</span>                   <br>prom/memcached-exporter    Exports metrics <span class="hljs-keyword">from</span> memcached servers <span class="hljs-keyword">for</span> consumption <span class="hljs-keyword">by</span> Prometheus.             <span class="hljs-number">10</span>               <br></code></pre></td></tr></table></figure><p>NAME：镜像名</p><p>DESCRIPTION：描述</p><p>START：关注数</p><p>OFFICIAL：是否为docker官方发布</p><p>AUTOMATED：自动构建</p><h2 id="下载镜像"><a href="#下载镜像" class="headerlink" title="下载镜像"></a>下载镜像</h2><h3 id="docker-pull"><a href="#docker-pull" class="headerlink" title="docker pull"></a>docker pull</h3><p><strong>docker pull [OPTIONS] NAME[:TAG|@DIGEST]</strong></p><h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>从镜像仓库中拉取或者更新指定镜像，如不选定版本号，则下载最新镜像</p><h4 id="OPTIONS-1"><a href="#OPTIONS-1" class="headerlink" title="OPTIONS"></a>OPTIONS</h4><h5 id="a-–all-tags"><a href="#a-–all-tags" class="headerlink" title="-a –all-tags"></a>-a –all-tags</h5><p>拉取所有tagged镜像</p><h5 id="–distable-content-trust"><a href="#–distable-content-trust" class="headerlink" title="–distable-content-trust"></a>–distable-content-trust</h5><p>忽略镜像的校验，默认是开启校验的</p><h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>1、下载指定版本的镜像命名都为软件名，取决于<a href="https://hub.docker.com/%E4%B8%AD%E6%98%BE%E7%A4%BA%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%90%8D">https://hub.docker.com/中显示的软件名</a></p><p>docker pull grafana&#x2F;grafana</p><p>docker pull mysql</p><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript">[root@localhost grafana]<span class="hljs-comment"># docker pull grafana/grafana:6.3.3</span><br><span class="hljs-number">6.3</span><span class="hljs-number">.3</span>: Pulling <span class="hljs-keyword">from</span> grafana/grafana<br>[root@localhost grafana]<span class="hljs-comment"># docker pull grafana/grafana:8.2.6</span><br><span class="hljs-number">8.2</span><span class="hljs-number">.6</span>: Pulling <span class="hljs-keyword">from</span> grafana/grafana<br><br>[root@localhost grafana]<span class="hljs-comment"># docker images | grep grafana</span><br>grafana/grafana                                                   <span class="hljs-number">8.2</span><span class="hljs-number">.6</span>     aeeaa96eea83   <span class="hljs-number">5</span> months ago   <span class="hljs-number">253</span>MB<br>grafana/grafana                                                   <span class="hljs-number">6.3</span><span class="hljs-number">.3</span>     a6e14b4109af   <span class="hljs-number">2</span> years ago    <span class="hljs-number">253</span>MB<br></code></pre></td></tr></table></figure><p>2、pull 的name一定是search查询出来的name，否则会报错</p><h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>从 docker hub 下载最新版memcached</p><p>docker pull memcached</p><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs makefile">(base) root@localhost:~<span class="hljs-comment"># docker pull memcached:latest</span><br><span class="hljs-section">latest: Pulling from library/memcached</span><br><span class="hljs-section">c229119241af: Pull complete </span><br><span class="hljs-section">af2f0309d301: Pull complete </span><br><span class="hljs-section">35783664a727: Pull complete </span><br><span class="hljs-section">a0d63d088cef: Pull complete </span><br><span class="hljs-section">d2f1f521665d: Pull complete </span><br><span class="hljs-section">24f6b2ace768: Pull complete </span><br><span class="hljs-section">Digest: sha256:c42541495ec1a6925cb105635bcafeedf60a56e3b9e4ac8b1afaf6d7851d70b2</span><br><span class="hljs-section">Status: Downloaded newer image for memcached:latest</span><br><span class="hljs-section">docker.io/library/memcached:latest</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>applications</category>
+      
+      <category>docker</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>applications</tag>
+      
+      <tag>docker</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2024/02/19/security/secvulns/oss/osstools/"/>
+    <url>/2024/02/19/security/secvulns/oss/osstools/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>fping</title>
     <link href="/2024/02/19/security/sectools/fping/"/>
     <url>/2024/02/19/security/sectools/fping/</url>
@@ -33,13 +193,33 @@
   
   
   <entry>
-    <title>一万小时定律</title>
-    <link href="/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/"/>
-    <url>/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/</url>
+    <title>burpsuite_http2</title>
+    <link href="/2024/02/19/security/sectools/burpsuite/burpsuite_http2/"/>
+    <url>/2024/02/19/security/sectools/burpsuite/burpsuite_http2/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>使用 burpsuite 测试过程中遇到 dashboard中的一些 event log ，对部分错误日志分析记录</p><h2 id="报错及解决方案"><a href="#报错及解决方案" class="headerlink" title="报错及解决方案"></a>报错及解决方案</h2><p>报错均 基于burp suite 2021.10.3版本 </p><h3 id="error-suite-Communication-error-domain"><a href="#error-suite-Communication-error-domain" class="headerlink" title="error-suite-Communication error:domain"></a>error-suite-Communication error:domain</h3><h4 id="报错现象"><a href="#报错现象" class="headerlink" title="报错现象"></a>报错现象</h4><p>suite：Communication error:domain</p><p>Repeater：Server ALPN does not advertise HTTP&#x2F;2 support.You can force HTTP&#x2F;2 from the Repeater menu</p><h4 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h4><p>当前版本支持 HTTP&#x2F;2，但是会存在部分请求不支持HTTP&#x2F;2，就会报Server ALPN does not advertise HTTP&#x2F;2 support.You can force HTTP&#x2F;2 from the Repeater menu错，可在INSPECTOR中进行协议切换</p><p>在 Project options -&gt; HTTP -&gt; HTTP&#x2F;2有勾选，如果服务支持将默认使用 HTTP&#x2F;2</p><p>Repeater</p><p>请求默认使用 HTTP&#x2F;2协议</p><h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>默认服务都会支持 HTTP&#x2F;1 协议，为避免报错信息，可以将 HTTP&#x2F;2关闭掉</p><h3 id="No-response-received-from-remote-server"><a href="#No-response-received-from-remote-server" class="headerlink" title="No response received from remote server"></a>No response received from remote server</h3><h4 id="报错现象-1"><a href="#报错现象-1" class="headerlink" title="报错现象"></a>报错现象</h4><p>dashboard 中 event log No response received from remote server</p><h4 id="报错原因-1"><a href="#报错原因-1" class="headerlink" title="报错原因"></a>报错原因</h4><p>新版本burpsuite默认支持http2，如果遇到不支持的站点，就会报错</p><h4 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h4><p>1、proxy-&gt;options-&gt;Miscellaneous 勾选使用http&#x2F;1.0进行通信，默认不勾选</p><p>2、Project options-&gt;HTTP-&gt;HTTP&#x2F;2取消勾选默认HTTP&#x2F;2的选项</p>]]></content>
     
     
+    <categories>
+      
+      <category>security</category>
+      
+      <category>sectools</category>
+      
+      <category>burpsuite</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>sectools</tag>
+      
+      <tag>burpsuite</tag>
+      
+    </tags>
     
   </entry>
   
@@ -71,6 +251,31 @@
       <tag>sectools</tag>
       
       <tag>burpsuite</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>一万小时定律</title>
+    <link href="/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/"/>
+    <url>/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
+    
+    
+    <categories>
+      
+      <category>life</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>life</tag>
       
     </tags>
     
