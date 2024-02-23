@@ -24,7 +24,7 @@
 <meta property="og:description" content="命令基于 mac Docker Desktop 4.11.1 (84025)  镜像查询镜像docker searchdocker search [OPTIONS] TEAM 描述默认官方 Docker Hub （hub.docker.com）查找镜像 OPTIONS-f –filter filterFilter output based on conditions provided 根据过滤">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-02-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-22T11:08:51.462Z">
+<meta property="article:modified_time" content="2024-02-22T11:28:08.006Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="yunwei">
 <meta property="article:tag" content="applications">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          339 字
+          340 字
         
       </span>
     
@@ -275,7 +275,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-02-22T19:08:51+08:00
+                    本文最后更新于 2024-02-22T19:28:08+08:00
                   
                   
 
@@ -307,14 +307,14 @@
 <h4 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h4><p>从镜像仓库中拉取或者更新指定镜像，如不选定版本号，则下载最新镜像</p>
 <h4 id="OPTIONS-1"><a href="#OPTIONS-1" class="headerlink" title="OPTIONS"></a>OPTIONS</h4><h5 id="a-–all-tags"><a href="#a-–all-tags" class="headerlink" title="-a –all-tags"></a>-a –all-tags</h5><p>拉取所有tagged镜像</p>
 <h5 id="–distable-content-trust"><a href="#–distable-content-trust" class="headerlink" title="–distable-content-trust"></a>–distable-content-trust</h5><p>忽略镜像的校验，默认是开启校验的</p>
-<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>1、下载指定版本的镜像命名都为软件名，取决于<a target="_blank" rel="noopener" href="https://hub.docker.com/%E4%B8%AD%E6%98%BE%E7%A4%BA%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%90%8D">https://hub.docker.com/中显示的软件名</a></p>
-<p>docker pull grafana&#x2F;grafana</p>
-<p>docker pull mysql</p>
+<h4 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h4><p>1、pull命令中的NAME，取决于<a target="_blank" rel="noopener" href="https://hub.docker.com/%E4%B8%AD%E6%98%BE%E7%A4%BA%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%90%8D%E3%80%82">https://hub.docker.com/中显示的软件名。</a></p>
+<p>例如：</p>
+<p>下载 mysql 8.3.0 版本，使用 docker pull mysql:8.3.0</p>
+<p>下载 grafana&#x2F;grafana 10.2.4 版本，使用 docker pull grafana&#x2F;grafana:10.2.4 </p>
 <figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs coffeescript">[root@localhost grafana]<span class="hljs-comment"># docker pull grafana/grafana:6.3.3</span><br><span class="hljs-number">6.3</span><span class="hljs-number">.3</span>: Pulling <span class="hljs-keyword">from</span> grafana/grafana<br>[root@localhost grafana]<span class="hljs-comment"># docker pull grafana/grafana:8.2.6</span><br><span class="hljs-number">8.2</span><span class="hljs-number">.6</span>: Pulling <span class="hljs-keyword">from</span> grafana/grafana<br><br>[root@localhost grafana]<span class="hljs-comment"># docker images | grep grafana</span><br>grafana/grafana                                                   <span class="hljs-number">8.2</span><span class="hljs-number">.6</span>     aeeaa96eea83   <span class="hljs-number">5</span> months ago   <span class="hljs-number">253</span>MB<br>grafana/grafana                                                   <span class="hljs-number">6.3</span><span class="hljs-number">.3</span>     a6e14b4109af   <span class="hljs-number">2</span> years ago    <span class="hljs-number">253</span>MB<br></code></pre></td></tr></table></figure>
 
 
 
-<p>2、pull 的name一定是search查询出来的name，否则会报错</p>
 <h4 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h4><p>从 docker hub 下载最新版memcached</p>
 <p>docker pull memcached</p>
 <figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs makefile">(base) root@localhost:~<span class="hljs-comment"># docker pull memcached:latest</span><br><span class="hljs-section">latest: Pulling from library/memcached</span><br><span class="hljs-section">c229119241af: Pull complete </span><br><span class="hljs-section">af2f0309d301: Pull complete </span><br><span class="hljs-section">35783664a727: Pull complete </span><br><span class="hljs-section">a0d63d088cef: Pull complete </span><br><span class="hljs-section">d2f1f521665d: Pull complete </span><br><span class="hljs-section">24f6b2ace768: Pull complete </span><br><span class="hljs-section">Digest: sha256:c42541495ec1a6925cb105635bcafeedf60a56e3b9e4ac8b1afaf6d7851d70b2</span><br><span class="hljs-section">Status: Downloaded newer image for memcached:latest</span><br><span class="hljs-section">docker.io/library/memcached:latest</span><br></code></pre></td></tr></table></figure>
