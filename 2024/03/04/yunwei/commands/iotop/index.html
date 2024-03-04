@@ -16,25 +16,21 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="命令基于 mac Docker Desktop 4.11.1 (84025)  查询指定镜像仓库镜像列表Curl 1curl -X &#x27;GET&#x27; &#x27;h__ps:&#x2F;&#x2F;demo.goharbor.io&#x2F;api&#x2F;v2.0&#x2F;projects?page&#x3D;1&amp;page_size&#x3D;10&amp;with_detail&#x3D;true&#x27;  -H &#x27;accept">
-<meta property="og:type" content="article">
-<meta property="og:title" content="docker_tips">
-<meta property="og:url" content="https://10000hours6.github.io/2024/02/28/yunwei/applications/docker/docker_tips/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="iotop">
+<meta property="og:url" content="https://10000hours6.github.io/2024/03/04/yunwei/commands/iotop/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="命令基于 mac Docker Desktop 4.11.1 (84025)  查询指定镜像仓库镜像列表Curl 1curl -X &#x27;GET&#x27; &#x27;h__ps:&#x2F;&#x2F;demo.goharbor.io&#x2F;api&#x2F;v2.0&#x2F;projects?page&#x3D;1&amp;page_size&#x3D;10&amp;with_detail&#x3D;true&#x27;  -H &#x27;accept">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-04T03:29:27.361Z">
+<meta property="article:published_time" content="2024-03-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-04T03:30:40.831Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="yunwei">
-<meta property="article:tag" content="applications">
-<meta property="article:tag" content="docker">
-<meta property="article:tag" content="tips">
+<meta property="article:tag" content="commands">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>docker_tips - 10000hours</title>
+  <title>iotop - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="docker_tips"></span>
+            <span id="subtitle" data-typed-text="iotop"></span>
           
         </div>
 
@@ -211,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-28 00:00" pubdate>
-          2024年2月28日 凌晨
+        <time datetime="2024-03-04 00:00" pubdate>
+          2024年3月4日 凌晨
         </time>
       </span>
     
@@ -223,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          197 字
+          0 字
         
       </span>
     
@@ -234,7 +230,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -271,12 +267,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">docker_tips</h1>
+            <h1 id="seo-header">iotop</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-03-04T11:29:27+08:00
+                    本文最后更新于 2024-03-04T11:30:40+08:00
                   
                   
 
@@ -287,30 +283,6 @@
               <div class="markdown-body">
                 
                 <span id="more"></span>
-
-<p>命令基于 mac Docker Desktop 4.11.1 (84025) </p>
-<h3 id="查询指定镜像仓库镜像列表"><a href="#查询指定镜像仓库镜像列表" class="headerlink" title="查询指定镜像仓库镜像列表"></a>查询指定镜像仓库镜像列表</h3><p><strong>Curl</strong></p>
-<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">curl -X <span class="hljs-symbol">&#x27;GET</span><span class="hljs-string">&#x27; &#x27;</span>h__ps://demo.goharbor.io/api/v2.<span class="hljs-number">0</span>/projects?page=<span class="hljs-number">1</span>&amp;page_size=<span class="hljs-number">10</span>&amp;with_detail=<span class="hljs-literal">true</span>&#x27;  -H <span class="hljs-symbol">&#x27;accept</span>: application/json&#x27;<br></code></pre></td></tr></table></figure>
-
-<p><strong>Request URL</strong></p>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://demo.goharbor.io/api/v2.<span class="hljs-number">0</span>/projects?page=<span class="hljs-number">1</span>&amp;page_size=<span class="hljs-number">10</span>&amp;with_detail=true<br></code></pre></td></tr></table></figure>
-
-<p>q&#x3D;string   </p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">格式<span class="hljs-attribute">q</span>=k=v <br><span class="hljs-attribute">q</span>=name=admin 精确匹配<br><span class="hljs-attribute">q</span>=name=~admin 模糊匹配<br></code></pre></td></tr></table></figure>
-
-<p>q&#x3D;name&#x3D;admin</p>
-<p>page&#x3D;interger</p>
-<p>page_size&#x3D;interger</p>
-<p>name&#x3D;string 指定项目</p>
-<p>sort&#x3D;string  指定排序字段</p>
-<p>public&#x3D;boolean  指定查询公开项目还是私有项目，默认公开项目</p>
-<p>owner&#x3D;string  指定作者</p>
-<p>with_detail&#x3D;boolean  指定是否需要展示详情</p>
-<h3 id="查询指定镜像仓库指定镜像"><a href="#查询指定镜像仓库指定镜像" class="headerlink" title="查询指定镜像仓库指定镜像"></a>查询指定镜像仓库指定镜像</h3><p><strong>CURL</strong></p>
-<p>curl -X ‘GET’ ‘h__ps:&#x2F;&#x2F;demo.goharbor.io&#x2F;api&#x2F;v2.0&#x2F;search?q&#x3D;1’ -H ‘accept: application&#x2F;json’</p>
-<p><strong>Request URL</strong></p>
-<p>h__ps:&#x2F;&#x2F;demo.goharbor.io&#x2F;api&#x2F;v2.0&#x2F;search?q&#x3D;1</p>
-
                 
               </div>
             
@@ -333,15 +305,8 @@
   
     <span>></span>
     
-  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/docker/" class="category-chain-item">docker</a>
-  
-  
-
   
 
   
@@ -359,11 +324,7 @@
       
         <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
       
-        <a href="/tags/applications/" class="print-no-link">#applications</a>
-      
-        <a href="/tags/docker/" class="print-no-link">#docker</a>
-      
-        <a href="/tags/tips/" class="print-no-link">#tips</a>
+        <a href="/tags/commands/" class="print-no-link">#commands</a>
       
     </div>
   
@@ -375,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>docker_tips</div>
-      <div>https://10000hours6.github.io/2024/02/28/yunwei/applications/docker/docker_tips/</div>
+      <div>iotop</div>
+      <div>https://10000hours6.github.io/2024/03/04/yunwei/commands/iotop/</div>
     </div>
     <div class="license-meta">
       
@@ -388,7 +349,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月28日</div>
+          <div>2024年3月4日</div>
         </div>
       
       
@@ -413,18 +374,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/04/yunwei/commands/iotop/" title="iotop">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">iotop</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/26/yunwei/switch/switch_rules/" title="switch_rules">
-                        <span class="hidden-mobile">switch_rules</span>
+                      <a href="/2024/02/28/yunwei/applications/docker/docker_tips/" title="docker_tips">
+                        <span class="hidden-mobile">docker_tips</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
