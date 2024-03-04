@@ -16,20 +16,23 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="一万小时定律">
-<meta property="og:url" content="https://10000hours6.github.io/2024/02/06/%E4%B8%80%E4%B8%87%E5%B0%8F%E6%97%B6%E5%AE%9A%E5%BE%8B/index.html">
+    <meta name="description" content="基本ACL支持根据源IP地址过滤报文，高级ACL不仅支持源IP地址，还支持根据目的IP地址过滤报文 策略执行顺序 从上往下 首次匹配 一旦有规则匹配到了数据包，交换机就会执行该规则指定的操作，并停止继续检查其他规则。这意味着如果ACL中的某个规则匹配了数据包，后面的规则就不会再被考虑。 默认策略 如果数据包没有匹配到任何ACL策略，交换机会按照默认策略处理，也就是需要在策略最后添加默认允许">
+<meta property="og:type" content="article">
+<meta property="og:title" content="switch_rules">
+<meta property="og:url" content="https://10000hours6.github.io/2024/02/26/yunwei/switch/switch_rules/index.html">
 <meta property="og:site_name" content="10000hours">
+<meta property="og:description" content="基本ACL支持根据源IP地址过滤报文，高级ACL不仅支持源IP地址，还支持根据目的IP地址过滤报文 策略执行顺序 从上往下 首次匹配 一旦有规则匹配到了数据包，交换机就会执行该规则指定的操作，并停止继续检查其他规则。这意味着如果ACL中的某个规则匹配了数据包，后面的规则就不会再被考虑。 默认策略 如果数据包没有匹配到任何ACL策略，交换机会按照默认策略处理，也就是需要在策略最后添加默认允许">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-05T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-21T03:18:32.047Z">
+<meta property="article:published_time" content="2024-02-25T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-26T11:34:35.966Z">
 <meta property="article:author" content="10000hours">
-<meta property="article:tag" content="life">
+<meta property="article:tag" content="yunwei">
+<meta property="article:tag" content="switch">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>一万小时定律 - 10000hours</title>
+  <title>switch_rules - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="一万小时定律"></span>
+            <span id="subtitle" data-typed-text="switch_rules"></span>
           
         </div>
 
@@ -206,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-06 00:00" pubdate>
-          2024年2月6日 凌晨
+        <time datetime="2024-02-26 00:00" pubdate>
+          2024年2月26日 凌晨
         </time>
       </span>
     
@@ -218,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          1.5k 字
         
       </span>
     
@@ -229,7 +232,7 @@
         
         
         
-          1 分钟
+          13 分钟
         
       </span>
     
@@ -266,12 +269,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">一万小时定律</h1>
+            <h1 id="seo-header">switch_rules</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-02-21T11:18:32+08:00
+                    本文最后更新于 2024-02-26T19:34:35+08:00
                   
                   
 
@@ -282,6 +285,408 @@
               <div class="markdown-body">
                 
                 <span id="more"></span>
+
+
+
+<p>基本ACL支持根据源IP地址过滤报文，高级ACL不仅支持源IP地址，还支持根据目的IP地址过滤报文</p>
+<p>策略执行顺序</p>
+<p>从上往下</p>
+<p>首次匹配</p>
+<p>一旦有规则匹配到了数据包，交换机就会执行该规则指定的操作，并停止继续检查其他规则。这意味着如果ACL中的某个规则匹配了数据包，后面的规则就不会再被考虑。</p>
+<p>默认策略</p>
+<p>如果数据包没有匹配到任何ACL策略，交换机会按照默认策略处理，也就是需要在策略最后添加默认允许或默认拒绝</p>
+<p>格式</p>
+<p>access-list &lt;编号&gt; &lt;策略&gt; &lt;协议&gt; &lt;源地址&gt; &lt;源地址掩码&gt; &lt;目标地址&gt; &lt;目标地址掩码&gt; [&lt;源端口&gt; &lt;目标端口&gt; ]</p>
+<p>语法</p>
+<p>必须</p>
+<p>access-list: 表示创建或编辑ACL规则</p>
+<p>编号：ACL编号，用于区分不同的ACL规则，（范围通常为100-199（扩展ACL）或2000-2699（基于时间的ACL））需要确认的点</p>
+<p>策略：指定访问控制的行为，包含permit（允许）和 deny （拒绝）两种策略</p>
+<p>协议：指定需要匹配的协议类型，例如TCP、UDP、ICMP、IP（表示任何IP层协议，协议号的取值可以是1~255）等</p>
+<p>源地址：指定访问控制来源IP地址</p>
+<p>源地址掩码：指定访问控制来源IP地址的子网范围</p>
+<p>目标地址：指定访问控制目的IP地址</p>
+<p>目标地址掩码：指定访问控制目的IP地址的子网范围</p>
+<p>可选</p>
+<p>源端口  目标端口 ：TCP和UDP协议支持指定端口，比较符 eq port 等于，gt port 大于，lt port 小于，range startport endport 端口范围</p>
+<p>可以写具体端口，也可以写常用服务（www）</p>
+<p>常见TCP端口对应字符串</p>
+<table>
+<thead>
+<tr>
+<th><strong>端口号</strong></th>
+<th><strong>字符串</strong></th>
+<th><strong>协议</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>echo</td>
+<td>Echo</td>
+<td>计算机命令</td>
+</tr>
+<tr>
+<td>9</td>
+<td>discard</td>
+<td>Discard</td>
+<td>用于连接测试的空服务</td>
+</tr>
+<tr>
+<td>13</td>
+<td>daytime</td>
+<td>Daytime</td>
+<td>给请求主机发送日期和时间</td>
+</tr>
+<tr>
+<td>19</td>
+<td>CHARgen</td>
+<td>Character generator</td>
+<td>字符生成服务；发送无止境的字符流</td>
+</tr>
+<tr>
+<td>20</td>
+<td>ftp-data</td>
+<td>FTP data connections</td>
+<td>FTP数据端口</td>
+</tr>
+<tr>
+<td>21</td>
+<td>ftp</td>
+<td>File Transfer Protocol(FTP)</td>
+<td>文件传输协议（FTP）端口</td>
+</tr>
+<tr>
+<td>23</td>
+<td>telnet</td>
+<td>Telnet</td>
+<td>Telnet服务</td>
+</tr>
+<tr>
+<td>25</td>
+<td>smtp</td>
+<td>Simple Mail Transport Protocol(SMTP)</td>
+<td>简单邮件传输协议</td>
+</tr>
+<tr>
+<td>37</td>
+<td>time</td>
+<td>Time</td>
+<td>时间协议</td>
+</tr>
+<tr>
+<td>43</td>
+<td>whois</td>
+<td>Nickname（WHOIS）</td>
+<td>目录服务</td>
+</tr>
+<tr>
+<td>49</td>
+<td>tacacs</td>
+<td>TAC Access Control System (TACACS)</td>
+<td>用于基于TCP&#x2F;IP验证和访问的访问控制系统（TACACS登录主机协议）</td>
+</tr>
+<tr>
+<td>53</td>
+<td>domain</td>
+<td>Domain Name Service(DNS)</td>
+<td>域名服务</td>
+</tr>
+<tr>
+<td>70</td>
+<td>gopher</td>
+<td>Gopher</td>
+<td>信息检索协议（互联网文档搜寻和检索）</td>
+</tr>
+<tr>
+<td>79</td>
+<td>finger</td>
+<td>Finger</td>
+<td>用于用户联系信息的Finger服务，查询远程主机在线用户等信息</td>
+</tr>
+<tr>
+<td>80</td>
+<td>www</td>
+<td>World Wide Web(HTTP)</td>
+<td>用于万维网（WWW）服务的超文本传输协议（HTTP），用于网页浏览</td>
+</tr>
+<tr>
+<td>101</td>
+<td>hostname</td>
+<td>NIC hostname server</td>
+<td>NIC机器上的主机名服务</td>
+</tr>
+<tr>
+<td>109</td>
+<td>pop2</td>
+<td>Post Office Protocol v2</td>
+<td>邮件协议-版本2</td>
+</tr>
+<tr>
+<td>110</td>
+<td>pop3</td>
+<td>Post Office Protocol v3</td>
+<td>邮件协议-版本3</td>
+</tr>
+<tr>
+<td>111</td>
+<td>sunrpc</td>
+<td>Sun Remote Procedure Call (RPC)</td>
+<td>SUN公司的远程过程调用（RPC）协议，用于远程命令执行，被网络文件系统（NFS）使用</td>
+</tr>
+<tr>
+<td>119</td>
+<td>nntp</td>
+<td>Network News Transport Protocol(NNTP)</td>
+<td>网络新闻传输协议，承载USENET通信</td>
+</tr>
+<tr>
+<td>179</td>
+<td>bgp</td>
+<td>Border Gateway Protocol (BGP)</td>
+<td>边界网关协议</td>
+</tr>
+<tr>
+<td>194</td>
+<td>irc</td>
+<td>Internet Relay Chat(IRC)</td>
+<td>互联网中继聊天（多线交谈协议）</td>
+</tr>
+<tr>
+<td>512</td>
+<td>exec</td>
+<td>Exec (rsh)</td>
+<td>用于对远程执行的进程进行验证</td>
+</tr>
+<tr>
+<td>513</td>
+<td>login</td>
+<td>Login (rlogin)</td>
+<td>远程登录</td>
+</tr>
+<tr>
+<td>514</td>
+<td>cmd</td>
+<td>Remote commands</td>
+<td>远程命令，不必登录的远程shell（rshell）和远程复制（rcp）</td>
+</tr>
+<tr>
+<td>515</td>
+<td>lpd</td>
+<td>Printer service</td>
+<td>打印机（lpr）假脱机</td>
+</tr>
+<tr>
+<td>517</td>
+<td>talk</td>
+<td>Talk</td>
+<td>远程对话服务和客户</td>
+</tr>
+<tr>
+<td>540</td>
+<td>uucp</td>
+<td>Unix-to-Unix Copy Program</td>
+<td>Unix到Unix复制服务</td>
+</tr>
+<tr>
+<td>543</td>
+<td>klogin</td>
+<td>Kerberos login</td>
+<td>Kerberos版本5 （v5）远程登录</td>
+</tr>
+<tr>
+<td>544</td>
+<td>kshell</td>
+<td>Kerberos shell</td>
+<td>Kerberos版本5 （v5）远程shell</td>
+</tr>
+</tbody></table>
+<p>常见UDP端口对应字符串</p>
+<table>
+<thead>
+<tr>
+<th>端口号</th>
+<th>字符串</th>
+<th>协议</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>echo</td>
+<td>Echo</td>
+<td>计算机命令</td>
+</tr>
+<tr>
+<td>9</td>
+<td>discard</td>
+<td>Discard</td>
+<td>用于连接测试的空服务</td>
+</tr>
+<tr>
+<td>37</td>
+<td>time</td>
+<td>Time</td>
+<td>时间协议</td>
+</tr>
+<tr>
+<td>42</td>
+<td>nameserver</td>
+<td>Host Name Server</td>
+<td>主机名服务</td>
+</tr>
+<tr>
+<td>53</td>
+<td>dns</td>
+<td>Domain Name Service (DNS)</td>
+<td>域名服务</td>
+</tr>
+<tr>
+<td>65</td>
+<td>tacacs-ds</td>
+<td>TACACS-Database Service</td>
+<td>TACACS数据库服务</td>
+</tr>
+<tr>
+<td>67</td>
+<td>bootps</td>
+<td>Bootstrap Protocol Server</td>
+<td>引导程序协议 （BOOTP）服务端， DHCP服务使用</td>
+</tr>
+<tr>
+<td>68</td>
+<td>bootpc</td>
+<td>Bootstrap Protocol Client</td>
+<td>引导程序协议 （BOOTP）客户端， DHCP客户使用</td>
+</tr>
+<tr>
+<td>69</td>
+<td>tftp</td>
+<td>Trivial File Transfer Protocol (TFTP)</td>
+<td>小文件传输协议</td>
+</tr>
+<tr>
+<td>90</td>
+<td>dnsix</td>
+<td>DNSIX Security Attribute Token Map</td>
+<td>DNSIX安全属性标记图</td>
+</tr>
+<tr>
+<td>111</td>
+<td>sunrpc</td>
+<td>SUN Remote Procedure Call (SUN RPC)</td>
+<td>SUN公司的远程过程调用（RPC）协议， 用于远程命令执行， 被网络文件系统（NFS）使用</td>
+</tr>
+<tr>
+<td>123</td>
+<td>ntp</td>
+<td>Network Time Protocol (NTP)</td>
+<td>网络时间协议，蠕虫病毒会利用</td>
+</tr>
+<tr>
+<td>137</td>
+<td>netbios-ns</td>
+<td>NETBIOS Name Service</td>
+<td>NETBIOS名称服务</td>
+</tr>
+<tr>
+<td>138</td>
+<td>netbios-dgm</td>
+<td>NETBIOS Datagram Service</td>
+<td>NETBIOS数据报服务</td>
+</tr>
+<tr>
+<td>139</td>
+<td>netbios-ssn</td>
+<td>NETBIOS Session Service</td>
+<td>NETBIOS会话服务</td>
+</tr>
+<tr>
+<td>161</td>
+<td>snmp</td>
+<td>SNMP</td>
+<td>简单网络管理协议</td>
+</tr>
+<tr>
+<td>162</td>
+<td>snmptrap</td>
+<td>SNMPTRAP</td>
+<td>SNMP陷阱</td>
+</tr>
+<tr>
+<td>177</td>
+<td>xdmcp</td>
+<td>X Display Manager Control Protocol (XDMCP)</td>
+<td>X显示管理器控制协议</td>
+</tr>
+<tr>
+<td>434</td>
+<td>mobilip-ag</td>
+<td>MobileIP-Agent</td>
+<td>移动IP代理</td>
+</tr>
+<tr>
+<td>435</td>
+<td>mobilip-mn</td>
+<td>MobileIP-MN</td>
+<td>移动IP管理</td>
+</tr>
+<tr>
+<td>512</td>
+<td>biff</td>
+<td>Mail notify</td>
+<td>异步邮件，可用来通知用户有邮件到达</td>
+</tr>
+<tr>
+<td>513</td>
+<td>who</td>
+<td>Who</td>
+<td>登录的用户列表</td>
+</tr>
+<tr>
+<td>514</td>
+<td>syslog</td>
+<td>Syslog</td>
+<td>UNIX系统日志服务</td>
+</tr>
+<tr>
+<td>517</td>
+<td>talk</td>
+<td>Talk</td>
+<td>远程对话服务器和客户端</td>
+</tr>
+<tr>
+<td>520</td>
+<td>rip</td>
+<td>Routing Information Protocol</td>
+<td>RIP路由协议</td>
+</tr>
+</tbody></table>
+<p>掩码说明</p>
+<p>IP地址通配符掩码与IP地址的反向子网掩码类似，也是一个32比特位的数字字符串，用于指示IP地址中的哪些位将被检查。各比特位中，“0”表示“检查相应的位”，“1”表示“不检查相应的位”，概括为一句话就是“检查0，忽略1”。但与IP地址子网掩码不同的是，子网掩码中的“0”和“1”要求必须连续，而通配符掩码中的“0”和“1”可以不连续。</p>
+<p>通配符掩码可以为0，相当于0.0.0.0，表示源&#x2F;目的地址为主机地址；也可以为255.255.255.255，表示任意IP地址，相当于指定<strong>any</strong>参数</p>
+<p>例如：</p>
+<p>匹配 192.168.1.0&#x2F;24 ，可以写为 192.168.1.0 0.0.0.255，也就是只检查前24个比特位</p>
+<p>实例：</p>
+<p>允许特定源、目的IP之间 3306 端口的TCP流量</p>
+<p>rule 5 permit tcp source 10.122.1.1 0 destination 172.16.1.1 0 destination-port eq 3306</p>
+<p>规则编号：rule 5</p>
+<p>策略：permit（允许）</p>
+<p>协议：TCP</p>
+<p>源地址：10.122.1.1</p>
+<p>源地址掩码：0  通配符掩码，0表示必须精确匹配源地址</p>
+<p>目标地址：172.16.1.1 </p>
+<p>目的地址掩码：0  通配符掩码，0表示必须精确匹配目标地址</p>
+<p>目标端口：eq（等于） 3306</p>
+<p>允许ICMP协议数据包通过</p>
+<p>rule 500 permit icmp</p>
+<p>允许ICMP Echo请求数据包通过</p>
+<p>rule 501 permit icmp icmp-type echo</p>
+<p>允许ICMP Echo Reply 响应数据包通过，ICMP Echo Reply 是对 ICMP Echo 请求的响应，用于确认网络连接和诊断网络延迟</p>
+<p>rule 502 permit icmp icmp-type echo-reply </p>
+<p>允许ICMP port-unreachable 数据包通过，即目标端口不可达时，主机会发送 ICMP port-unreachable 消息作为响应</p>
+<p>rule 503 permit icmp icmp-type port-unreachable </p>
+<p>允许ICMP ttl-exceeded 数据包通过，即数据包TTL（Time to Live）字段减到0时，路由器会丢弃该数据包，并向源主机发送ICMP ttl-exceeded数据包</p>
 
                 
               </div>
@@ -300,8 +705,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/life/" class="category-chain-item">life</a>
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/switch/" class="category-chain-item">switch</a>
+  
+  
+
   
 
       </span>
@@ -315,7 +727,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/life/" class="print-no-link">#life</a>
+        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
+      
+        <a href="/tags/switch/" class="print-no-link">#switch</a>
       
     </div>
   
@@ -327,8 +741,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>一万小时定律</div>
-      <div>https://10000hours6.github.io/2024/02/06/一万小时定律/</div>
+      <div>switch_rules</div>
+      <div>https://10000hours6.github.io/2024/02/26/yunwei/switch/switch_rules/</div>
     </div>
     <div class="license-meta">
       
@@ -340,7 +754,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月6日</div>
+          <div>2024年2月26日</div>
         </div>
       
       
@@ -365,9 +779,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/06/security/sectools/burpsuite/proxy_match_replace_chinese/" title="proxy_match_replace_chinese">
+                      <a href="/2024/02/28/yunwei/applications/docker/docker_tips/" title="docker_tips">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">proxy_match_replace_chinese</span>
+                        <span class="hidden-mobile">docker_tips</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -375,8 +789,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/06/network/dns/dnsip/" title="dnsip">
-                        <span class="hidden-mobile">dnsip</span>
+                      <a href="/2024/02/21/security/secvulns/alibaba%20Sentinel/alibaba_Sentinel_base/" title="alibaba_Sentinel_base">
+                        <span class="hidden-mobile">alibaba_Sentinel_base</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
