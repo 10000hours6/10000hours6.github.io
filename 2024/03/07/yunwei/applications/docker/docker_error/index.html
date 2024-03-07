@@ -16,21 +16,24 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="iotop">
-<meta property="og:url" content="https://10000hours6.github.io/2024/03/04/yunwei/commands/iotop/index.html">
+    <meta name="description" content="docker pull errorimage name error12(base) root@localhost:~# docker pull gitlab-ce&#x2F;gitlab-ce:14.9.1Error response from daemon: pull access denied for gitlab-ce&#x2F;gitlab-ce, repository does not exist or">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker_error">
+<meta property="og:url" content="https://10000hours6.github.io/2024/03/07/yunwei/applications/docker/docker_error/index.html">
 <meta property="og:site_name" content="10000hours">
+<meta property="og:description" content="docker pull errorimage name error12(base) root@localhost:~# docker pull gitlab-ce&#x2F;gitlab-ce:14.9.1Error response from daemon: pull access denied for gitlab-ce&#x2F;gitlab-ce, repository does not exist or">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-03T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-04T03:30:40.831Z">
+<meta property="article:published_time" content="2024-03-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-07T13:56:26.964Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="yunwei">
-<meta property="article:tag" content="commands">
+<meta property="article:tag" content="applications">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>iotop - 10000hours</title>
+  <title>docker_error - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="iotop"></span>
+            <span id="subtitle" data-typed-text="docker_error"></span>
           
         </div>
 
@@ -207,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-04 00:00" pubdate>
-          2024年3月4日 凌晨
+        <time datetime="2024-03-07 00:00" pubdate>
+          2024年3月7日 凌晨
         </time>
       </span>
     
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          134 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -267,12 +270,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">iotop</h1>
+            <h1 id="seo-header">docker_error</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-03-04T11:30:40+08:00
+                    本文最后更新于 2024-03-07T21:56:26+08:00
                   
                   
 
@@ -283,6 +286,20 @@
               <div class="markdown-body">
                 
                 <span id="more"></span>
+
+<h1 id="docker-pull-error"><a href="#docker-pull-error" class="headerlink" title="docker pull error"></a>docker pull error</h1><h2 id="image-name-error"><a href="#image-name-error" class="headerlink" title="image name error"></a>image name error</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs subunit">(base) root@localhost:~# docker pull gitlab-ce/gitlab-ce:14.9.1<br><span class="hljs-keyword">Error </span>response from daemon: pull access denied for gitlab-ce/gitlab-ce, repository does not exist or may require &#x27;docker login&#x27;: denied: requested access to the resource is denied<br></code></pre></td></tr></table></figure>
+
+<p>因为镜像名称写错导致报错，正确镜像名称gitlab&#x2F;gitlab-ce</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs elixir">(base) root<span class="hljs-variable">@localhost</span><span class="hljs-symbol">:~</span><span class="hljs-comment"># docker search gitlab-ce</span><br><span class="hljs-title class_">NAME</span>                                     <span class="hljs-title class_">DESCRIPTION</span>                                     <span class="hljs-title class_">STARS</span>     <span class="hljs-title class_">OFFICIAL</span>   <span class="hljs-title class_">AUTOMATED</span><br>gitlab/gitlab-ce                         <span class="hljs-title class_">GitLab</span> <span class="hljs-title class_">Community</span> <span class="hljs-title class_">Edition</span> docker image based …   <span class="hljs-number">3592</span>                 [<span class="hljs-title class_">OK</span>]<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="image-tag-error"><a href="#image-tag-error" class="headerlink" title="image tag error"></a>image tag error</h2><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs subunit">(base) root@localhost:~# docker pull gitlab/gitlab-ce:14.9.1<br><span class="hljs-keyword">Error </span>response from daemon: manifest for gitlab/gitlab-ce:14.9.1 not found: manifest unknown: manifest unknown<br><br></code></pre></td></tr></table></figure>
+
+<p>因为镜像版本号不对导致报错，需要正确版本号</p>
+<p>如何确认正常版本号</p>
+<p>登录docker hub <a target="_blank" rel="noopener" href="https://hub.docker.com/u/library">https://hub.docker.com/u/library</a> 搜索对应的镜像</p>
+<p>复制提供的命令即可正确下载</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ichen820/article/details/114536044">https://blog.csdn.net/ichen820/article/details/114536044</a></p>
+
                 
               </div>
             
@@ -305,8 +322,15 @@
   
     <span>></span>
     
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
+  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/applications/docker/" class="category-chain-item">docker</a>
+  
+  
+
   
 
   
@@ -324,7 +348,9 @@
       
         <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
       
-        <a href="/tags/commands/" class="print-no-link">#commands</a>
+        <a href="/tags/applications/" class="print-no-link">#applications</a>
+      
+        <a href="/tags/docker/" class="print-no-link">#docker</a>
       
     </div>
   
@@ -336,8 +362,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>iotop</div>
-      <div>https://10000hours6.github.io/2024/03/04/yunwei/commands/iotop/</div>
+      <div>docker_error</div>
+      <div>https://10000hours6.github.io/2024/03/07/yunwei/applications/docker/docker_error/</div>
     </div>
     <div class="license-meta">
       
@@ -349,7 +375,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月4日</div>
+          <div>2024年3月7日</div>
         </div>
       
       
@@ -374,9 +400,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/07/yunwei/applications/docker/docker_error/" title="docker_error">
+                      <a href="/2024/03/07/yunwei/applications/docker/docker_compose/" title="docker_compose">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">docker_error</span>
+                        <span class="hidden-mobile">docker_compose</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -384,8 +410,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/04/security/secvulns/ftp/ftp_weak_password/" title="ftp_weak_password">
-                        <span class="hidden-mobile">ftp_weak_password</span>
+                      <a href="/2024/03/04/yunwei/commands/iotop/" title="iotop">
+                        <span class="hidden-mobile">iotop</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
