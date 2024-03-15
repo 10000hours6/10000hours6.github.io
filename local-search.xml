@@ -4,6 +4,128 @@
   
   
   <entry>
+    <title>curl_base</title>
+    <link href="/2024/03/15/yunwei/applications/curl/curl_base/"/>
+    <url>/2024/03/15/yunwei/applications/curl/curl_base/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>curl 是一个免费的开源工具，用于从或向服务器传输数据。它支持多种操作系统，如 Windows、Ubuntu、RHEL、CentOS、Fedora 和 OpenSUSE。</p><h2 id="功能提供"><a href="#功能提供" class="headerlink" title="功能提供"></a>功能提供</h2><p>curl 所有的传输功能均为 libcurl 库提供</p><h2 id="语法参数"><a href="#语法参数" class="headerlink" title="语法参数"></a>语法参数</h2><h3 id="–insecure"><a href="#–insecure" class="headerlink" title="–insecure"></a>–insecure</h3><p>忽略HTTPS证书校验</p><h3 id="v"><a href="#v" class="headerlink" title="-v"></a>-v</h3><p>显示完整通信过程，端口连接，request请求</p><figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs gams">root@iZbp1191gh7vw52537lyxrZ:~# curl https:<span class="hljs-comment">//10000hours.github.io -v</span><br><span class="hljs-comment">*   Trying 185.199.108.153:443...</span><br><span class="hljs-comment">*   Trying 2606:50c0:8000::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8000::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8003::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8003::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8002::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8002::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8001::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8001::153: Network is unreachable</span><br><span class="hljs-comment">* Connected to 10000hours.github.io (185.199.108.153) port 443 (#0)</span><br><span class="hljs-comment">* ALPN, offering h2</span><br><span class="hljs-comment">* ALPN, offering http/1.1</span><br><span class="hljs-comment">*  CAfile: /etc/ssl/certs/ca-certificates.crt</span><br><span class="hljs-comment">*  CApath: /etc/ssl/certs</span><br><span class="hljs-comment">* TLSv1.0 (OUT), TLS header, Certificate Status (22):</span><br><span class="hljs-comment">* TLSv1.3 (OUT), TLS handshake, Client hello (1):</span><br><span class="hljs-comment">* TLSv1.2 (IN), TLS header, Certificate Status (22):</span><br></code></pre></td></tr></table></figure><h3 id="H"><a href="#H" class="headerlink" title="-H"></a>-H</h3><p>设置请求header</p><p>-H “X-Stream-Protocol-Version: <a href="http://v2.channel.k8s.io/">v2.channel.k8s.io</a>“</p><h3 id="X"><a href="#X" class="headerlink" title="-X"></a>-X</h3><p>指定协议，默认GET</p><p>-X POST</p><h3 id="d"><a href="#d" class="headerlink" title="-d"></a>-d</h3><p>指定参数 -d ‘key&#x3D;value’，多个参数，多个-d</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">curl -d <span class="hljs-string">&quot;name=curl&quot;</span> https:<span class="hljs-comment">//example.com</span><br>curl -d <span class="hljs-string">&quot;name=curl&quot;</span> -d <span class="hljs-string">&quot;tool=cmdline&quot;</span> https:<span class="hljs-comment">//example.com</span><br></code></pre></td></tr></table></figure><h3 id="G"><a href="#G" class="headerlink" title="-G"></a>-G</h3><p>指定发送GET请求</p><h3 id="k"><a href="#k" class="headerlink" title="-k"></a>-k</h3><p>忽略HTTPS证书校验</p><h3 id="s"><a href="#s" class="headerlink" title="-s"></a>-s</h3><p>静默模式，不输出任何信息</p><h3 id="S"><a href="#S" class="headerlink" title="-S"></a>-S</h3><p>显示错误信息</p><h3 id="L"><a href="#L" class="headerlink" title="-L"></a>-L</h3><p>跟随重定向</p><h3 id="e"><a href="#e" class="headerlink" title="-e"></a>-e</h3><p>设置referer</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">curl -e <span class="hljs-string">&quot;https://example.com&quot;</span> http:<span class="hljs-comment">//www.example.com</span><br></code></pre></td></tr></table></figure><h2 id="支持的协议"><a href="#支持的协议" class="headerlink" title="支持的协议"></a>支持的协议</h2><h3 id="DICT"><a href="#DICT" class="headerlink" title="DICT"></a>DICT</h3><p>Lets you lookup words using online dictionaries.</p><p>允许您使用在线词典查找单词。</p><h3 id="FILE"><a href="#FILE" class="headerlink" title="FILE"></a>FILE</h3><p>Read or write local files. curl does not support accessing file:&#x2F;&#x2F; URL remotely, but when running on Microsoft Windows using the native UNC approach will work.</p><p>读取或写入本地文件。curl不支持远程访问file:&#x2F;&#x2F; URL，但在Microsoft Windows上运行时，使用本机UNC方法可以工作。</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir">root<span class="hljs-variable">@iZbp1191gh7vw52537lyxrZ</span><span class="hljs-symbol">:~</span><span class="hljs-comment"># curl file:///root/1.txt</span><br><span class="hljs-number">111111</span><br></code></pre></td></tr></table></figure><h3 id="FTP-FTPS"><a href="#FTP-FTPS" class="headerlink" title="FTP FTPS"></a>FTP FTPS</h3><p>curl supports the File Transfer Protocol with a lot of tweaks and levers. With or without using TLS.</p><p>curl支持使用文件传输协议，并具有许多调整和杠杆作用。无论是否使用TLS，都可以使用它。</p><h4 id="从FTP服务器下载文件"><a href="#从FTP服务器下载文件" class="headerlink" title="从FTP服务器下载文件"></a>从FTP服务器下载文件</h4><p>curl <a href="ftp://username/">ftp://username</a>:<a href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;download&#x2F;file.txt -o local_file.txt</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs elixir">➜  /tmp curl <span class="hljs-symbol">ftp:</span>//<span class="hljs-symbol">hot:</span><span class="hljs-number">123456</span><span class="hljs-variable">@10</span>.<span class="hljs-number">2.2</span>.<span class="hljs-number">2</span>/hotcal.tar.gz -o local_file.txt<br>  % <span class="hljs-title class_">Total</span>    % <span class="hljs-title class_">Received</span> % <span class="hljs-title class_">Xferd</span>  <span class="hljs-title class_">Average</span> <span class="hljs-title class_">Speed</span>   <span class="hljs-title class_">Time</span>    <span class="hljs-title class_">Time</span>     <span class="hljs-title class_">Time</span>  <span class="hljs-title class_">Current</span><br>                                 <span class="hljs-title class_">Dload</span>  <span class="hljs-title class_">Upload</span>   <span class="hljs-title class_">Total</span>   <span class="hljs-title class_">Spent</span>    <span class="hljs-title class_">Left</span>  <span class="hljs-title class_">Speed</span><br><span class="hljs-number">100</span> <span class="hljs-number">95172</span>  <span class="hljs-number">100</span> <span class="hljs-number">95172</span>    <span class="hljs-number">0</span>     <span class="hljs-number">0</span>   <span class="hljs-number">484</span>k      <span class="hljs-number">0</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span>  <span class="hljs-number">491</span>k<br><br>➜  /tmp ls -la local_file.txt<br>-rw-r--r--  <span class="hljs-number">1</span> admin  wheel  <span class="hljs-number">95172</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">17</span><span class="hljs-symbol">:</span><span class="hljs-number">43</span> local_file.txt<br></code></pre></td></tr></table></figure><h4 id="上传文件到FTP服务器"><a href="#上传文件到FTP服务器" class="headerlink" title="上传文件到FTP服务器"></a>上传文件到FTP服务器</h4><p>curl -T “file.txt” <a href="ftp://username/">ftp://username</a>:<a href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;upload&#x2F;</p><h4 id="被动模式进行FTP传输"><a href="#被动模式进行FTP传输" class="headerlink" title="被动模式进行FTP传输"></a>被动模式进行FTP传输</h4><p>被动模式用于解决某些情况下，主动模式失败的情况</p><p>curl -e “<a href="ftp://ftp.example.com/">ftp://ftp.example.com</a>“ <a href="ftp://username/">ftp://username</a>:<a href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;download&#x2F;file.txt -o local_file.txt</p><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs elixir">➜  /tmp curl -e <span class="hljs-string">&quot;ftp://10.2.2.2&quot;</span> <span class="hljs-symbol">ftp:</span>//<span class="hljs-symbol">hot:</span><span class="hljs-number">123456</span><span class="hljs-variable">@10</span>.<span class="hljs-number">2.2</span>.<span class="hljs-number">2</span>/hotcal.tar.gz -o local_file.txt <br>  % <span class="hljs-title class_">Total</span>    % <span class="hljs-title class_">Received</span> % <span class="hljs-title class_">Xferd</span>  <span class="hljs-title class_">Average</span> <span class="hljs-title class_">Speed</span>   <span class="hljs-title class_">Time</span>    <span class="hljs-title class_">Time</span>     <span class="hljs-title class_">Time</span>  <span class="hljs-title class_">Current</span><br>                                 <span class="hljs-title class_">Dload</span>  <span class="hljs-title class_">Upload</span>   <span class="hljs-title class_">Total</span>   <span class="hljs-title class_">Spent</span>    <span class="hljs-title class_">Left</span>  <span class="hljs-title class_">Speed</span><br><span class="hljs-number">100</span> <span class="hljs-number">95172</span>  <span class="hljs-number">100</span> <span class="hljs-number">95172</span>    <span class="hljs-number">0</span>     <span class="hljs-number">0</span>   <span class="hljs-number">518</span>k      <span class="hljs-number">0</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span>  <span class="hljs-number">537</span>k<br>➜  /tmp <br>➜  /tmp ls -lat local_file.txt <br>-rw-r--r--  <span class="hljs-number">1</span> admin  wheel  <span class="hljs-number">95172</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">19</span><span class="hljs-symbol">:</span><span class="hljs-number">21</span> local_file.txt<br></code></pre></td></tr></table></figure><h3 id="GOPHER-GOPHERS"><a href="#GOPHER-GOPHERS" class="headerlink" title="GOPHER GOPHERS"></a>GOPHER GOPHERS</h3><p>Retrieve files.</p><p>检索文件</p><h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP HTTPS"></a>HTTP HTTPS</h3><p>curl supports HTTP with numerous options and variations. It can speak HTTP version 0.9, 1.0, 1.1, 2 and 3 depending on build options and the correct command line options.</p><p>curl通过许多选项和变体支持HTTP。它可以使用HTTP版本0.9、1.0、1.1、2和3，具体取决于构建选项和正确的命令行选项。</p><h3 id="IMAP-IMAPS"><a href="#IMAP-IMAPS" class="headerlink" title="IMAP IMAPS"></a>IMAP IMAPS</h3><p>Using the mail reading protocol, curl can “download” emails for you. With or without using TLS.</p><p>使用邮件读取协议，curl可以为您“下载”电子邮件。使用或不使用TLS。</p><h3 id="LDAP-LDAPS-MQTT-POP3-POP3S-RTMP-RTMPS-RTSP-SCP-SFTP-SMB-SMBS-SMTP-SMTPS-TELNET-or-TFTP"><a href="#LDAP-LDAPS-MQTT-POP3-POP3S-RTMP-RTMPS-RTSP-SCP-SFTP-SMB-SMBS-SMTP-SMTPS-TELNET-or-TFTP" class="headerlink" title="LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET or TFTP"></a>LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET or TFTP</h3><h2 id="官方链接"><a href="#官方链接" class="headerlink" title="官方链接"></a>官方链接</h2><p><a href="https://curl.se/libcurl/">https://curl.se/libcurl/</a></p><p><a href="https://github.com/curl/curl">https://github.com/curl/curl</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>application</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>application</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git_base</title>
+    <link href="/2024/03/15/yunwei/applications/git/git_base/"/>
+    <url>/2024/03/15/yunwei/applications/git/git_base/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Git 是一个开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。</p><p>Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p><p>Git 与常用的版本控制工具 CVS, Subversion 等不同，它采用了分布式版本库的方式，不必服务器端软件支持。</p><h1 id="command"><a href="#command" class="headerlink" title="command"></a>command</h1><h2 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h2><h3 id="git-config-l"><a href="#git-config-l" class="headerlink" title="git config -l"></a>git config -l</h3><p>返回所有配置信息</p><p>返回值为key&#x3D;value格式</p><figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs perl">[root@localhost software]<span class="hljs-comment"># git config --global -l</span><br>http.https:<span class="hljs-regexp">//gi</span>thub.com.proxy=socks5:<span class="hljs-regexp">//</span><span class="hljs-number">10.222</span>.<span class="hljs-number">28.7</span>:<span class="hljs-number">1081</span><br></code></pre></td></tr></table></figure><h3 id="git-config-get-keyname"><a href="#git-config-get-keyname" class="headerlink" title="git config get keyname"></a>git config get keyname</h3><p>返回指定key的value</p><figure class="highlight dart"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dart">[root<span class="hljs-meta">@localhost</span> software]# git config --global --<span class="hljs-keyword">get</span> http.https:<span class="hljs-comment">//github.com.proxy</span><br>socks5:<span class="hljs-comment">//10.222.28.7:1081</span><br></code></pre></td></tr></table></figure><h3 id="git-config-–global-–unset-keyname"><a href="#git-config-–global-–unset-keyname" class="headerlink" title="git config –global –unset keyname"></a>git config –global –unset keyname</h3><p>取消指定key的配置</p><figure class="highlight hsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs hsp">[root@localhost software]<span class="hljs-meta"># git config --<span class="hljs-keyword">global</span> --unset http.https:<span class="hljs-comment">//github.com.proxy</span></span><br>[root@localhost software]<span class="hljs-meta"># git config --<span class="hljs-keyword">global</span> --get http.https:<span class="hljs-comment">//github.com.proxy</span></span><br></code></pre></td></tr></table></figure><h2 id="清除本地缓存"><a href="#清除本地缓存" class="headerlink" title="清除本地缓存"></a>清除本地缓存</h2><p><strong>git rm -r –cached .</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">➜  studynote git:(main) ✗ git <span class="hljs-built_in">rm</span> -r --cached .<br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;.gitignore&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;README.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangBase.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangError.md&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>application</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>application</tag>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git_base</title>
+    <link href="/2024/03/15/yunwei/applications/git/git_error/"/>
+    <url>/2024/03/15/yunwei/applications/git/git_error/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对日常使用git过程中遇到的问题及解决方案记录总结</p><h2 id="CentOS-无法-git-clone"><a href="#CentOS-无法-git-clone" class="headerlink" title="CentOS 无法 git clone"></a>CentOS 无法 git clone</h2><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>1、设置socket5代理</p><p>git config –global http.<a href="https://github.com.proxy/">https://github.com.proxy</a> socks5:&#x2F;&#x2F;10.222.28.7:1081</p><p>2、取消代理</p><p>git config –global –unset http.proxy git config –global –unset https.proxy</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p>[1] 设置代理解决github被墙 TjFish 2022-03-15 21:57</p><p>链接：<a href="https://zhuanlan.zhihu.com/p/481574024">https://zhuanlan.zhihu.com/p/481574024</a></p><h2 id="上传文件过大"><a href="#上传文件过大" class="headerlink" title="上传文件过大"></a>上传文件过大</h2><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a><strong>报错信息</strong></h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">➜  studynote git:(main) git push <br>枚举对象中: <span class="hljs-number">834</span>, 完成.<br>对象计数中: <span class="hljs-number">100</span>% (<span class="hljs-number">834</span>/<span class="hljs-number">834</span>), 完成.<br>使用 <span class="hljs-number">8</span> 个线程进行压缩<br>压缩对象中: <span class="hljs-number">100</span>% (<span class="hljs-number">829</span>/<span class="hljs-number">829</span>), 完成.<br>写入对象中: <span class="hljs-number">100</span>% (<span class="hljs-number">831</span>/<span class="hljs-number">831</span>), <span class="hljs-number">467.85</span> MiB | <span class="hljs-number">1.09</span> MiB/s, 完成.<br>总共 <span class="hljs-number">831</span>（差异 <span class="hljs-number">13</span>），复用 <span class="hljs-number">0</span>（差异 <span class="hljs-number">0</span>），包复用 <span class="hljs-number">0</span><br>remote: Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">13</span>/<span class="hljs-number">13</span>), done.<br>remote: <span class="hljs-literal">error</span>: Trace: b0be7add97db98c12a70ff80495a417f07375427385a833f1e5978a2830b3fb7<br>remote: <span class="hljs-literal">error</span>: See https://gh.io/lfs <span class="hljs-keyword">for</span> more information.<br>remote: <span class="hljs-literal">error</span>: <span class="hljs-keyword">File</span> security/secResources/PPT/FireShot Capture <span class="hljs-number">001</span> - 华为Anti-DDoS方案技术白皮书-V600R21C10 - 华为企业业务 - e.huawei.com.pdf <span class="hljs-keyword">is</span> <span class="hljs-number">309.68</span> MB; this exceeds GitHub<span class="hljs-symbol">&#x27;s</span> <span class="hljs-keyword">file</span> size limit <span class="hljs-keyword">of</span> <span class="hljs-number">100.00</span> MB<br>remote: <span class="hljs-literal">error</span>: GH001: Large files detected. You may want <span class="hljs-keyword">to</span> try Git Large <span class="hljs-keyword">File</span> Storage - https://git-lfs.github.com.<br><span class="hljs-keyword">To</span> ncgithub.com:C0isini/studynote.git<br> ! [remote rejected] main -&gt; main (pre-receive hook declined)<br>错误：无法推送一些引用到 <span class="hljs-symbol">&#x27;ncgithub</span>.com:C0isini/studynote.git&#x27;<br></code></pre></td></tr></table></figure><p>清除本地缓存</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">➜  studynote git:(main) ✗ git <span class="hljs-built_in">rm</span> -r --cached .<br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;.gitignore&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;README.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangBase.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangError.md&#x27;</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>application</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>application</tag>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>git_sec</title>
+    <link href="/2024/03/15/yunwei/applications/git/git_sec/"/>
+    <url>/2024/03/15/yunwei/applications/git/git_sec/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>github 为了安全性需要禁止上传敏感内容，所以需要 .gitignore 文件来设置哪些文件不需要上传进行版本管理</p><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-string">/dir/</span> 过滤整个文件夹<br>*<span class="hljs-string">.txt</span> 过滤所有<span class="hljs-string">.txt</span>文件<br><span class="hljs-string">/dir/config.php</span> 过滤具体文件<br></code></pre></td></tr></table></figure><p>说明：</p><p>过滤掉的文件不会上传，也就是说不会进行版本管理，本地还是会有的</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">/ 开头表示目录<br>* 通配多个字符<br>? 通配单个字符<br><span class="hljs-string">[]</span> 包含单个字符的匹配列表<br>! 表示不忽略匹配的文件或者目录，也就是会上传<br></code></pre></td></tr></table></figure><p>规则匹配策略：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">自上到下进行匹配<br></code></pre></td></tr></table></figure><h2 id="错误总结"><a href="#错误总结" class="headerlink" title="错误总结"></a>错误总结</h2><p>1、不生效原因</p><p>可能是已经在缓存中，清除缓存，重新上传</p><p>git rm -r –cached .</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>application</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>application</tag>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>ubuntu_static_ip</title>
     <link href="/2024/03/14/network/ip/ubuntu_static_ip/"/>
     <url>/2024/03/14/network/ip/ubuntu_static_ip/</url>
@@ -69,35 +191,6 @@
     <url>/2024/03/14/dev/golang/golang_error/</url>
     
     <content type="html"><![CDATA[<span id="more"></span><h2 id="runtime-main-main·f-function-main-is-undeclared-in-the-main-package"><a href="#runtime-main-main·f-function-main-is-undeclared-in-the-main-package" class="headerlink" title="runtime.main_main·f: function main is undeclared in the main package"></a>runtime.main_main·f: function main is undeclared in the main package</h2><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ada">➜  gocode go run printgo.go<br># command-line-arguments<br>runtime.main_main·f: <span class="hljs-keyword">function</span> <span class="hljs-title">main</span> <span class="hljs-keyword">is</span> undeclared <span class="hljs-keyword">in</span> the main <span class="hljs-keyword">package</span><br><span class="hljs-title"><span class="hljs-keyword">package</span> main</span><br><br>import <span class="hljs-string">&quot;fmt&quot;</span><br><br>func printtest() &#123;<br>fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure><h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>Go程序中找不到主函数（main函数）的定义或声明。在Go中，每个可执行程序都必须包含一个名为<code>main</code>的包，并在该包中包含一个名为<code>main</code>的函数。这个<code>main</code>函数是程序的入口点，它会被自动调用。</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加main函数</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">printtest</span><span class="hljs-params">()</span></span> &#123;<br>fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>printtest()<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>dev</category>
-      
-      <category>golang</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>dev</tag>
-      
-      <tag>golang</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>golang_error</title>
-    <link href="/2024/03/14/yunwei/applications/curl/curl_base/"/>
-    <url>/2024/03/14/yunwei/applications/curl/curl_base/</url>
-    
-    <content type="html"><![CDATA[<span id="more"></span>]]></content>
     
     
     <categories>

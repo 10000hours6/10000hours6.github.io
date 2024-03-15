@@ -16,23 +16,24 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="runtime.main_main·f: function main is undeclared in the main package报错信息12345678910➜  gocode go run printgo.go# command-line-argumentsruntime.main_main·f: function main is undeclared in the main pac">
+    <meta name="description" content="前言对日常使用git过程中遇到的问题及解决方案记录总结 CentOS 无法 git clone解决方案1、设置socket5代理 git config –global http.https:&#x2F;&#x2F;github.com.proxy socks5:&#x2F;&#x2F;10.222.28.7:1081 2、取消代理 git config –global –unset http.proxy git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="golang_error">
-<meta property="og:url" content="https://10000hours6.github.io/2024/03/14/dev/golang/golang_error/index.html">
+<meta property="og:title" content="git_base">
+<meta property="og:url" content="https://10000hours6.github.io/2024/03/15/yunwei/applications/git/git_error/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="runtime.main_main·f: function main is undeclared in the main package报错信息12345678910➜  gocode go run printgo.go# command-line-argumentsruntime.main_main·f: function main is undeclared in the main pac">
+<meta property="og:description" content="前言对日常使用git过程中遇到的问题及解决方案记录总结 CentOS 无法 git clone解决方案1、设置socket5代理 git config –global http.https:&#x2F;&#x2F;github.com.proxy socks5:&#x2F;&#x2F;10.222.28.7:1081 2、取消代理 git config –global –unset http.proxy git">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-14T02:12:49.985Z">
+<meta property="article:published_time" content="2024-03-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-15T01:50:02.516Z">
 <meta property="article:author" content="10000hours">
-<meta property="article:tag" content="dev">
-<meta property="article:tag" content="golang">
+<meta property="article:tag" content="yunwei">
+<meta property="article:tag" content="application">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>golang_error - 10000hours</title>
+  <title>git_base - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="golang_error"></span>
+            <span id="subtitle" data-typed-text="git_base"></span>
           
         </div>
 
@@ -209,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-14 00:00" pubdate>
-          2024年3月14日 凌晨
+        <time datetime="2024-03-15 00:00" pubdate>
+          2024年3月15日 凌晨
         </time>
       </span>
     
@@ -221,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          130 字
+          286 字
         
       </span>
     
@@ -232,7 +233,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -269,12 +270,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">golang_error</h1>
+            <h1 id="seo-header">git_base</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-03-14T10:12:49+08:00
+                    本文最后更新于 2024-03-15T09:50:02+08:00
                   
                   
 
@@ -286,11 +287,19 @@
                 
                 <span id="more"></span>
 
-<h2 id="runtime-main-main·f-function-main-is-undeclared-in-the-main-package"><a href="#runtime-main-main·f-function-main-is-undeclared-in-the-main-package" class="headerlink" title="runtime.main_main·f: function main is undeclared in the main package"></a>runtime.main_main·f: function main is undeclared in the main package</h2><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ada">➜  gocode go run printgo.go<br># command-line-arguments<br>runtime.main_main·f: <span class="hljs-keyword">function</span> <span class="hljs-title">main</span> <span class="hljs-keyword">is</span> undeclared <span class="hljs-keyword">in</span> the main <span class="hljs-keyword">package</span><br><span class="hljs-title"><span class="hljs-keyword">package</span> main</span><br><br>import <span class="hljs-string">&quot;fmt&quot;</span><br><br>func printtest() &#123;<br>	fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对日常使用git过程中遇到的问题及解决方案记录总结</p>
+<h2 id="CentOS-无法-git-clone"><a href="#CentOS-无法-git-clone" class="headerlink" title="CentOS 无法 git clone"></a>CentOS 无法 git clone</h2><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>1、设置socket5代理</p>
+<p>git config –global http.<a target="_blank" rel="noopener" href="https://github.com.proxy/">https://github.com.proxy</a> socks5:&#x2F;&#x2F;10.222.28.7:1081</p>
+<p>2、取消代理</p>
+<p>git config –global –unset http.proxy git config –global –unset https.proxy</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p>[1] 设置代理解决github被墙 TjFish 2022-03-15 21:57</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/481574024">https://zhuanlan.zhihu.com/p/481574024</a></p>
+<h2 id="上传文件过大"><a href="#上传文件过大" class="headerlink" title="上传文件过大"></a>上传文件过大</h2><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a><strong>报错信息</strong></h3><figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs vhdl">➜  studynote git:(main) git push <br>枚举对象中: <span class="hljs-number">834</span>, 完成.<br>对象计数中: <span class="hljs-number">100</span>% (<span class="hljs-number">834</span>/<span class="hljs-number">834</span>), 完成.<br>使用 <span class="hljs-number">8</span> 个线程进行压缩<br>压缩对象中: <span class="hljs-number">100</span>% (<span class="hljs-number">829</span>/<span class="hljs-number">829</span>), 完成.<br>写入对象中: <span class="hljs-number">100</span>% (<span class="hljs-number">831</span>/<span class="hljs-number">831</span>), <span class="hljs-number">467.85</span> MiB | <span class="hljs-number">1.09</span> MiB/s, 完成.<br>总共 <span class="hljs-number">831</span>（差异 <span class="hljs-number">13</span>），复用 <span class="hljs-number">0</span>（差异 <span class="hljs-number">0</span>），包复用 <span class="hljs-number">0</span><br>remote: Resolving deltas: <span class="hljs-number">100</span>% (<span class="hljs-number">13</span>/<span class="hljs-number">13</span>), done.<br>remote: <span class="hljs-literal">error</span>: Trace: b0be7add97db98c12a70ff80495a417f07375427385a833f1e5978a2830b3fb7<br>remote: <span class="hljs-literal">error</span>: See https://gh.io/lfs <span class="hljs-keyword">for</span> more information.<br>remote: <span class="hljs-literal">error</span>: <span class="hljs-keyword">File</span> security/secResources/PPT/FireShot Capture <span class="hljs-number">001</span> - 华为Anti-DDoS方案技术白皮书-V600R21C10 - 华为企业业务 - e.huawei.com.pdf <span class="hljs-keyword">is</span> <span class="hljs-number">309.68</span> MB; this exceeds GitHub<span class="hljs-symbol">&#x27;s</span> <span class="hljs-keyword">file</span> size limit <span class="hljs-keyword">of</span> <span class="hljs-number">100.00</span> MB<br>remote: <span class="hljs-literal">error</span>: GH001: Large files detected. You may want <span class="hljs-keyword">to</span> try Git Large <span class="hljs-keyword">File</span> Storage - https://git-lfs.github.com.<br><span class="hljs-keyword">To</span> ncgithub.com:C0isini/studynote.git<br> ! [remote rejected] main -&gt; main (pre-receive hook declined)<br>错误：无法推送一些引用到 <span class="hljs-symbol">&#x27;ncgithub</span>.com:C0isini/studynote.git&#x27;<br></code></pre></td></tr></table></figure>
 
-<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>Go程序中找不到主函数（main函数）的定义或声明。在Go中，每个可执行程序都必须包含一个名为<code>main</code>的包，并在该包中包含一个名为<code>main</code>的函数。这个<code>main</code>函数是程序的入口点，它会被自动调用。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加main函数</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">printtest</span><span class="hljs-params">()</span></span> &#123;<br>	fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>	printtest()<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>清除本地缓存</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">➜  studynote git:(main) ✗ git <span class="hljs-built_in">rm</span> -r --cached .<br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;.gitignore&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;README.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangBase.md&#x27;</span><br><span class="hljs-built_in">rm</span> <span class="hljs-string">&#x27;dev/golang/golangError.md&#x27;</span><br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
@@ -308,12 +317,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/dev/" class="category-chain-item">dev</a>
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
   
   
     <span>></span>
     
-  <a href="/categories/dev/golang/" class="category-chain-item">golang</a>
+  <a href="/categories/yunwei/application/" class="category-chain-item">application</a>
   
   
 
@@ -330,9 +339,11 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/dev/" class="print-no-link">#dev</a>
+        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
       
-        <a href="/tags/golang/" class="print-no-link">#golang</a>
+        <a href="/tags/application/" class="print-no-link">#application</a>
+      
+        <a href="/tags/git/" class="print-no-link">#git</a>
       
     </div>
   
@@ -344,8 +355,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>golang_error</div>
-      <div>https://10000hours6.github.io/2024/03/14/dev/golang/golang_error/</div>
+      <div>git_base</div>
+      <div>https://10000hours6.github.io/2024/03/15/yunwei/applications/git/git_error/</div>
     </div>
     <div class="license-meta">
       
@@ -357,7 +368,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月14日</div>
+          <div>2024年3月15日</div>
         </div>
       
       
@@ -382,9 +393,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/14/dev/golang/golang_base/" title="golang_base">
+                      <a href="/2024/03/15/yunwei/applications/git/git_base/" title="git_base">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">golang_base</span>
+                        <span class="hidden-mobile">git_base</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -392,8 +403,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/14/security/secvulns/solr/solr_keys/" title="sorl_keys">
-                        <span class="hidden-mobile">sorl_keys</span>
+                      <a href="/2024/03/15/yunwei/applications/git/git_sec/" title="git_sec">
+                        <span class="hidden-mobile">git_sec</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

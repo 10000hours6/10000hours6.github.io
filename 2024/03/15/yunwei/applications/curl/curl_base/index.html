@@ -16,23 +16,23 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="runtime.main_main·f: function main is undeclared in the main package报错信息12345678910➜  gocode go run printgo.go# command-line-argumentsruntime.main_main·f: function main is undeclared in the main pac">
+    <meta name="description" content="前言curl 是一个免费的开源工具，用于从或向服务器传输数据。它支持多种操作系统，如 Windows、Ubuntu、RHEL、CentOS、Fedora 和 OpenSUSE。 功能提供curl 所有的传输功能均为 libcurl 库提供 语法参数–insecure忽略HTTPS证书校验 -v显示完整通信过程，端口连接，request请求 123456789101112131415161718">
 <meta property="og:type" content="article">
-<meta property="og:title" content="golang_error">
-<meta property="og:url" content="https://10000hours6.github.io/2024/03/14/dev/golang/golang_error/index.html">
+<meta property="og:title" content="curl_base">
+<meta property="og:url" content="https://10000hours6.github.io/2024/03/15/yunwei/applications/curl/curl_base/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="runtime.main_main·f: function main is undeclared in the main package报错信息12345678910➜  gocode go run printgo.go# command-line-argumentsruntime.main_main·f: function main is undeclared in the main pac">
+<meta property="og:description" content="前言curl 是一个免费的开源工具，用于从或向服务器传输数据。它支持多种操作系统，如 Windows、Ubuntu、RHEL、CentOS、Fedora 和 OpenSUSE。 功能提供curl 所有的传输功能均为 libcurl 库提供 语法参数–insecure忽略HTTPS证书校验 -v显示完整通信过程，端口连接，request请求 123456789101112131415161718">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-03-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-14T02:12:49.985Z">
+<meta property="article:published_time" content="2024-03-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-15T01:41:07.125Z">
 <meta property="article:author" content="10000hours">
-<meta property="article:tag" content="dev">
-<meta property="article:tag" content="golang">
+<meta property="article:tag" content="yunwei">
+<meta property="article:tag" content="application">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>golang_error - 10000hours</title>
+  <title>curl_base - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="golang_error"></span>
+            <span id="subtitle" data-typed-text="curl_base"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-14 00:00" pubdate>
-          2024年3月14日 凌晨
+        <time datetime="2024-03-15 00:00" pubdate>
+          2024年3月15日 凌晨
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          130 字
+          663 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          2 分钟
+          6 分钟
         
       </span>
     
@@ -269,12 +269,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">golang_error</h1>
+            <h1 id="seo-header">curl_base</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-03-14T10:12:49+08:00
+                    本文最后更新于 2024-03-15T09:41:07+08:00
                   
                   
 
@@ -286,11 +286,54 @@
                 
                 <span id="more"></span>
 
-<h2 id="runtime-main-main·f-function-main-is-undeclared-in-the-main-package"><a href="#runtime-main-main·f-function-main-is-undeclared-in-the-main-package" class="headerlink" title="runtime.main_main·f: function main is undeclared in the main package"></a>runtime.main_main·f: function main is undeclared in the main package</h2><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ada">➜  gocode go run printgo.go<br># command-line-arguments<br>runtime.main_main·f: <span class="hljs-keyword">function</span> <span class="hljs-title">main</span> <span class="hljs-keyword">is</span> undeclared <span class="hljs-keyword">in</span> the main <span class="hljs-keyword">package</span><br><span class="hljs-title"><span class="hljs-keyword">package</span> main</span><br><br>import <span class="hljs-string">&quot;fmt&quot;</span><br><br>func printtest() &#123;<br>	fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>curl 是一个免费的开源工具，用于从或向服务器传输数据。它支持多种操作系统，如 Windows、Ubuntu、RHEL、CentOS、Fedora 和 OpenSUSE。</p>
+<h2 id="功能提供"><a href="#功能提供" class="headerlink" title="功能提供"></a>功能提供</h2><p>curl 所有的传输功能均为 libcurl 库提供</p>
+<h2 id="语法参数"><a href="#语法参数" class="headerlink" title="语法参数"></a>语法参数</h2><h3 id="–insecure"><a href="#–insecure" class="headerlink" title="–insecure"></a>–insecure</h3><p>忽略HTTPS证书校验</p>
+<h3 id="v"><a href="#v" class="headerlink" title="-v"></a>-v</h3><p>显示完整通信过程，端口连接，request请求</p>
+<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs gams">root@iZbp1191gh7vw52537lyxrZ:~# curl https:<span class="hljs-comment">//10000hours.github.io -v</span><br><span class="hljs-comment">*   Trying 185.199.108.153:443...</span><br><span class="hljs-comment">*   Trying 2606:50c0:8000::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8000::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8003::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8003::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8002::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8002::153: Network is unreachable</span><br><span class="hljs-comment">*   Trying 2606:50c0:8001::153:443...</span><br><span class="hljs-comment">* Immediate connect fail for 2606:50c0:8001::153: Network is unreachable</span><br><span class="hljs-comment">* Connected to 10000hours.github.io (185.199.108.153) port 443 (#0)</span><br><span class="hljs-comment">* ALPN, offering h2</span><br><span class="hljs-comment">* ALPN, offering http/1.1</span><br><span class="hljs-comment">*  CAfile: /etc/ssl/certs/ca-certificates.crt</span><br><span class="hljs-comment">*  CApath: /etc/ssl/certs</span><br><span class="hljs-comment">* TLSv1.0 (OUT), TLS header, Certificate Status (22):</span><br><span class="hljs-comment">* TLSv1.3 (OUT), TLS handshake, Client hello (1):</span><br><span class="hljs-comment">* TLSv1.2 (IN), TLS header, Certificate Status (22):</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h3><p>Go程序中找不到主函数（main函数）的定义或声明。在Go中，每个可执行程序都必须包含一个名为<code>main</code>的包，并在该包中包含一个名为<code>main</code>的函数。这个<code>main</code>函数是程序的入口点，它会被自动调用。</p>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>增加main函数</p>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span><br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">printtest</span><span class="hljs-params">()</span></span> &#123;<br>	fmt.Println(<span class="hljs-string">&quot;test&quot;</span>)<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>	printtest()<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+<h3 id="H"><a href="#H" class="headerlink" title="-H"></a>-H</h3><p>设置请求header</p>
+<p>-H “X-Stream-Protocol-Version: <a target="_blank" rel="noopener" href="http://v2.channel.k8s.io/">v2.channel.k8s.io</a>“</p>
+<h3 id="X"><a href="#X" class="headerlink" title="-X"></a>-X</h3><p>指定协议，默认GET</p>
+<p>-X POST</p>
+<h3 id="d"><a href="#d" class="headerlink" title="-d"></a>-d</h3><p>指定参数 -d ‘key&#x3D;value’，多个参数，多个-d</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">curl -d <span class="hljs-string">&quot;name=curl&quot;</span> https:<span class="hljs-comment">//example.com</span><br>curl -d <span class="hljs-string">&quot;name=curl&quot;</span> -d <span class="hljs-string">&quot;tool=cmdline&quot;</span> https:<span class="hljs-comment">//example.com</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="G"><a href="#G" class="headerlink" title="-G"></a>-G</h3><p>指定发送GET请求</p>
+<h3 id="k"><a href="#k" class="headerlink" title="-k"></a>-k</h3><p>忽略HTTPS证书校验</p>
+<h3 id="s"><a href="#s" class="headerlink" title="-s"></a>-s</h3><p>静默模式，不输出任何信息</p>
+<h3 id="S"><a href="#S" class="headerlink" title="-S"></a>-S</h3><p>显示错误信息</p>
+<h3 id="L"><a href="#L" class="headerlink" title="-L"></a>-L</h3><p>跟随重定向</p>
+<h3 id="e"><a href="#e" class="headerlink" title="-e"></a>-e</h3><p>设置referer</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">curl -e <span class="hljs-string">&quot;https://example.com&quot;</span> http:<span class="hljs-comment">//www.example.com</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="支持的协议"><a href="#支持的协议" class="headerlink" title="支持的协议"></a>支持的协议</h2><h3 id="DICT"><a href="#DICT" class="headerlink" title="DICT"></a>DICT</h3><p>Lets you lookup words using online dictionaries.</p>
+<p>允许您使用在线词典查找单词。</p>
+<h3 id="FILE"><a href="#FILE" class="headerlink" title="FILE"></a>FILE</h3><p>Read or write local files. curl does not support accessing file:&#x2F;&#x2F; URL remotely, but when running on Microsoft Windows using the native UNC approach will work.</p>
+<p>读取或写入本地文件。curl不支持远程访问file:&#x2F;&#x2F; URL，但在Microsoft Windows上运行时，使用本机UNC方法可以工作。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs elixir">root<span class="hljs-variable">@iZbp1191gh7vw52537lyxrZ</span><span class="hljs-symbol">:~</span><span class="hljs-comment"># curl file:///root/1.txt</span><br><span class="hljs-number">111111</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="FTP-FTPS"><a href="#FTP-FTPS" class="headerlink" title="FTP FTPS"></a>FTP FTPS</h3><p>curl supports the File Transfer Protocol with a lot of tweaks and levers. With or without using TLS.</p>
+<p>curl支持使用文件传输协议，并具有许多调整和杠杆作用。无论是否使用TLS，都可以使用它。</p>
+<h4 id="从FTP服务器下载文件"><a href="#从FTP服务器下载文件" class="headerlink" title="从FTP服务器下载文件"></a>从FTP服务器下载文件</h4><p>curl <a href="ftp://username/">ftp://username</a>:<a target="_blank" rel="noopener" href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;download&#x2F;file.txt -o local_file.txt</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs elixir">➜  /tmp curl <span class="hljs-symbol">ftp:</span>//<span class="hljs-symbol">hot:</span><span class="hljs-number">123456</span><span class="hljs-variable">@10</span>.<span class="hljs-number">2.2</span>.<span class="hljs-number">2</span>/hotcal.tar.gz -o local_file.txt<br>  % <span class="hljs-title class_">Total</span>    % <span class="hljs-title class_">Received</span> % <span class="hljs-title class_">Xferd</span>  <span class="hljs-title class_">Average</span> <span class="hljs-title class_">Speed</span>   <span class="hljs-title class_">Time</span>    <span class="hljs-title class_">Time</span>     <span class="hljs-title class_">Time</span>  <span class="hljs-title class_">Current</span><br>                                 <span class="hljs-title class_">Dload</span>  <span class="hljs-title class_">Upload</span>   <span class="hljs-title class_">Total</span>   <span class="hljs-title class_">Spent</span>    <span class="hljs-title class_">Left</span>  <span class="hljs-title class_">Speed</span><br><span class="hljs-number">100</span> <span class="hljs-number">95172</span>  <span class="hljs-number">100</span> <span class="hljs-number">95172</span>    <span class="hljs-number">0</span>     <span class="hljs-number">0</span>   <span class="hljs-number">484</span>k      <span class="hljs-number">0</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span>  <span class="hljs-number">491</span>k<br><br>➜  /tmp ls -la local_file.txt<br>-rw-r--r--  <span class="hljs-number">1</span> admin  wheel  <span class="hljs-number">95172</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">17</span><span class="hljs-symbol">:</span><span class="hljs-number">43</span> local_file.txt<br></code></pre></td></tr></table></figure>
+
+<h4 id="上传文件到FTP服务器"><a href="#上传文件到FTP服务器" class="headerlink" title="上传文件到FTP服务器"></a>上传文件到FTP服务器</h4><p>curl -T “file.txt” <a href="ftp://username/">ftp://username</a>:<a target="_blank" rel="noopener" href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;upload&#x2F;</p>
+<h4 id="被动模式进行FTP传输"><a href="#被动模式进行FTP传输" class="headerlink" title="被动模式进行FTP传输"></a>被动模式进行FTP传输</h4><p>被动模式用于解决某些情况下，主动模式失败的情况</p>
+<p>curl -e “<a href="ftp://ftp.example.com/">ftp://ftp.example.com</a>“ <a href="ftp://username/">ftp://username</a>:<a target="_blank" rel="noopener" href="http://mailto:password@ftp.example.com/">password@ftp.example.com</a>&#x2F;download&#x2F;file.txt -o local_file.txt</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs elixir">➜  /tmp curl -e <span class="hljs-string">&quot;ftp://10.2.2.2&quot;</span> <span class="hljs-symbol">ftp:</span>//<span class="hljs-symbol">hot:</span><span class="hljs-number">123456</span><span class="hljs-variable">@10</span>.<span class="hljs-number">2.2</span>.<span class="hljs-number">2</span>/hotcal.tar.gz -o local_file.txt <br>  % <span class="hljs-title class_">Total</span>    % <span class="hljs-title class_">Received</span> % <span class="hljs-title class_">Xferd</span>  <span class="hljs-title class_">Average</span> <span class="hljs-title class_">Speed</span>   <span class="hljs-title class_">Time</span>    <span class="hljs-title class_">Time</span>     <span class="hljs-title class_">Time</span>  <span class="hljs-title class_">Current</span><br>                                 <span class="hljs-title class_">Dload</span>  <span class="hljs-title class_">Upload</span>   <span class="hljs-title class_">Total</span>   <span class="hljs-title class_">Spent</span>    <span class="hljs-title class_">Left</span>  <span class="hljs-title class_">Speed</span><br><span class="hljs-number">100</span> <span class="hljs-number">95172</span>  <span class="hljs-number">100</span> <span class="hljs-number">95172</span>    <span class="hljs-number">0</span>     <span class="hljs-number">0</span>   <span class="hljs-number">518</span>k      <span class="hljs-number">0</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span> --<span class="hljs-symbol">:--</span><span class="hljs-symbol">:--</span>  <span class="hljs-number">537</span>k<br>➜  /tmp <br>➜  /tmp ls -lat local_file.txt <br>-rw-r--r--  <span class="hljs-number">1</span> admin  wheel  <span class="hljs-number">95172</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span> <span class="hljs-number">19</span><span class="hljs-symbol">:</span><span class="hljs-number">21</span> local_file.txt<br></code></pre></td></tr></table></figure>
+
+<h3 id="GOPHER-GOPHERS"><a href="#GOPHER-GOPHERS" class="headerlink" title="GOPHER GOPHERS"></a>GOPHER GOPHERS</h3><p>Retrieve files.</p>
+<p>检索文件</p>
+<h3 id="HTTP-HTTPS"><a href="#HTTP-HTTPS" class="headerlink" title="HTTP HTTPS"></a>HTTP HTTPS</h3><p>curl supports HTTP with numerous options and variations. It can speak HTTP version 0.9, 1.0, 1.1, 2 and 3 depending on build options and the correct command line options.</p>
+<p>curl通过许多选项和变体支持HTTP。它可以使用HTTP版本0.9、1.0、1.1、2和3，具体取决于构建选项和正确的命令行选项。</p>
+<h3 id="IMAP-IMAPS"><a href="#IMAP-IMAPS" class="headerlink" title="IMAP IMAPS"></a>IMAP IMAPS</h3><p>Using the mail reading protocol, curl can “download” emails for you. With or without using TLS.</p>
+<p>使用邮件读取协议，curl可以为您“下载”电子邮件。使用或不使用TLS。</p>
+<h3 id="LDAP-LDAPS-MQTT-POP3-POP3S-RTMP-RTMPS-RTSP-SCP-SFTP-SMB-SMBS-SMTP-SMTPS-TELNET-or-TFTP"><a href="#LDAP-LDAPS-MQTT-POP3-POP3S-RTMP-RTMPS-RTSP-SCP-SFTP-SMB-SMBS-SMTP-SMTPS-TELNET-or-TFTP" class="headerlink" title="LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET or TFTP"></a>LDAP, LDAPS, MQTT, POP3, POP3S, RTMP, RTMPS, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET or TFTP</h3><h2 id="官方链接"><a href="#官方链接" class="headerlink" title="官方链接"></a>官方链接</h2><p><a target="_blank" rel="noopener" href="https://curl.se/libcurl/">https://curl.se/libcurl/</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/curl/curl">https://github.com/curl/curl</a></p>
+
                 
               </div>
             
@@ -308,12 +351,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/dev/" class="category-chain-item">dev</a>
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
   
   
     <span>></span>
     
-  <a href="/categories/dev/golang/" class="category-chain-item">golang</a>
+  <a href="/categories/yunwei/application/" class="category-chain-item">application</a>
   
   
 
@@ -330,9 +373,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/dev/" class="print-no-link">#dev</a>
+        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
       
-        <a href="/tags/golang/" class="print-no-link">#golang</a>
+        <a href="/tags/application/" class="print-no-link">#application</a>
       
     </div>
   
@@ -344,8 +387,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>golang_error</div>
-      <div>https://10000hours6.github.io/2024/03/14/dev/golang/golang_error/</div>
+      <div>curl_base</div>
+      <div>https://10000hours6.github.io/2024/03/15/yunwei/applications/curl/curl_base/</div>
     </div>
     <div class="license-meta">
       
@@ -357,7 +400,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年3月14日</div>
+          <div>2024年3月15日</div>
         </div>
       
       
@@ -382,18 +425,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/14/dev/golang/golang_base/" title="golang_base">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">golang_base</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/14/security/secvulns/solr/solr_keys/" title="sorl_keys">
-                        <span class="hidden-mobile">sorl_keys</span>
+                      <a href="/2024/03/15/yunwei/applications/git/git_base/" title="git_base">
+                        <span class="hidden-mobile">git_base</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
