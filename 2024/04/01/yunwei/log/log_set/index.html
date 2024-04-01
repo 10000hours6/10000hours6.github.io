@@ -1,0 +1,754 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/hd.png">
+  <link rel="icon" href="/img/hd.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="10000hours">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="前言日志作为系统中很重要的一部分，对日志配置的研究有助于进一步了解日志 LinuxCentOS设置日志文件大小配置文件&#x2F;etc&#x2F;logrogtate.conf &#x2F;etc&#x2F;logrotate.d&#x2F; 日志配置字段说明备注独立设置的日志格式配置优先于通用格式配置 例如：&#x2F;etc&#x2F;logrotate.d&#x2F;里的会优先于&amp;#x">
+<meta property="og:type" content="article">
+<meta property="og:title" content="log_set">
+<meta property="og:url" content="https://10000hours6.github.io/2024/04/01/yunwei/log/log_set/index.html">
+<meta property="og:site_name" content="10000hours">
+<meta property="og:description" content="前言日志作为系统中很重要的一部分，对日志配置的研究有助于进一步了解日志 LinuxCentOS设置日志文件大小配置文件&#x2F;etc&#x2F;logrogtate.conf &#x2F;etc&#x2F;logrotate.d&#x2F; 日志配置字段说明备注独立设置的日志格式配置优先于通用格式配置 例如：&#x2F;etc&#x2F;logrotate.d&#x2F;里的会优先于&amp;#x">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-03-31T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-04-01T09:32:57.343Z">
+<meta property="article:author" content="10000hours">
+<meta property="article:tag" content="yunwei">
+<meta property="article:tag" content="log">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>log_set - 10000hours</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"10000hours6.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.1.1"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>10000hours</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/hd.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="log_set"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-01 00:00" pubdate>
+          2024年4月1日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          986 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          9 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">log_set</h1>
+            
+              <p id="updated-time" class="note note-info" style="display: none">
+                
+                  
+                    本文最后更新于 2024-04-01T17:32:57+08:00
+                  
+                  
+
+                
+              </p>
+            
+            
+              <div class="markdown-body">
+                
+                <span id="more"></span>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>日志作为系统中很重要的一部分，对日志配置的研究有助于进一步了解日志</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="CentOS"><a href="#CentOS" class="headerlink" title="CentOS"></a>CentOS</h3><h4 id="设置日志文件大小"><a href="#设置日志文件大小" class="headerlink" title="设置日志文件大小"></a>设置日志文件大小</h4><h5 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h5><p>&#x2F;etc&#x2F;logrogtate.conf</p>
+<p>&#x2F;etc&#x2F;logrotate.d&#x2F;</p>
+<h5 id="日志配置字段说明"><a href="#日志配置字段说明" class="headerlink" title="日志配置字段说明"></a>日志配置字段说明</h5><h6 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h6><p>独立设置的日志格式配置优先于通用格式配置</p>
+<p>例如：&#x2F;etc&#x2F;logrotate.d&#x2F;里的会优先于&#x2F;etc&#x2F;logrogtate.conf里的配置</p>
+<p>&#x2F;etc&#x2F;logrogtate.conf 里的独立配置也会优先于通用配置，wtmp 和 btmp日志会按照独立的配置执行，例如按月转储，只保留1个</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs stata">weekly<br><span class="hljs-keyword">rotate</span> 4<br>create<br>dateext<br><span class="hljs-keyword">include</span> /etc/logrotate.<span class="hljs-keyword">d</span><br>/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/wtmp &#123;<br>    monthly<br>    create 0664 root utmp<br>	minsize 1M<br>    <span class="hljs-keyword">rotate</span> 1<br>&#125;<br>/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/btmp &#123;<br>    missingok<br>    monthly<br>    create 0600 root utmp<br>    <span class="hljs-keyword">rotate</span> 1<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h6 id="weekly"><a href="#weekly" class="headerlink" title="weekly"></a>weekly</h6><p>每周转储一次，也就是每周生成一个日志文件</p>
+<h6 id="daily"><a href="#daily" class="headerlink" title="daily"></a>daily</h6><p>每天转储一次，也就是每天生成一个日志文件</p>
+<h6 id="monthly"><a href="#monthly" class="headerlink" title="monthly"></a>monthly</h6><p>每月转储一次，也就是每月生成一个日志文件</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tap">(base) [root@aliyun-1_1_1_1 log]<span class="hljs-comment"># ls /var/log/secure* -lat</span><br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 21008467 </span>4月  <span class="hljs-number"> 1 </span>16:02 /var/log/secure<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 96609789 </span>3月 <span class="hljs-number"> 31 </span>03:20 /var/log/secure-20240331<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 98212385 </span>3月 <span class="hljs-number"> 24 </span>03:21 /var/log/secure-20240324<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 98575554 </span>3月 <span class="hljs-number"> 17 </span>03:13 /var/log/secure-20240317<br>-rw-------<span class="hljs-number"> 1 </span>root root<span class="hljs-number"> 100238540 </span>3月 <span class="hljs-number"> 10 </span>03:38 /var/log/secure-20240310<br></code></pre></td></tr></table></figure>
+
+<h6 id="rotate-num"><a href="#rotate-num" class="headerlink" title="rotate  num"></a>rotate  num</h6><p>保存num个备份文件</p>
+<p>&#x2F;var&#x2F;log&#x2F;secure-20240331 &#x2F;var&#x2F;log&#x2F;secure-20240324 &#x2F;var&#x2F;log&#x2F;secure-20240317 &#x2F;var&#x2F;log&#x2F;secure-20240310</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs tap">(base) [root@aliyun-1_1_1_1 log]<span class="hljs-comment"># ls /var/log/secure* -lat</span><br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 21008467 </span>4月  <span class="hljs-number"> 1 </span>16:02 /var/log/secure<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 96609789 </span>3月 <span class="hljs-number"> 31 </span>03:20 /var/log/secure-20240331<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 98212385 </span>3月 <span class="hljs-number"> 24 </span>03:21 /var/log/secure-20240324<br>-rw-------<span class="hljs-number"> 1 </span>root root <span class="hljs-number"> 98575554 </span>3月 <span class="hljs-number"> 17 </span>03:13 /var/log/secure-20240317<br>-rw-------<span class="hljs-number"> 1 </span>root root<span class="hljs-number"> 100238540 </span>3月 <span class="hljs-number"> 10 </span>03:38 /var/log/secure-20240310<br></code></pre></td></tr></table></figure>
+
+<h6 id="dateext"><a href="#dateext" class="headerlink" title="dateext"></a>dateext</h6><p>在转储后的文件名中增加日期</p>
+<p>secure-20240331</p>
+<h6 id="dateformat-Y-m-d"><a href="#dateformat-Y-m-d" class="headerlink" title="dateformat .%Y-%m-%d"></a>dateformat .%Y-%m-%d</h6><p>自定义转储后增加的日期格式</p>
+<h6 id="dateyesterday"><a href="#dateyesterday" class="headerlink" title="dateyesterday"></a>dateyesterday</h6><p>设置新增加的日期均为昨天</p>
+<p>例如：2024年4月1日转储的文件，文件中的日期将为2024-03-30，而不是2024.04.01</p>
+<h6 id="missingok"><a href="#missingok" class="headerlink" title="missingok"></a>missingok</h6><p>如果日志文件丢失，则忽略并继续转储</p>
+<h6 id="create-0644-root-root"><a href="#create-0644-root-root" class="headerlink" title="create 0644 root root"></a>create 0644 root root</h6><p>创建新的转储后的日志文件权限</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arcade">/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/btmp &#123;<br>    missingok<br>    monthly<br>    create <span class="hljs-number">0600</span> root utmp<br>    <span class="hljs-built_in">rotate</span> <span class="hljs-number">1</span><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tap">(base) [root@aliyun-1_1_1_1 log]<span class="hljs-comment"># ls -lat btmp*</span><br>-rw-------<span class="hljs-number"> 1 </span>root utmp   <span class="hljs-number"> 1536 </span>4月  <span class="hljs-number"> 1 </span>15:16 btmp<br>-rw-------<span class="hljs-number"> 1 </span>root utmp<span class="hljs-number"> 1031808 </span>4月  <span class="hljs-number"> 1 </span>01:40 btmp-20240401<br></code></pre></td></tr></table></figure>
+
+<p>create 0600 root utmp 表示 utmp 日志文件的权限为 6(r+w)00，用户为root，属组信息为 utmp</p>
+<h6 id="minsize-xxM"><a href="#minsize-xxM" class="headerlink" title="minsize xxM"></a>minsize xxM</h6><p>日志文件必需达到指定大小才执行转储策略</p>
+<p>当日志文件大小小于指定的值时，不会进行转储</p>
+<p>到日志文件大小达到或超过指定的值时，将按照其他的转储条件执行操作（如size、rotate）</p>
+<p>通常用于避免对过小的日志文件进行转储，因为转储过程可能会导致数据丢失或不必要的系统开销</p>
+<h6 id="size-xxM"><a href="#size-xxM" class="headerlink" title="size xxM"></a>size xxM</h6><p>日志文件达到指定文件大小才执行转储策略</p>
+<p>当日志大小达到或超过指定的大小时，将触发转储操作</p>
+<p>当日志大小没有达到指定的大小时，将不会触发转储操作</p>
+<h6 id="notifempty"><a href="#notifempty" class="headerlink" title="notifempty"></a>notifempty</h6><p>如果日志文件为空，则不转储</p>
+<h6 id="compress"><a href="#compress" class="headerlink" title="compress"></a>compress</h6><p>压缩转储之后的日志文件</p>
+<h6 id="sharedscripts"><a href="#sharedscripts" class="headerlink" title="sharedscripts"></a>sharedscripts</h6><p>每次转储文件时是否应该执行一次脚本</p>
+<p>设置为TRUE时，会在所有相关文件转储后执行一次脚本，会在access.log和error.log都转储完成后，执行一次脚本</p>
+<p>设置为FALSE时，会在每个日志文件转储后执行脚本，会在access.log转储完执行一次，在error.log转储完执行一次</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs mel">(base) [root@aliyun<span class="hljs-number">-1</span>_1_1_1 nginx]# <span class="hljs-keyword">ls</span><br>access.<span class="hljs-keyword">log</span>  <span class="hljs-keyword">error</span>.<span class="hljs-keyword">log</span>  <span class="hljs-keyword">error</span>.<span class="hljs-keyword">log</span><span class="hljs-number">-20230810</span><br></code></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-regexp">/var/</span>log<span class="hljs-regexp">/nginx/</span>*.log &#123;<br>    create <span class="hljs-number">0640</span> nginx root<br>    daily<br>    rotate <span class="hljs-number">10</span><br>    missingok<br>    notifempty<br>    compress<br>    delaycompress<br>    sharedscripts<br>    postrotate<br>        <span class="hljs-regexp">/bin/</span>kill -USR1 `cat <span class="hljs-regexp">/run/</span>nginx.pid <span class="hljs-number">2</span>&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span>` <span class="hljs-number">2</span>&gt;<span class="hljs-regexp">/dev/</span><span class="hljs-keyword">null</span> || <span class="hljs-keyword">true</span><br>    endscript<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h6 id="postrotate"><a href="#postrotate" class="headerlink" title="postrotate"></a>postrotate</h6><p>执行的脚本</p>
+<h6 id="endscript"><a href="#endscript" class="headerlink" title="endscript"></a>endscript</h6><p>标记前面定义的 prerotate 或 postrotate 段落的结束</p>
+<h4 id="默认配置"><a href="#默认配置" class="headerlink" title="默认配置"></a>默认配置</h4><h5 id="logrotate-conf"><a href="#logrotate-conf" class="headerlink" title="logrotate.conf"></a>logrotate.conf</h5><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs stata">weekly<br><span class="hljs-keyword">rotate</span> 4<br>create<br>dateext<br><span class="hljs-keyword">include</span> /etc/logrotate.<span class="hljs-keyword">d</span><br>/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/wtmp &#123;<br>    monthly<br>    create 0664 root utmp<br>	minsize 1M<br>    <span class="hljs-keyword">rotate</span> 1<br>&#125;<br>/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/btmp &#123;<br>    missingok<br>    monthly<br>    create 0600 root utmp<br>    <span class="hljs-keyword">rotate</span> 1<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-bootlog"><a href="#logrotate-d-bootlog" class="headerlink" title="logrotate.d&#x2F;bootlog"></a>logrotate.d&#x2F;bootlog</h5><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs stata">/<span class="hljs-keyword">var</span>/<span class="hljs-keyword">log</span>/<span class="hljs-keyword">boot</span>.<span class="hljs-keyword">log</span><br>&#123;<br>    missingok<br>    daily<br>    copytruncate<br>    <span class="hljs-keyword">rotate</span> 7<br>    notifempty<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-chrony"><a href="#logrotate-d-chrony" class="headerlink" title="logrotate.d&#x2F;chrony"></a>logrotate.d&#x2F;chrony</h5><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs gradle"><span class="hljs-regexp">/var/</span>log<span class="hljs-regexp">/chrony/</span>*.log &#123;<br>    missingok<br>    nocreate<br>    sharedscripts<br>    postrotate<br>        <span class="hljs-regexp">/usr/</span>bin<span class="hljs-regexp">/chronyc cyclelogs &gt; /</span>dev/<span class="hljs-keyword">null</span> <span class="hljs-number">2</span>&gt;&amp;<span class="hljs-number">1</span> || <span class="hljs-keyword">true</span><br>    endscript<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-firewalld"><a href="#logrotate-d-firewalld" class="headerlink" title="logrotate.d&#x2F;firewalld"></a>logrotate.d&#x2F;firewalld</h5><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arcade">/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/firewalld &#123;<br>    weekly<br>    missingok<br>    <span class="hljs-built_in">rotate</span> <span class="hljs-number">4</span><br>    copytruncate<br>    minsize <span class="hljs-number">1</span>M<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-firewalld-1"><a href="#logrotate-d-firewalld-1" class="headerlink" title="logrotate.d&#x2F;firewalld"></a>logrotate.d&#x2F;firewalld</h5><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs arcade">/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/cron<br>/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/maillog<br>/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/messages<br>/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/secure<br>/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/spooler<br>&#123;<br>    missingok<br>    sharedscripts<br>    postrotate<br>	/bin/kill -HUP <span class="hljs-string">`cat /var/run/syslogd.pid 2&gt; /dev/null`</span> <span class="hljs-number">2</span>&gt; <span class="hljs-regexp">/dev/</span><span class="hljs-literal">null</span> || <span class="hljs-literal">true</span><br>    endscript<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-wpa-supplicant"><a href="#logrotate-d-wpa-supplicant" class="headerlink" title="logrotate.d&#x2F;wpa_supplicant"></a>logrotate.d&#x2F;wpa_supplicant</h5><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs arcade">/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/wpa_supplicant.<span class="hljs-built_in">log</span> &#123;<br>    missingok<br>    notifempty<br>    size <span class="hljs-number">30</span>k<br>    create <span class="hljs-number">0600</span> root root<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<h5 id="logrotate-d-yum"><a href="#logrotate-d-yum" class="headerlink" title="logrotate.d&#x2F;yum"></a>logrotate.d&#x2F;yum</h5><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arcade">/<span class="hljs-keyword">var</span>/<span class="hljs-built_in">log</span>/yum.<span class="hljs-built_in">log</span> &#123;<br>    missingok<br>    notifempty<br>    maxsize <span class="hljs-number">30</span>k<br>    yearly<br>    create <span class="hljs-number">0600</span> root root<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/log/" class="category-chain-item">log</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
+      
+        <a href="/tags/log/" class="print-no-link">#log</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>log_set</div>
+      <div>https://10000hours6.github.io/2024/04/01/yunwei/log/log_set/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>10000hours</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月1日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              BY 10000HOURS
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/04/01/yunwei/log/log_dmesg/" title="log_dmesg">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">log_dmesg</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/04/01/yunwei/log/log_wtmp/" title="log_wtmp">
+                        <span class="hidden-mobile">log_wtmp</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  var relativeDate = function() {
+    var updatedTime = document.getElementById('updated-time');
+    if (updatedTime) {
+      var text = updatedTime.textContent;
+      var reg = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:Z|[+-]\d{2}:\d{2})/;
+      var matchs = text.match(reg);
+      if (matchs) {
+        var relativeTime = moment(matchs[0]).fromNow();
+        updatedTime.textContent = text.replace(reg, relativeTime);
+      }
+      updatedTime.style.display = '';
+    }
+  };
+  Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/moment.min.js', function() {
+    if (!'zh-cn'.startsWith('en')) {
+      Fluid.utils.createScript('https://lib.baomitu.com/moment.js/2.29.4/locale/zh-cn.min.js', function() {
+        relativeDate();
+      });
+    } else {
+      relativeDate();
+    }
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

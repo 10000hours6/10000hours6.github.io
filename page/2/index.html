@@ -224,15 +224,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/03/12/security/secresponse/sec_response/" target="_blank">
-          sec_response
+        <a href="/2024/03/15/yunwei/applications/git/git_sec/" target="_blank">
+          git_sec
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/12/security/secresponse/sec_response/" target="_blank">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/applications/git/git_sec/" target="_blank">
         <div>
-          主机信息收集主机信息 hostnamectlStatic hostname ：主机名，来自&#x2F;etc&#x2F;hostname Machine ID ：设备唯一标识 Virtualization：kvm 虚拟化，可以用来标记是否是虚拟机，物理机不存在该数据 12345678910111213root@iZbp1191gh7vw52537lyxrZ:/tmp/test# hostn
+          前言github 为了安全性需要禁止上传敏感内容，所以需要 .gitignore 文件来设置哪些文件不需要上传进行版本管理 语法123/dir/ 过滤整个文件夹*.txt 过滤所有.txt文件/dir/config.php 过滤具体文件  说明： 过滤掉的文件不会上传，也就是说不会进行版本管理，本地还是会有的 12345/ 开头表示目录* 通配多个字符? 通配单个字符[] 包含单个字符的匹配列
         </div>
       </a>
 
@@ -240,242 +240,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-12 00:00" pubdate>
-              2024-03-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/security/" class="category-chain-item">security</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/netSec/" class="category-chain-item">netSec</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/netSec/secresponse/" class="category-chain-item">secresponse</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/security/">#security</a>
-            
-              <a href="/tags/netSec/">#netSec</a>
-            
-              <a href="/tags/secresponse/">#secresponse</a>
-            
-              <a href="/tags/%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94/">#应急响应</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/12/network/dns/ubuntu_dns/" target="_blank">
-          ubuntu_dns
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/12/network/dns/ubuntu_dns/" target="_blank">
-        <div>
-          前言Ubuntu16 Ubuntu20 重启后DNS配置丢失 解决方案1、修改 &#x2F;etc&#x2F;systemd&#x2F;resolved.conf 文件，增加 dns信息 DNS&#x3D;8.8.8.8 114.114.114.114 2、root身份重启 DNS 服务 systemctl restart systemd-resolved 3、root身份设置开机启动 sys
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-12 00:00" pubdate>
-              2024-03-12
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/network/" class="category-chain-item">network</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/network/dns/" class="category-chain-item">dns</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/dns/">#dns</a>
-            
-              <a href="/tags/network/">#network</a>
-            
-              <a href="/tags/ubuntu/">#ubuntu</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/08/security/netSec/ddos/udp_flood/" target="_blank">
-          udp_flood
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/08/security/netSec/ddos/udp_flood/" target="_blank">
-        <div>
-          前言在DDoS攻击中，攻击方式以协议进行划分的话，主要是TCP Flood，UDP Flood，ICMP Flood 等，其中 UDP Flood是最主要也是最常见的流量型攻击方式。 2021年5月，QUIC正式成为互联网标准协议，针对80、443端口的UDP Flood徒增。 ntp反射放大倍数556.9 协议端口协议：UDP 端口：123 ntp反射原理原理说明ntp(Network Ti
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-08 00:00" pubdate>
-              2024-03-08
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/security/" class="category-chain-item">security</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/netSec/" class="category-chain-item">netSec</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/netSec/ddos/" class="category-chain-item">ddos</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/security/">#security</a>
-            
-              <a href="/tags/netSec/">#netSec</a>
-            
-              <a href="/tags/ddos/">#ddos</a>
-            
-              <a href="/tags/udpflood/">#udpflood</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/08/yunwei/applications/ntp/ntp_domain/" target="_blank">
-          ntp_domain
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/08/yunwei/applications/ntp/ntp_domain/" target="_blank">
-        <div>
-          常见ntp服务域名阿里云   经典网络内网 专有网络VPC内网 公网    - ntp.cloud.aliyuncs.com ntp.aliyun.com   ntp1.cloud.aliyuncs.com ntp7.cloud.aliyuncs.com ntp1.aliyun.com   ntp2.cloud.aliyuncs.com ntp8.cloud.aliyuncs.com ntp2
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-08 00:00" pubdate>
-              2024-03-08
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
             </time>
           </div>
         
@@ -495,15 +261,8 @@
   
     <span>></span>
     
-  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
+  <a href="/categories/yunwei/application/" class="category-chain-item">application</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/ntp/" class="category-chain-item">ntp</a>
-  
-  
-
   
 
   
@@ -521,88 +280,9 @@
             
               <a href="/tags/yunwei/">#yunwei</a>
             
-              <a href="/tags/applications/">#applications</a>
+              <a href="/tags/application/">#application</a>
             
-              <a href="/tags/ntp/">#ntp</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/07/yunwei/applications/docker/docker_compose/" target="_blank">
-          docker_compose
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/07/yunwei/applications/docker/docker_compose/" target="_blank">
-        <div>
-          描述项目（project）由一组关联的应用容器组成一个完整业务单元 服务（service）一个应用容器 语法version指定yml基于的docker-compose版本 1version: &#x27;2.3&#x27;    services123services:  redis:    image: redis:5.0.9-alpine    image指定容器运行的镜像 12345im
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-07 00:00" pubdate>
-              2024-03-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/docker/" class="category-chain-item">docker</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/applications/">#applications</a>
-            
-              <a href="/tags/docker/">#docker</a>
+              <a href="/tags/git/">#git</a>
             
           </div>
         
@@ -616,15 +296,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/03/07/yunwei/applications/docker/docker_error/" target="_blank">
-          docker_error
+        <a href="/2024/03/15/yunwei/commands/hostnamectl/" target="_blank">
+          hostnamectl
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/07/yunwei/applications/docker/docker_error/" target="_blank">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/commands/hostnamectl/" target="_blank">
         <div>
-          docker pull errorimage name error12(base) root@localhost:~# docker pull gitlab-ce/gitlab-ce:14.9.1Error response from daemon: pull access denied for gitlab-ce/gitlab-ce, repository does not exist or
+          hostnamectl控制系统主机名 12345678910111213root@iZbp1191gh7vw52537lyxrZ:~# hostnamectl Static hostname: iZbp1191gh7vw52537lyxrZ       Icon name: computer-vm         Chassis: vm      Machine ID: 8da0ace235c
         </div>
       </a>
 
@@ -632,87 +312,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-07 00:00" pubdate>
-              2024-03-07
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/docker/" class="category-chain-item">docker</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/applications/">#applications</a>
-            
-              <a href="/tags/docker/">#docker</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/04/yunwei/commands/iotop/" target="_blank">
-          iotop
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/04/yunwei/commands/iotop/" target="_blank">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-04 00:00" pubdate>
-              2024-03-04
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
             </time>
           </div>
         
@@ -765,15 +366,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/03/04/security/secvulns/ftp/ftp_weak_password/" target="_blank">
-          ftp_weak_password
+        <a href="/2024/03/15/yunwei/commands/last&amp;lastb/" target="_blank">
+          last-lastb
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/04/security/secvulns/ftp/ftp_weak_password/" target="_blank">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/commands/last&amp;lastb/" target="_blank">
         <div>
-          漏洞名称ftp弱口令 漏洞简介ftp服务存在弱口令 漏洞级别高危 漏洞修复1、禁止将ftp&#x2F;sftp服务暴露在公网 2、设置强口令，包含数字、大小写字母、特殊字符，长度10位以上 3、设置访问来源IP限制 漏洞挖掘默认信息默认端口 21（TCP） 服务指纹title：Sentinel Dashboard 服务查询fofa.info“title: Sentinel Dashboard”
+          lastlast命令会读取用户登录日志内容展示出来，默认&#x2F;var&#x2F;log&#x2F;wtmp，也可以通过 -f 来指定文件 参数描述语法last [-R] [-num] [ -n num ] [-adFiowx] [ -f file ] [ -t YYYYMMDDHHMMSS ] [name…]  [tty…] -f file:指定读取的文件，默认为&#x2F;var&#x
         </div>
       </a>
 
@@ -781,172 +382,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-04 00:00" pubdate>
-              2024-03-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/security/" class="category-chain-item">security</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/secvulns/" class="category-chain-item">secvulns</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/secvulns/yunweivulns/" class="category-chain-item">yunweivulns</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/security/">#security</a>
-            
-              <a href="/tags/secvulns/">#secvulns</a>
-            
-              <a href="/tags/yunweivulns/">#yunweivulns</a>
-            
-              <a href="/tags/weakpassword/">#weakpassword</a>
-            
-              <a href="/tags/ftp/">#ftp</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/03/04/security/secvulns/telnet/telnet_weak_password/" target="_blank">
-          telnet_weak_password
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/04/security/secvulns/telnet/telnet_weak_password/" target="_blank">
-        <div>
-          
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-03-04 00:00" pubdate>
-              2024-03-04
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/security/" class="category-chain-item">security</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/secvulns/" class="category-chain-item">secvulns</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/security/secvulns/yunweivulns/" class="category-chain-item">yunweivulns</a>
-  
-  
-
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/security/">#security</a>
-            
-              <a href="/tags/secvulns/">#secvulns</a>
-            
-              <a href="/tags/yunweivulns/">#yunweivulns</a>
-            
-              <a href="/tags/weakpassword/">#weakpassword</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/02/28/yunwei/applications/docker/docker_tips/" target="_blank">
-          docker_tips
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/02/28/yunwei/applications/docker/docker_tips/" target="_blank">
-        <div>
-          命令基于 mac Docker Desktop 4.11.1 (84025)  查询指定镜像仓库镜像列表Curl 1curl -X &#x27;GET&#x27; &#x27;h__ps://demo.goharbor.io/api/v2.0/projects?page=1&amp;page_size=10&amp;with_detail=true&#x27;  -H &#x27;accept
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-02-28 00:00" pubdate>
-              2024-02-28
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
             </time>
           </div>
         
@@ -966,15 +403,8 @@
   
     <span>></span>
     
-  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/applications/docker/" class="category-chain-item">docker</a>
-  
-  
-
   
 
   
@@ -992,11 +422,511 @@
             
               <a href="/tags/yunwei/">#yunwei</a>
             
-              <a href="/tags/applications/">#applications</a>
+              <a href="/tags/commands/">#commands</a>
             
-              <a href="/tags/docker/">#docker</a>
+              <a href="/tags/last/">#last</a>
             
-              <a href="/tags/tips/">#tips</a>
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/yunwei/commands/w&amp;who/" target="_blank">
+          w&amp;who
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/commands/w&amp;who/" target="_blank">
+        <div>
+          w显示当前登录系统的用户信息以及当前正在做什么 参数解释12345root@iZbp1191gh7vw52537lyxrZ:/var/log# w 14:17:40 up 209 days,  3:06,  2 users,  load average: 0.00, 0.01, 0.00USER     TTY      FROM             LOGIN@   IDLE   JCP
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/commands/">#commands</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/yunwei/commands/ps/" target="_blank">
+          ps
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/commands/ps/" target="_blank">
+        <div>
+          前言用于查看当前进程信息 命令12345678ps -ef:基于Unix的选项，可以使用破折号(-)UID          PID    PPID  C STIME TTY          TIME CMDroot           1       0  0 Oct27 ?        00:00:11 /sbin/initps aux:基于BSD的选项，不可以使用破折号(-)USER
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/commands/">#commands</a>
+            
+              <a href="/tags/ps/">#ps</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/network/QUIC/quic_base/" target="_blank">
+          auic_base
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/network/QUIC/quic_base/" target="_blank">
+        <div>
+          简介QUIC （Quick UDP Internet Connection），通用的传输层网络协议，由Google设计，2012年实现部署，目前Chrome、Edge、Firefox均已支持此协议；Safari实现了QUIC，但默认情况不启用。 由于该协议设计目标在于取代TCP协议，偶尔也被称为 TCP&#x2F;2 2012年实现部署 2013年公开公布 2015年提交IETF进行标准化 2
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/network/" class="category-chain-item">network</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/network/quic/" class="category-chain-item">quic</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/network/">#network</a>
+            
+              <a href="/tags/quic/">#quic</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/yunwei/dir/procdir/" target="_blank">
+          procdir
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/dir/procdir/" target="_blank">
+        <div>
+          前言Linux在启动一个进程时，系统会在&#x2F;proc下创建一个以PID命名的文件夹，在该文件夹下会有我们的进程的信息 文件说明exels -lat &#x2F;proc&#x2F;pid&#x2F;exe 可查看到对应进程可执行文件的绝对路径 12root@iZbp1191gh7vw52537lyxrZ:~# ls -lat /proc/659535/exelrwxrwxrwx 1 m
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/dir/" class="category-chain-item">dir</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/dir/">#dir</a>
+            
+              <a href="/tags/proc/">#proc</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/security/secvulns/redis/redis_unauth/" target="_blank">
+          redis_unauth
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/security/secvulns/redis/redis_unauth/" target="_blank">
+        <div>
+          前言Redis 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API。 当redis配置设置不当，可能会存在数据泄露、服务器入侵等安全风险 漏洞成因当redis服务存在未授权（没有设置密码+没有限制访问IP）或弱口令时，存在被利用 redis 的持久化功能和 config 命令（
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/security/" class="category-chain-item">security</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/security/secvulns/" class="category-chain-item">secvulns</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/security/">#security</a>
+            
+              <a href="/tags/secvulns/">#secvulns</a>
+            
+              <a href="/tags/unauth/">#unauth</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/yunwei/applications/firewalld/iptables_command/" target="_blank">
+          iptables_command
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/applications/firewalld/iptables_command/" target="_blank">
+        <div>
+          LinuxCentosFriewalldCentOS7默认防火墙 开启防护墙之后默认是没有任何策略的，也就是除SSH的22端口之外其他的端口都不通 防火墙策略的增加都是追加形式 查询防火墙状态firewall-cmd –state1234567┌──(root㉿kali2022-appsec)-[~]└─# firewall-cmd --statenot running┌──(root㉿kal
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/application/" class="category-chain-item">application</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/application/">#application</a>
+            
+              <a href="/tags/firewalld/">#firewalld</a>
+            
+              <a href="/tags/iptables/">#iptables</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/03/15/yunwei/applications/git/git_tips/" target="_blank">
+          git_tips
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/03/15/yunwei/applications/git/git_tips/" target="_blank">
+        <div>
+          配置多个账号背景mac 电脑配置多个github账号 ssh 操作过程生成不同账号密钥ssh-keygen -t rsa -C “github登录邮箱” -f ~&#x2F;.ssh&#x2F;id_rsa_密钥名称，生成不同账号的密钥，只需要修改 “github登录邮箱”和“密钥名称”即可 1ssh-keygen -t rsa -C &quot;pr0t0n119@proton.me&quo
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-03-15 00:00" pubdate>
+              2024-03-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/application/" class="category-chain-item">application</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/application/">#application</a>
+            
+              <a href="/tags/git/">#git</a>
             
           </div>
         
@@ -1008,7 +938,7 @@
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="page-number" href="/page/5/#board">5</a><a class="extend next" rel="next" href="/page/3/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
