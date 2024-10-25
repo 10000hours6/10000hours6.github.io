@@ -2622,7 +2622,7 @@
     <link href="/2024/02/06/10000hours/"/>
     <url>/2024/02/06/10000hours/</url>
     
-    <content type="html"><![CDATA[<span id="more"></span><p>上传命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g <br>hexo d<br></code></pre></td></tr></table></figure><p>文件路径</p><p>&#x2F;Users&#x2F;admin&#x2F;10000hours&#x2F;Hexo</p>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span>]]></content>
     
     
     <categories>
@@ -2647,7 +2647,7 @@
     <link href="/2024/02/06/hexoblog/hexo_command/"/>
     <url>/2024/02/06/hexoblog/hexo_command/</url>
     
-    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>上传命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g <br>hexo d<br></code></pre></td></tr></table></figure><p>文件路径</p><p>&#x2F;Users&#x2F;admin&#x2F;10000hours&#x2F;Hexo</p>]]></content>
     
     
     <categories>
