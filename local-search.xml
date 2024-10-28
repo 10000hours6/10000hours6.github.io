@@ -4,6 +4,99 @@
   
   
   <entry>
+    <title>weibo视频下载</title>
+    <link href="/2024/10/28/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/"/>
+    <url>/2024/10/28/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>下载微博中的视频文件，客户端被禁止下载</p><p>1、复制视频短链接</p><p>右击视频，复制视频短链接</p><p><a href="http://t.cn/A6TEMuJJ">http://t.cn/A6TEMuJJ</a></p><p>2、解析短链接，获取实际链接（需要登录状态）</p><p>访问短链接<a href="http://t.cn/A6TEMuJJ%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%88%B0%E5%AE%9E%E9%99%85%E9%93%BE%E6%8E%A5https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow">http://t.cn/A6TEMuJJ，获取到实际链接https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow</a></p><p>3、firefox浏览器访问实际链接，另存视频即可下载</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>commands</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ddos_protection</title>
+    <link href="/2024/10/28/security/netSec/ddos/ddos_protection/"/>
+    <url>/2024/10/28/security/netSec/ddos/ddos_protection/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="防护技术"><a href="#防护技术" class="headerlink" title="防护技术"></a>防护技术</h1><h2 id="防护触发机制"><a href="#防护触发机制" class="headerlink" title="防护触发机制"></a>防护触发机制</h2><p>检测SYN、ACK、UDP、ICMP等协议每秒数据包数量（pps），达到阈值触发防护</p><h2 id="防护动作"><a href="#防护动作" class="headerlink" title="防护动作"></a>防护动作</h2><h3 id="限速"><a href="#限速" class="headerlink" title="限速"></a>限速</h3><h3 id="拦截"><a href="#拦截" class="headerlink" title="拦截"></a>拦截</h3><h3 id="区域防护（GenIP）"><a href="#区域防护（GenIP）" class="headerlink" title="区域防护（GenIP）"></a>区域防护（GenIP）</h3><p>限制指定区域访问策略，动作为限速、拦截</p><h3 id="异常数据包防护"><a href="#异常数据包防护" class="headerlink" title="异常数据包防护"></a>异常数据包防护</h3><p>过滤无效SYN数据包</p><h1 id="防护方案"><a href="#防护方案" class="headerlink" title="防护方案"></a>防护方案</h1><h2 id="方案问题"><a href="#方案问题" class="headerlink" title="方案问题"></a>方案问题</h2><h3 id="CDN-WAF"><a href="#CDN-WAF" class="headerlink" title="CDN+WAF"></a>CDN+WAF</h3><h4 id="方案细节"><a href="#方案细节" class="headerlink" title="方案细节"></a>方案细节</h4><p>CDN防护流量型攻击</p><p>WAF防护CC等消耗型攻击</p><h4 id="方案问题-1"><a href="#方案问题-1" class="headerlink" title="方案问题"></a>方案问题</h4><h2 id="技术名词"><a href="#技术名词" class="headerlink" title="技术名词"></a>技术名词</h2><h3 id="DCDN"><a href="#DCDN" class="headerlink" title="DCDN"></a>DCDN</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>netSec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>netSec</tag>
+      
+      <tag>ddos</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tcp_ack_flood</title>
+    <link href="/2024/10/28/security/netSec/ddos/tcp_ack_flood/"/>
+    <url>/2024/10/28/security/netSec/ddos/tcp_ack_flood/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>发送大量伪造源IP的ACK报文，消耗目标的会话资源</p><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="Large-ACK-Flood"><a href="#Large-ACK-Flood" class="headerlink" title="Large ACK Flood"></a>Large ACK Flood</h3><p>向目标IP发送大量携带大Payload的ACK报文，既可以消耗攻击目标的会话资源，也可以消耗带宽资源，由于攻击报文大小明显大于正常报文，因此称为 Large ACK Flood</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>netSec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>netSec</tag>
+      
+      <tag>ddos</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>pdf_to_word</title>
     <link href="/2024/10/28/yunwei/tips/pdf_to_word/"/>
     <url>/2024/10/28/yunwei/tips/pdf_to_word/</url>
@@ -33,13 +126,31 @@
   
   
   <entry>
-    <title></title>
-    <link href="/2024/10/25/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/"/>
-    <url>/2024/10/25/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/</url>
+    <title>ttl</title>
+    <link href="/2024/10/28/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/"/>
+    <url>/2024/10/28/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/</url>
     
-    <content type="html"><![CDATA[<h2 id="TTL说明"><a href="#TTL说明" class="headerlink" title="TTL说明"></a>TTL说明</h2><p>Time To Live，生存时间</p><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>限制IP数据包在网络中传输的最大跳数（路由器数量）</p><p>每当IP数据包通过一个路由器时，其TTL值减1</p><p>如果TTL值减为0，路由器会丢弃该数据包，并向发送端返回一个ICMP错误消息，通知发送端数据包被丢弃</p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>确保IP数据包不会无限制地在网络中循环，避免因路由环路（routing loop）而造成网络拥塞或资源浪费</p><p>用于估算数据包从发送端到目标主机的路径的长度（通过TTL递减次数），尽管具体路径会因网络拓扑结构而异</p><h2 id="ping-ttl说明"><a href="#ping-ttl说明" class="headerlink" title="ping ttl说明"></a>ping ttl说明</h2><p>在执行PING命令时，PING会发送一个ICMP回显请求（Echo Request）到目标主机</p><p>接收到请求的目标主机会返回一个ICMP回显应答（Echo Reply）</p><h2 id="常见设备TTL"><a href="#常见设备TTL" class="headerlink" title="常见设备TTL"></a>常见设备TTL</h2><h3 id="Windows-128"><a href="#Windows-128" class="headerlink" title="Windows 128"></a>Windows 128</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">C:\WINDOWS\system32&gt;ping -c 1 127.0.0.1<br><br>正在<span class="hljs-built_in"> Ping </span>127.0.0.1 具有 32 字节的数据:<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br></code></pre></td></tr></table></figure><h3 id="Mac-64"><a href="#Mac-64" class="headerlink" title="Mac 64"></a>Mac 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>localhost<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>localhost (127.0.0.1): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.070 ms<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.142 ms<br></code></pre></td></tr></table></figure><h3 id="iPhone-64"><a href="#iPhone-64" class="headerlink" title="iPhone 64"></a>iPhone 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.13<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.13 (10.223.28.13): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=67.655 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=87.895 ms<br></code></pre></td></tr></table></figure><h3 id="安卓-64"><a href="#安卓-64" class="headerlink" title="安卓 64"></a>安卓 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.5       <span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.5 (10.223.28.5): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=48.917 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=69.429 ms<br></code></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="TTL说明"><a href="#TTL说明" class="headerlink" title="TTL说明"></a>TTL说明</h2><p>Time To Live，生存时间</p><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>限制IP数据包在网络中传输的最大跳数（路由器数量）</p><p>每当IP数据包通过一个路由器时，其TTL值减1</p><p>如果TTL值减为0，路由器会丢弃该数据包，并向发送端返回一个ICMP错误消息，通知发送端数据包被丢弃</p><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>确保IP数据包不会无限制地在网络中循环，避免因路由环路（routing loop）而造成网络拥塞或资源浪费</p><p>用于估算数据包从发送端到目标主机的路径的长度（通过TTL递减次数），尽管具体路径会因网络拓扑结构而异</p><h2 id="ping-ttl说明"><a href="#ping-ttl说明" class="headerlink" title="ping ttl说明"></a>ping ttl说明</h2><p>在执行PING命令时，PING会发送一个ICMP回显请求（Echo Request）到目标主机</p><p>接收到请求的目标主机会返回一个ICMP回显应答（Echo Reply）</p><h2 id="常见设备TTL"><a href="#常见设备TTL" class="headerlink" title="常见设备TTL"></a>常见设备TTL</h2><h3 id="Windows-128"><a href="#Windows-128" class="headerlink" title="Windows 128"></a>Windows 128</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">C:\WINDOWS\system32&gt;ping -c 1 127.0.0.1<br><br>正在<span class="hljs-built_in"> Ping </span>127.0.0.1 具有 32 字节的数据:<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br></code></pre></td></tr></table></figure><h3 id="Mac-64"><a href="#Mac-64" class="headerlink" title="Mac 64"></a>Mac 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>localhost<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>localhost (127.0.0.1): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.070 ms<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.142 ms<br></code></pre></td></tr></table></figure><h3 id="iPhone-64"><a href="#iPhone-64" class="headerlink" title="iPhone 64"></a>iPhone 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.13<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.13 (10.223.28.13): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=67.655 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=87.895 ms<br></code></pre></td></tr></table></figure><h3 id="安卓-64"><a href="#安卓-64" class="headerlink" title="安卓 64"></a>安卓 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.5       <span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.5 (10.223.28.5): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=48.917 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=69.429 ms<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>commands</tag>
+      
+    </tags>
     
   </entry>
   
@@ -81,20 +192,7 @@
     <link href="/2024/07/26/security/netSec/ddos/tcp_finrst_flood/"/>
     <url>/2024/07/26/security/netSec/ddos/tcp_finrst_flood/</url>
     
-    <content type="html"><![CDATA[<h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2024/07/23/security/netSec/ddos/tcp_ack_flood/"/>
-    <url>/2024/07/23/security/netSec/ddos/tcp_ack_flood/</url>
-    
-    <content type="html"><![CDATA[<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>发送大量伪造源IP的ACK报文，消耗目标的会话资源</p><h2 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h2><h3 id="Large-ACK-Flood"><a href="#Large-ACK-Flood" class="headerlink" title="Large ACK Flood"></a>Large ACK Flood</h3><p>向目标IP发送大量携带大Payload的ACK报文，既可以消耗攻击目标的会话资源，也可以消耗带宽资源，由于攻击报文大小明显大于正常报文，因此称为 Large ACK Flood</p>]]></content>
+    <content type="html"><![CDATA[]]></content>
     
     
     
@@ -195,19 +293,6 @@
     <url>/2024/06/26/security/netSec/ddos/ddos_tools/hping3/</url>
     
     <content type="html"><![CDATA[<p>攻击IP  10.185.16.237</p><p>被攻击IP  10.185.6.137</p><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h4 id="S-–syn"><a href="#S-–syn" class="headerlink" title="-S –syn"></a>-S –syn</h4><p>set SYN flag  设置SYN标记，也就是发SYN数据包</p><h4 id="i-–interval"><a href="#i-–interval" class="headerlink" title="-i  –interval"></a>-i  –interval</h4><p>wait (uX for X microseconds, for example -i u1000)  </p><p>​ –fast  alias for -i u10000 (10 packets for second) 每秒10个数据包</p><p>​     –faster   alias for -i u1000 (100 packets for second)      每秒100个数据包</p><p>​     –flood   sent packets as fast as possible. Don’t show replies.  以尽可能快的速度发送数据包 </p><h4 id="p-–destport"><a href="#p-–destport" class="headerlink" title="-p –destport"></a>-p –destport</h4><p>[+][+]<port> destination port(default 0) ctrl+z inc&#x2F;dec  目的IP，默认为0</p><h4 id="s-–baseport"><a href="#s-–baseport" class="headerlink" title="-s –baseport"></a>-s –baseport</h4><p>base source port             (default random)  随机源端口</p><h4 id="k-–keep"><a href="#k-–keep" class="headerlink" title="-k –keep"></a>-k –keep</h4><p>keep still source port 保持源端口</p><h4 id="–tcp-timestamp"><a href="#–tcp-timestamp" class="headerlink" title="–tcp-timestamp"></a>–tcp-timestamp</h4><p>enable the TCP timestamp option to guess the HZ&#x2F;uptime</p><h4 id="L-–setack"><a href="#L-–setack" class="headerlink" title="-L –setack"></a>-L –setack</h4><p>set TCP ack 设置ACK标记</p><h4 id="a-–spoof"><a href="#a-–spoof" class="headerlink" title="-a –spoof"></a>-a –spoof</h4><p>spoof source address</p><p>伪造源IP</p><h4 id="c-–count"><a href="#c-–count" class="headerlink" title="-c –count"></a>-c –count</h4><p>packet count</p><p>指定发送数据包数量</p><h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h4 id="syn-flood"><a href="#syn-flood" class="headerlink" title="syn flood"></a>syn flood</h4><p>尽设备最大性能攻击，150K pps左右攻击量</p><p>hping3  目标IP -S -p 目标端口 –flood –rand-source</p><p>指定每秒发送数据包数量，每秒10000请求</p><p>hping3  目标IP -S -p 目标端口 -i u10000 –rand-source</p><h4 id="tcp-Fragment（分片）"><a href="#tcp-Fragment（分片）" class="headerlink" title="tcp Fragment（分片）"></a>tcp Fragment（分片）</h4><p>syn分片</p><p>hping3 –syn –flood 目标IP  –rand-source -p 目标端口 -d  数据大小</p><p>hping3 –syn –flood 10.185.6.137 –rand-source -p 22 -d 2000</p><h4 id="udp-flood"><a href="#udp-flood" class="headerlink" title="udp flood"></a>udp flood</h4><p>尽设备最大性能攻击</p><p>hping3 目标IP -2 –flood –rand-source -d 数据大小 -p 80</p><h4 id="icmp-flood"><a href="#icmp-flood" class="headerlink" title="icmp flood"></a>icmp flood</h4><p>源目的相同</p><p>hping3 目标IP -a 目标IP –icmp –flood</p><p>死亡ping</p><p>hping3 目标IP –icmp -d 数据包大小</p><p>以太网MTU为 1500 字节</p><h4 id="fin-flood"><a href="#fin-flood" class="headerlink" title="fin flood"></a>fin flood</h4><p>hping3 –fin –flood 目标IP –rand-source -p 目标端口</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs vim">[root@localhost ~]# hping3 --<span class="hljs-keyword">fin</span> --flood 目标IP --rand-<span class="hljs-keyword">source</span> -<span class="hljs-keyword">p</span> <span class="hljs-number">22</span><br>HPING 目标IP (ens3f1 目标IP): F <span class="hljs-keyword">set</span>, <span class="hljs-number">40</span> headers + <span class="hljs-number">0</span> data bytes<br>hping in flood <span class="hljs-keyword">mode</span>, <span class="hljs-keyword">no</span> replies will <span class="hljs-keyword">be</span> shown<br></code></pre></td></tr></table></figure><h4 id="tcp-rst-flood"><a href="#tcp-rst-flood" class="headerlink" title="tcp rst flood"></a>tcp rst flood</h4><p>hping3 –rst –flood 目标IP –rand-source -p 22</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs vim">HPING 目标IP (ens3f1 目标IP): R <span class="hljs-keyword">set</span>, <span class="hljs-number">40</span> headers + <span class="hljs-number">0</span> data bytes<br>hping in flood <span class="hljs-keyword">mode</span>, <span class="hljs-keyword">no</span> replies will <span class="hljs-keyword">be</span> shown<br></code></pre></td></tr></table></figure><h4 id="DNS-query-flood"><a href="#DNS-query-flood" class="headerlink" title="DNS query flood"></a>DNS query flood</h4><p>hping3 –udp –flood 目标IP -a 伪造源IP -p 53 -k</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-attr">[root@localhost ~]</span># hping3 <span class="hljs-attr">--udp</span> <span class="hljs-attr">--flood</span> 目标IP -<span class="hljs-selector-tag">a</span> <span class="hljs-number">5.5</span>.<span class="hljs-number">5.5</span> -<span class="hljs-selector-tag">p</span> <span class="hljs-number">53</span> -k<br>HPING 目标IP (ens3f1 目标IP): udp mode set, <span class="hljs-number">28</span> headers + <span class="hljs-number">0</span> data bytes<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2024/06/24/security/netSec/ddos/ddos_protection/"/>
-    <url>/2024/06/24/security/netSec/ddos/ddos_protection/</url>
-    
-    <content type="html"><![CDATA[<h1 id="防护技术"><a href="#防护技术" class="headerlink" title="防护技术"></a>防护技术</h1><h2 id="防护触发机制"><a href="#防护触发机制" class="headerlink" title="防护触发机制"></a>防护触发机制</h2><p>检测SYN、ACK、UDP、ICMP等协议每秒数据包数量（pps），达到阈值触发防护</p><h2 id="防护动作"><a href="#防护动作" class="headerlink" title="防护动作"></a>防护动作</h2><h3 id="限速"><a href="#限速" class="headerlink" title="限速"></a>限速</h3><h3 id="拦截"><a href="#拦截" class="headerlink" title="拦截"></a>拦截</h3><h3 id="区域防护（GenIP）"><a href="#区域防护（GenIP）" class="headerlink" title="区域防护（GenIP）"></a>区域防护（GenIP）</h3><p>限制指定区域访问策略，动作为限速、拦截</p><h3 id="异常数据包防护"><a href="#异常数据包防护" class="headerlink" title="异常数据包防护"></a>异常数据包防护</h3><p>过滤无效SYN数据包</p><h1 id="防护方案"><a href="#防护方案" class="headerlink" title="防护方案"></a>防护方案</h1><h2 id="方案问题"><a href="#方案问题" class="headerlink" title="方案问题"></a>方案问题</h2><h3 id="CDN-WAF"><a href="#CDN-WAF" class="headerlink" title="CDN+WAF"></a>CDN+WAF</h3><h4 id="方案细节"><a href="#方案细节" class="headerlink" title="方案细节"></a>方案细节</h4><p>CDN防护流量型攻击</p><p>WAF防护CC等消耗型攻击</p><h4 id="方案问题-1"><a href="#方案问题-1" class="headerlink" title="方案问题"></a>方案问题</h4><h2 id="技术名词"><a href="#技术名词" class="headerlink" title="技术名词"></a>技术名词</h2><h3 id="DCDN"><a href="#DCDN" class="headerlink" title="DCDN"></a>DCDN</h3>]]></content>
     
     
     
@@ -632,19 +717,6 @@
       <tag>osSec</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title></title>
-    <link href="/2024/04/23/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/"/>
-    <url>/2024/04/23/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    
-    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>下载微博中的视频文件，客户端被禁止下载</p><p>1、复制视频短链接</p><p>右击视频，复制视频短链接</p><p><a href="http://t.cn/A6TEMuJJ">http://t.cn/A6TEMuJJ</a></p><p>2、解析短链接，获取实际链接（需要登录状态）</p><p>访问短链接<a href="http://t.cn/A6TEMuJJ%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%88%B0%E5%AE%9E%E9%99%85%E9%93%BE%E6%8E%A5https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow">http://t.cn/A6TEMuJJ，获取到实际链接https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow</a></p><p>3、firefox浏览器访问实际链接，另存视频即可下载</p>]]></content>
-    
-    
     
   </entry>
   

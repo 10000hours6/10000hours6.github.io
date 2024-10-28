@@ -16,21 +16,24 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="TTL说明Time To Live，生存时间 定义限制IP数据包在网络中传输的最大跳数（路由器数量） 每当IP数据包通过一个路由器时，其TTL值减1 如果TTL值减为0，路由器会丢弃该数据包，并向发送端返回一个ICMP错误消息，通知发送端数据包被丢弃 作用确保IP数据包不会无限制地在网络中循环，避免因路由环路（routing loop）而造成网络拥塞或资源浪费 用于估算数据包从发送端到目标主机的路">
+    <meta name="description" content="背景下载微博中的视频文件，客户端被禁止下载 1、复制视频短链接 右击视频，复制视频短链接 http:&#x2F;&#x2F;t.cn&#x2F;A6TEMuJJ 2、解析短链接，获取实际链接（需要登录状态） 访问短链接http:&#x2F;&#x2F;t.cn&#x2F;A6TEMuJJ，获取到实际链接https:&#x2F;&#x2F;weibo.com&#x2F;tv&#x2F;show&#x2F;1034:5026030381891614?from&#x3D;old_pc_videoshow 3、fi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10000hours">
-<meta property="og:url" content="https://10000hours6.github.io/2024/10/25/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/index.html">
+<meta property="og:title" content="weibo视频下载">
+<meta property="og:url" content="https://10000hours6.github.io/2024/10/28/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="TTL说明Time To Live，生存时间 定义限制IP数据包在网络中传输的最大跳数（路由器数量） 每当IP数据包通过一个路由器时，其TTL值减1 如果TTL值减为0，路由器会丢弃该数据包，并向发送端返回一个ICMP错误消息，通知发送端数据包被丢弃 作用确保IP数据包不会无限制地在网络中循环，避免因路由环路（routing loop）而造成网络拥塞或资源浪费 用于估算数据包从发送端到目标主机的路">
+<meta property="og:description" content="背景下载微博中的视频文件，客户端被禁止下载 1、复制视频短链接 右击视频，复制视频短链接 http:&#x2F;&#x2F;t.cn&#x2F;A6TEMuJJ 2、解析短链接，获取实际链接（需要登录状态） 访问短链接http:&#x2F;&#x2F;t.cn&#x2F;A6TEMuJJ，获取到实际链接https:&#x2F;&#x2F;weibo.com&#x2F;tv&#x2F;show&#x2F;1034:5026030381891614?from&#x3D;old_pc_videoshow 3、fi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-25T12:20:20.707Z">
-<meta property="article:modified_time" content="2024-10-25T12:20:42.133Z">
+<meta property="article:published_time" content="2024-10-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-28T06:07:10.370Z">
 <meta property="article:author" content="10000hours">
+<meta property="article:tag" content="yunwei">
+<meta property="article:tag" content="tips">
+<meta property="article:tag" content="commands">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>10000hours</title>
+  <title>weibo视频下载 - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="weibo视频下载"></span>
           
         </div>
 
@@ -207,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-25 20:20" pubdate>
-          2024年10月25日 晚上
+        <time datetime="2024-10-28 00:00" pubdate>
+          2024年10月28日 凌晨
         </time>
       </span>
     
@@ -219,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          390 字
+          103 字
         
       </span>
     
@@ -230,7 +233,7 @@
         
         
         
-          4 分钟
+          1 分钟
         
       </span>
     
@@ -267,12 +270,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">weibo视频下载</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-25T20:20:42+08:00
+                    本文最后更新于 2024-10-28T14:07:10+08:00
                   
                   
 
@@ -282,21 +285,18 @@
             
               <div class="markdown-body">
                 
-                <h2 id="TTL说明"><a href="#TTL说明" class="headerlink" title="TTL说明"></a>TTL说明</h2><p>Time To Live，生存时间</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>限制IP数据包在网络中传输的最大跳数（路由器数量）</p>
-<p>每当IP数据包通过一个路由器时，其TTL值减1</p>
-<p>如果TTL值减为0，路由器会丢弃该数据包，并向发送端返回一个ICMP错误消息，通知发送端数据包被丢弃</p>
-<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>确保IP数据包不会无限制地在网络中循环，避免因路由环路（routing loop）而造成网络拥塞或资源浪费</p>
-<p>用于估算数据包从发送端到目标主机的路径的长度（通过TTL递减次数），尽管具体路径会因网络拓扑结构而异</p>
-<h2 id="ping-ttl说明"><a href="#ping-ttl说明" class="headerlink" title="ping ttl说明"></a>ping ttl说明</h2><p>在执行PING命令时，PING会发送一个ICMP回显请求（Echo Request）到目标主机</p>
-<p>接收到请求的目标主机会返回一个ICMP回显应答（Echo Reply）</p>
-<h2 id="常见设备TTL"><a href="#常见设备TTL" class="headerlink" title="常见设备TTL"></a>常见设备TTL</h2><h3 id="Windows-128"><a href="#Windows-128" class="headerlink" title="Windows 128"></a>Windows 128</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs routeros">C:\WINDOWS\system32&gt;ping -c 1 127.0.0.1<br><br>正在<span class="hljs-built_in"> Ping </span>127.0.0.1 具有 32 字节的数据:<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br>来自 127.0.0.1 的回复: 字节=32 时间&lt;1ms <span class="hljs-attribute">TTL</span>=128<br></code></pre></td></tr></table></figure>
+                <span id="more"></span>
 
-<h3 id="Mac-64"><a href="#Mac-64" class="headerlink" title="Mac 64"></a>Mac 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>localhost<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>localhost (127.0.0.1): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.070 ms<br>64 bytes <span class="hljs-keyword">from</span> 127.0.0.1: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=64 <span class="hljs-attribute">time</span>=0.142 ms<br></code></pre></td></tr></table></figure>
 
-<h3 id="iPhone-64"><a href="#iPhone-64" class="headerlink" title="iPhone 64"></a>iPhone 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.13<span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.13 (10.223.28.13): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=67.655 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.13: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=87.895 ms<br></code></pre></td></tr></table></figure>
 
-<h3 id="安卓-64"><a href="#安卓-64" class="headerlink" title="安卓 64"></a>安卓 64</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs routeros">➜  ~<span class="hljs-built_in"> ping </span>10.223.28.5       <span class="hljs-built_in"></span><br><span class="hljs-built_in">PING </span>10.223.28.5 (10.223.28.5): 56 data bytes<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=0 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=48.917 ms<br>64 bytes <span class="hljs-keyword">from</span> 10.223.28.5: <span class="hljs-attribute">icmp_seq</span>=1 <span class="hljs-attribute">ttl</span>=63 <span class="hljs-attribute">time</span>=69.429 ms<br></code></pre></td></tr></table></figure>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>下载微博中的视频文件，客户端被禁止下载</p>
+<p>1、复制视频短链接</p>
+<p>右击视频，复制视频短链接</p>
+<p><a target="_blank" rel="noopener" href="http://t.cn/A6TEMuJJ">http://t.cn/A6TEMuJJ</a></p>
+<p>2、解析短链接，获取实际链接（需要登录状态）</p>
+<p>访问短链接<a target="_blank" rel="noopener" href="http://t.cn/A6TEMuJJ%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%88%B0%E5%AE%9E%E9%99%85%E9%93%BE%E6%8E%A5https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow">http://t.cn/A6TEMuJJ，获取到实际链接https://weibo.com/tv/show/1034:5026030381891614?from=old_pc_videoshow</a></p>
+<p>3、firefox浏览器访问实际链接，另存视频即可下载</p>
+
                 
               </div>
             
@@ -304,6 +304,45 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
+      
+        <a href="/tags/tips/" class="print-no-link">#tips</a>
+      
+        <a href="/tags/commands/" class="print-no-link">#commands</a>
+      
+    </div>
   
 </div>
 
@@ -313,8 +352,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://10000hours6.github.io/2024/10/25/yunwei/tips/常见设备TTL/</div>
+      <div>weibo视频下载</div>
+      <div>https://10000hours6.github.io/2024/10/28/yunwei/tips/weibo视频下载/</div>
     </div>
     <div class="license-meta">
       
@@ -326,7 +365,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月25日</div>
+          <div>2024年10月28日</div>
         </div>
       
       
@@ -351,18 +390,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/28/yunwei/tips/pdf_to_word/" title="pdf_to_word">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">pdf_to_word</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/25/yunwei/tips/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/" title="查看服务器出口IP">
-                        <span class="hidden-mobile">查看服务器出口IP</span>
+                      <a href="/2024/10/28/security/netSec/ddos/ddos_protection/" title="ddos_protection">
+                        <span class="hidden-mobile">ddos_protection</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
