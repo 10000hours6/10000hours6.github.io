@@ -224,15 +224,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/04/03/yunwei/tips/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/" target="_blank">
-          rm删除大量文件
+        <a href="/2024/04/17/yunwei/commands/yum/" target="_blank">
+          yum
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/tips/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/" target="_blank">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/17/yunwei/commands/yum/" target="_blank">
         <div>
-          现象目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long” 解决方案ls | xargs -n 10 rm -rf ls 命令解释ls | xargs -n 10  xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割 123sinascan__2022-07-26
+          查看yum安装的服务yum list installed  12345678910[root@localhost tmp]# yum list installed 已加载插件：fastestmirrorLoading mirror speeds from cached hostfile * epel: mirrors.bfsu.edu.cn已安装的软件包NetworkManager.x86
         </div>
       </a>
 
@@ -240,150 +240,8 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/tips/windows2022_localuser_allowremote/" target="_blank">
-          windows2022_localuser_allowremote
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/tips/windows2022_localuser_allowremote/" target="_blank">
-        <div>
-          背景在Windows Server 2022 Standard 系统中新增本地用户后无法远程登录 远程报错信息要远程登录，你需要具有通过远程桌面服务进行登录的权限。默认情况下，远程桌面用户组的成员有这项权限。如果你所属的组没有这项权限，或者远程桌面用户组中已经删除了这项权限，那么需要手动为你授予这一权限 报错原因本地用户默认没有远程登录的权限，需要单独设置权限，管理员用户默认拥有远程登录权限
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/tips/" class="category-chain-item">tips</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/tips/">#tips</a>
-            
-              <a href="/tags/windwos/">#windwos</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/tips/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/" target="_blank">
-          查看目录归属磁盘
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/tips/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/" target="_blank">
-        <div>
-          查看目录归属磁盘df -h [目录] 123[root@localhost opt]# df -h /opt/Filesystem      Size  Used Avail Use% Mounted on/dev/sda6       236G  125G   99G  56% /opt
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
+            <time datetime="2024-04-17 00:00" pubdate>
+              2024-04-17
             </time>
           </div>
         
@@ -425,6 +283,452 @@
               <a href="/tags/tips/">#tips</a>
             
               <a href="/tags/commands/">#commands</a>
+            
+              <a href="/tags/yum/">#yum</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/16/yunwei/applications/redis/redis_base/" target="_blank">
+          redis_base
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/16/yunwei/applications/redis/redis_base/" target="_blank">
+        <div>
+          安装Centos添加 EPEL 存储库sudo yum install epel-release 安装Redissudo yum install redis 默认安装的版本为 3.2.12 启动
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-16 00:00" pubdate>
+              2024-04-16
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/applications/" class="category-chain-item">applications</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/applications/">#applications</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/08/security/netSec/ddos/ddos_type/" target="_blank">
+          ddos_type
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/08/security/netSec/ddos/ddos_type/" target="_blank">
+        <div>
+          网络层攻击：利用僵尸网络发送大量网络层报文形成超大带宽流量，拥塞带宽网络 会话耗尽攻击：利用僵尸网络发送大量TCP会话层报文，耗尽防火墙、负载均衡等基础设备的会话资源或目标服务器会话资源 应用层攻击：利用僵尸网络向目标服务器发送过量应用层请求，耗尽目标业务系统资源耗尽 华为  网络层攻击  反射攻击  会话耗尽攻击   应用层攻击   IPv6攻击
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-08 00:00" pubdate>
+              2024-04-08
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/security/" class="category-chain-item">security</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/security/netSec/" class="category-chain-item">netSec</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/security/netSec/ddos/" class="category-chain-item">ddos</a>
+  
+  
+
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/security/">#security</a>
+            
+              <a href="/tags/netSec/">#netSec</a>
+            
+              <a href="/tags/ddos/">#ddos</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/03/yunwei/applications/ftp/ftp/" target="_blank">
+          
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/applications/ftp/ftp/" target="_blank">
+        <div>
+          简介FTP（File Transfer Protocol）文件传输协议，用于在网络上进行文件传输的协议 安装LinuxLinux下常用的ftp工具为vsftp 检查是否安装rpm -qa | grep vsftpd yum安装yum install vsftpd -y 操作启动service vsftpd start systemctl start vsftpd 停止service vsftpd
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-03 19:48" pubdate>
+              2024-04-03
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/03/yunwei/machine_id/" target="_blank">
+          machine_id
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/machine_id/" target="_blank">
+        <div>
+          简介在 Linux 系统中，每台计算机都有一个唯一的标识符，称为机器 ID（Machine ID）。机器 ID 是一个由操作系统生成的字符串，用于标识特定的计算机。它在系统启动时自动生成，并且在系统的整个生命周期中保持不变。本文将详细介绍机器 ID 的作用、生成方式以及在 Linux 系统中的应用。 机器 ID 的生成方式Linux 系统中的机器 ID 是通过以下方式生成的： systemd在
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-03 00:00" pubdate>
+              2024-04-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/03/yunwei/cpe/" target="_blank">
+          cpe
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/cpe/" target="_blank">
+        <div>
+          简介Common Platform Enumeration 通用平台枚举 以标准化方式为软件应用程序、操作系统及硬件命令的方法 语法1cpe:/&lt;part&gt;:&lt;vendor&gt;:&lt;product&gt;:&lt;version&gt;:&lt;update&gt;:&lt;edition&gt;:&lt;language&gt;  示例cpe:&#x2F;o:alm
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-03 00:00" pubdate>
+              2024-04-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/03/yunwei/errors/error_fork_cannot_allocate_memory/" target="_blank">
+          error_fork_cannot_allocate_memory
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/errors/error_fork_cannot_allocate_memory/" target="_blank">
+        <div>
+          背景CentOS6中终端中执行命令提示报错 123[root@web-54 vsftpd]# service vsftpd status/etc/rc.d/init.d/functions: fork: Cannot allocate memory/etc/rc.d/init.d/functions: fork: Cannot allocate memory  报错原因系统进程数不足导致 解决
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-03 00:00" pubdate>
+              2024-04-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/errors/" class="category-chain-item">errors</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/errors/">#errors</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/2024/04/03/yunwei/errors/error_userdel_creating_mailbox_file_File_exists/" target="_blank">
+          error_userdel_creating_mailbox_file_File_exists
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/errors/error_userdel_creating_mailbox_file_File_exists/" target="_blank">
+        <div>
+          背景useradd 新建用户后，使用 userdel删除，再次创建时提示以下错误 1Creating mailbox file: File exists  解决方案删除 &#x2F;var&#x2F;spool&#x2F;mail 下对应用户名文件 12[root@webscan-54 vsftpd]# ls /var/spool/mail/ftpuserftp  -l-rw-rw---- 1
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2024-04-03 00:00" pubdate>
+              2024-04-03
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center">
+            <i class="iconfont icon-category"></i>
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/yunwei/errors/" class="category-chain-item">errors</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/yunwei/">#yunwei</a>
+            
+              <a href="/tags/errors/">#errors</a>
             
           </div>
         
@@ -517,356 +821,6 @@
       <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/crontab/" target="_blank">
         <div>
           简介crontab(定时任务)，是系统为用户提供定时执行任务的功能。 语法不同版本的系统，都会在通用语法的之后再扩展一些语法 crontab命令语法：crontab [-u user] [-l | -r | -e] [-i] [-s] -u user：指定用户，不指定表示当前用户，只有管理员才可以指定用户，普通用户使用-u会出现如下提示 12[test@110 /]$ crontab -u a
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/commands/history/" target="_blank">
-          history
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/history/" target="_blank">
-        <div>
-          命令语法history num 显示指定条数的最新历史记录history num 123456[root@iZbp1191gh7vw52537lyxrZ ~]# history 5  106  root 2022-08-14 10:54:02  ls  107  root 2022-08-14 10:54:07  cat /etc/bashrc  108  root 2022-08-14 10
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/commands/hostname/" target="_blank">
-          hostname
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/hostname/" target="_blank">
-        <div>
-          简介显示系统主机名 查看主机名命令 hostname  cenots6：读取的是 &#x2F;etc&#x2F;sysconfig&#x2F;network 中的配置 123[root@rdimtools1.ops.xlzbb1 /tmp]# cat /etc/sysconfig/networkNETWORKING=yesHOSTNAME=rdimtools1.ops.xlzbb1.sinan
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/commands/ifdown/" target="_blank">
-          ifdown
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/ifdown/" target="_blank">
-        <div>
-          禁用网卡查询网卡信息使用ifconfig，不要使用ip a ip a 命令查询出来的网卡名存在问题 同台机器 ip  a : eth0.200@eth0 ifconfig :  eth0.200 示例： ifconfig 123456789101112131415161718192021222324252627[root@localhost tmp]# ifconfigeth0      Li
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/commands/ln/" target="_blank">
-          ln
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/ln/" target="_blank">
-        <div>
-          简介为文件创建链接，默认创建的均为硬链接 语法ln [OPTION]… [-T] TARGET LINK_NAME 为TARGET创建链接为LINK_NAME 123(base) [root@110 ~]# ln /etc/passwd test(base) [root@110 ~]# ls -la test-rw-r--r-- 2 root root 1343 Dec 16 00:13 te
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-04-03 00:00" pubdate>
-              2024-04-03
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
-  
-  
-    <span>></span>
-    
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
-  
-  
-
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/yunwei/">#yunwei</a>
-            
-              <a href="/tags/commands/">#commands</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/04/03/yunwei/commands/passwd/" target="_blank">
-          passwd
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/04/03/yunwei/commands/passwd/" target="_blank">
-        <div>
-          &#x2F;etc&#x2F;passwd存储账户的文件 只能是管理员修改，其他用户只有可读权限 12ll  /etc/passwd-rw-r--r-- 1 root root 1414 Aug 22 09:16 /etc/passwd  内容示例： 1234567891011121314151617181920212223242526272829(base) [root@110 sk
         </div>
       </a>
 

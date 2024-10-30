@@ -4,6 +4,234 @@
   
   
   <entry>
+    <title>Windows打开环境变量设置</title>
+    <link href="/2024/10/30/yunwei/tips/Windows/Windows%E6%89%93%E5%BC%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/"/>
+    <url>/2024/10/30/yunwei/tips/Windows/Windows%E6%89%93%E5%BC%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><p><strong>常见打开Windows环境变量设置页面的方式</strong></p><p><strong>1、快捷命令 sysdm.cpl</strong></p><p>按下Win+R 组合键，打开“运行”对话框</p><p>在对话框中输入 sysdm.cpl，确定打开系统属性页面</p><p>在系统属性页面选择“高级“页面中最下面的环境变量即可</p><p><strong>2、快捷命令 rundll32.exe sysdm.cpl,EditEnvironmentVariables</strong></p><p>按下Win+R 组合键，打开“运行”对话框</p><p>在对话框中输入rundll32.exe sysdm.cpl,EditEnvironmentVariables，确定即可</p><p><strong>3、搜索功能</strong></p><p>在Windows10或Windows11中的搜索功能（小圆圈）输入”环境变量“或“e nv”</p><p>在搜索结果中，点击 “编辑系统环境变量” 或类似的选项，即可打开环境变量设置窗口</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Windows查看系统启动时间</title>
+    <link href="/2024/10/30/yunwei/tips/Windows/Windows%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%97%B6%E9%97%B4/"/>
+    <url>/2024/10/30/yunwei/tips/Windows/Windows%E6%9F%A5%E7%9C%8B%E7%B3%BB%E7%BB%9F%E5%90%AF%E5%8A%A8%E6%97%B6%E9%97%B4/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><p>Q：如何查看系统启动时间</p><p>A：</p><p>按下Win+R 组合键，打开“运行”对话框</p><p>在对话框中输入 cmd，确定打开终端</p><p>在终端中输入 systemctl | find “系统启动时间” </p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>Windows</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title></title>
+    <link href="/2024/10/29/security/mobilesec/mobilesectips/Untitled/"/>
+    <url>/2024/10/29/security/mobilesec/mobilesectips/Untitled/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>exceltips</title>
+    <link href="/2024/10/29/yunwei/applications/excel/exceltips/"/>
+    <url>/2024/10/29/yunwei/applications/excel/exceltips/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="自动适配列宽度"><a href="#自动适配列宽度" class="headerlink" title="自动适配列宽度"></a><strong>自动适配列宽度</strong></h2><h3 id="for-mac"><a href="#for-mac" class="headerlink" title="for mac"></a><strong>for mac</strong></h3><p><strong>使用功能区按钮</strong></p><p>1、选择需要调整的列</p><p>2、转到工具栏的“开始”选项卡</p><p>3、找到“格式”按钮并点击</p><p>4、在弹出的菜单中选择“自动调整列宽”</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>tips</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>excel</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>移植bash到arm</title>
+    <link href="/2024/10/29/security/mobilesec/%E7%A7%BB%E6%A4%8Dbash%E5%88%B0arm/"/>
+    <url>/2024/10/29/security/mobilesec/%E7%A7%BB%E6%A4%8Dbash%E5%88%B0arm/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h5 id="Android中默认的shell是mksh，不支持-dev-tcp伪文件，所以需要编译静态bash到Android环境中使用"><a href="#Android中默认的shell是mksh，不支持-dev-tcp伪文件，所以需要编译静态bash到Android环境中使用" class="headerlink" title="Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用"></a>Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用</h5><h3 id="arm32-armeabi-v7a"><a href="#arm32-armeabi-v7a" class="headerlink" title="arm32(armeabi-v7a)"></a>arm32(armeabi-v7a)</h3><p>1、下载bash源码包</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://ftp.gnu.org/gnu/bash/bash-<span class="hljs-number">5</span>.<span class="hljs-number">1</span>.tar.gz<br></code></pre></td></tr></table></figure><p>2、配置</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs awk">.<span class="hljs-regexp">/configure CC=/u</span>sr<span class="hljs-regexp">/bin/</span>arm-linux-gnueabihf-gcc --prefix=<span class="hljs-regexp">/opt/</span>bash --host=arm-linux --enable-static-link --without-bash-malloc<br><br>备注：<br>CC:指定编译器，需要安装arm交叉编译器<br>--profix:安装路径前缀，也就是make install 后安装到那个目录<br>--host:<br>--enable-static-link:指定bash为静态编译<br>--without-bash-malloc:指定bash不使用自带的malloc，而使用glibc的malloc,如不开启此会报错<br>    collect2: error: ld returned <span class="hljs-number">1</span> <span class="hljs-keyword">exit</span> status<br>    Makefile:<span class="hljs-number">582</span>: recipe <span class="hljs-keyword">for</span> target <span class="hljs-string">&#x27;bash&#x27;</span> failed<br>    make: *** [bash] Error <span class="hljs-number">1</span><br>--host:指定需要允许的位置，默认build，也就是说本机编译在本地运行；如果需要运行在arm环境下，需要指定为arm-linux<br><br>错误处理：<br><span class="hljs-number">1</span>、gcc command not found<br>    root@ubuntu18:~/bash-<span class="hljs-number">5.1</span><span class="hljs-comment"># make</span><br>    rm -f mksyntax<br>    gcc -DPROGRAM=<span class="hljs-string">&#x27;&quot;bash&quot;&#x27;</span> -DCONF_HOSTTYPE=<span class="hljs-string">&#x27;&quot;arm&quot;&#x27;</span> -DCONF_OSTYPE=<span class="hljs-string">&#x27;&quot;linux-gnu&quot;&#x27;</span> -DCONF_MACHTYPE=<span class="hljs-string">&#x27;&quot;arm-unknown-linux-gnu&quot;&#x27;</span> -DCONF_VENDOR=<span class="hljs-string">&#x27;&quot;unknown&quot;&#x27;</span> -DLOCALEDIR=<span class="hljs-string">&#x27;&quot;/opt/bash/share/locale&quot;&#x27;</span> -DPACKAGE=<span class="hljs-string">&#x27;&quot;bash&quot;&#x27;</span> -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I.<span class="hljs-regexp">/include -I./</span>lib   -g -DCROSS_COMPILING -rdynamic -g -DCROSS_COMPILING -o mksyntax ./mksyntax.c<br>    make: gcc: Command not found<br>    Makefile:<span class="hljs-number">719</span>: recipe <span class="hljs-keyword">for</span> target <span class="hljs-string">&#x27;mksyntax&#x27;</span> failed<br>    make: *** [mksyntax] Error <span class="hljs-number">127</span><br><br>    解决方案：<br>    apt install gcc<br><br>参考链接：<br>https:<span class="hljs-regexp">//</span>www.cnblogs.com<span class="hljs-regexp">/lifexy/</span>p/<span class="hljs-number">7866453</span>.html<br></code></pre></td></tr></table></figure><p>3、编译</p><figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs tap">make &amp;&amp; make install<br><br>编译之后生成的bash目录，常用的bash就是bin/bash<br>root@ubuntu:~/bash-5.1<span class="hljs-comment"># ls /opt/bash -lat</span><br>total 16<br>drwxr-xr-x<span class="hljs-number"> 2 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 bin<br>drwxr-xr-x<span class="hljs-number"> 6 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 share<br>drwxr-xr-x<span class="hljs-number"> 4 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 .<br>drwxr-xr-x<span class="hljs-number"> 4 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 ..<br><br>root@ubuntu:~/bash-5.1<span class="hljs-comment"># ls /opt/bash/bin/bash -l</span><br>-rwxr-xr-x<span class="hljs-number"> 1 </span>root root<span class="hljs-number"> 3781200 </span>Aug<span class="hljs-number"> 30 </span>18:38 /opt/bash/bin/bash<br></code></pre></td></tr></table></figure><p>4、导入arm环境</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb -s 10.235.74.18:5555 push .\bash /data/security<br>push到设备的bash文件默认权限为666，没有执行权限<br>petrel-p1:/data/test <span class="hljs-comment"># ls -lat bash32</span><br>-rw-rw-rw- 1 root root 3781200 2021-08-30 18:39 bash32<br><br>直接执行会存在报错<br>/system/bin/sh: ./bash/bin/bash: can<span class="hljs-string">&#x27;t execute: Permission denied</span><br><span class="hljs-string"></span><br><span class="hljs-string">增加执行权限</span><br><span class="hljs-string">chmod +x bash32</span><br></code></pre></td></tr></table></figure><p>5、查看版本</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">petrel-p1:/data/test # /data/test/bash <span class="hljs-comment">--version</span><br>GNU bash, <span class="hljs-keyword">version</span> <span class="hljs-number">5.1</span><span class="hljs-number">.0</span>(<span class="hljs-number">2</span>)-<span class="hljs-keyword">release</span> (arm-<span class="hljs-type">unknown</span>-linux-gnu)<br>Copyright (C) <span class="hljs-number">2020</span> Free Software Foundation, Inc.<br>License GPLv3+: GNU GPL <span class="hljs-keyword">version</span> <span class="hljs-number">3</span> <span class="hljs-keyword">or</span> later &lt;http://gnu.org/licenses/gpl.html&gt;<br><br>This <span class="hljs-keyword">is</span> free software; you are free <span class="hljs-keyword">to</span> change <span class="hljs-keyword">and</span> redistribute it.<br>There <span class="hljs-keyword">is</span> <span class="hljs-keyword">NO</span> WARRANTY, <span class="hljs-keyword">to</span> the extent permitted <span class="hljs-keyword">by</span> law.<br></code></pre></td></tr></table></figure><h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><p>1、 arm not executable: 64-bit ELF file 当前可执行文件为64位，在本地环境32位无法运行，不兼容。</p><p>2、</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>mobilesec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>mobilesec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>tmux</title>
+    <link href="/2024/10/29/yunwei/applications/tmux/tmux/"/>
+    <url>/2024/10/29/yunwei/applications/tmux/tmux/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a><strong>安装</strong></h2><h3 id="Centos"><a href="#Centos" class="headerlink" title="Centos"></a><strong>Centos</strong></h3><p>yum install tmux -y</p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@nvm</span> <span class="hljs-built_in">log</span>]<span class="hljs-meta"># rpm -qa | grep tmux tmux-1.8-4.el7.x86_64</span><br></code></pre></td></tr></table></figure><h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a><strong>Ubuntu</strong></h3><p>apt-get install tmux</p><h3 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a><strong>Mac</strong></h3><p>brew install tmux</p><h2 id="操作命令"><a href="#操作命令" class="headerlink" title="操作命令"></a><strong>操作命令</strong></h2><h3 id="新建会话"><a href="#新建会话" class="headerlink" title="新建会话"></a><strong>新建会话</strong></h3><p><strong>tmux new -s</strong> </p><h3 id="列举后台运行会话"><a href="#列举后台运行会话" class="headerlink" title="列举后台运行会话"></a><strong>列举后台运行会话</strong></h3><p><strong>tmux ls</strong></p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta"># tmux ls</span><br>logs: <span class="hljs-number">1</span> windows (created Tue Aug <span class="hljs-number">20</span> <span class="hljs-number">18</span>:<span class="hljs-number">56</span>:<span class="hljs-number">57</span> <span class="hljs-number">2024</span>) [<span class="hljs-number">147</span>x37]<br>[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta">#</span><br></code></pre></td></tr></table></figure><h3 id="连接指定后台运行会话"><a href="#连接指定后台运行会话" class="headerlink" title="连接指定后台运行会话"></a><strong>连接指定后台运行会话</strong></h3><p><strong>tmux a -t sessionName</strong></p><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs csharp">[<span class="hljs-meta">root@nvm /</span>]<span class="hljs-meta"># tmux ls</span><br>logs: <span class="hljs-number">1</span> windows (created Tue Aug <span class="hljs-number">20</span> <span class="hljs-number">18</span>:<span class="hljs-number">56</span>:<span class="hljs-number">57</span> <span class="hljs-number">2024</span>) [<span class="hljs-number">147</span>x37]<br>[<span class="hljs-meta">root@nvm /</span>]<span class="hljs-meta"># tmux a -t logs</span><br>[<span class="hljs-meta">detached</span>]<br>[<span class="hljs-meta">root@nvm /</span>]<span class="hljs-meta">#</span><br></code></pre></td></tr></table></figure><h3 id="重命名会话名"><a href="#重命名会话名" class="headerlink" title="重命名会话名"></a><strong>重命名会话名</strong></h3><p><strong>tmux rename -t oldName newName</strong></p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta"># tmux ls</span><br>logs: <span class="hljs-number">1</span> windows (created Tue Aug <span class="hljs-number">20</span> <span class="hljs-number">18</span>:<span class="hljs-number">56</span>:<span class="hljs-number">57</span> <span class="hljs-number">2024</span>) [<span class="hljs-number">147</span>x37]<br>[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta"># tmux rename -t logs securelog</span><br>[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta"># tmux ls</span><br>securelog: <span class="hljs-number">1</span> windows (created Tue Aug <span class="hljs-number">20</span> <span class="hljs-number">18</span>:<span class="hljs-number">56</span>:<span class="hljs-number">57</span> <span class="hljs-number">2024</span>) [<span class="hljs-number">147</span>x37]<br>[root<span class="hljs-symbol">@nvm</span> /]<span class="hljs-meta">#</span><br></code></pre></td></tr></table></figure><h2 id="操作快捷键"><a href="#操作快捷键" class="headerlink" title="操作快捷键"></a><strong>操作快捷键</strong></h2><h3 id="分离会话"><a href="#分离会话" class="headerlink" title="分离会话"></a><strong>分离会话</strong></h3><p>退出界面，会话保持在后台</p><p><strong>ctrl+b 接 d</strong></p><h3 id="重命名会话"><a href="#重命名会话" class="headerlink" title="重命名会话"></a><strong>重命名会话</strong></h3><p><strong>ctr+b 接 $</strong></p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">(<span class="hljs-keyword">rename</span>-<span class="hljs-keyword">session</span>) logs<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>applications</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>applications</tag>
+      
+      <tag>tmux</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>adb_base</title>
+    <link href="/2024/10/29/security/mobilesec/mobilesectools/adb/adb_base/"/>
+    <url>/2024/10/29/security/mobilesec/mobilesectools/adb/adb_base/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="基础信息"><a href="#基础信息" class="headerlink" title="基础信息"></a>基础信息</h1><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p>$ 普通权限</p><p># root权限</p><h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>常用端口：5555</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="工具包下载地址"><a href="#工具包下载地址" class="headerlink" title="工具包下载地址"></a>工具包下载地址</h3><p><a href="https://developer.android.google.cn/studio/releases/platform-tools">https://developer.android.google.cn/studio/releases/platform-tools</a></p><p>解压到指定目录</p><p><img src="/image-20241029160255214.png" alt="image-20241029160255214"></p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h3><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>Windows path 中添加路径</p><p>D:\tools\security\adb\platform-tools</p><p>cmd 中执行 adb 命令即可</p><h4 id="Mac"><a href="#Mac" class="headerlink" title="Mac"></a>Mac</h4><h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><h2 id="获取本地连接设备列表"><a href="#获取本地连接设备列表" class="headerlink" title="获取本地连接设备列表"></a>获取本地连接设备列表</h2><p><strong>adb devices</strong></p><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs arduino">➜  platform-tools ./adb devices<br>List of devices attached<br><br><br>➜  platform-tools ./adb devices<br>List of devices attached<br><span class="hljs-number">347e5</span>e4unauthorized<br><br>➜  platform-tools ./adb devices<br>List of devices attached<br><span class="hljs-number">347e5</span>e4device<br></code></pre></td></tr></table></figure><p>unauthorized 表示设备未授权</p><p>device 表示连接成功</p><h2 id="连接设备"><a href="#连接设备" class="headerlink" title="连接设备"></a>连接设备</h2><p>adb connect ip:5555</p><h2 id="进入shell"><a href="#进入shell" class="headerlink" title="进入shell"></a>进入shell</h2><p><strong>adb shell</strong></p><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver">➜  <span class="hljs-built_in">platform</span>-tools adb <span class="hljs-built_in">shell</span><br>sagit:/ $ ip <span class="hljs-keyword">a</span><br></code></pre></td></tr></table></figure><p>待确认问题，多个设备，默认会连接哪个？</p><h2 id="查看应用列表"><a href="#查看应用列表" class="headerlink" title="查看应用列表"></a>查看应用列表</h2><h3 id="pm-list-packages"><a href="#pm-list-packages" class="headerlink" title="pm list packages"></a><strong>pm list packages</strong></h3><p><strong>adb shell pm list packages</strong></p><h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p>pm list packages</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus">➜  platform-tools adb shell<br>sagit:/ $ pm list packages<br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.contentextension</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.corner</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.double</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.providers</span><span class="hljs-selector-class">.telephony</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.powerkeeper</span><br>package:com<span class="hljs-selector-class">.goodix</span><span class="hljs-selector-class">.fingerprint</span><br>package:com<span class="hljs-selector-class">.xiaomi</span>.miplay_client<br></code></pre></td></tr></table></figure><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus">➜  /tmp adb shell pm list packages<br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.contentextension</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.corner</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.double</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.providers</span><span class="hljs-selector-class">.telephony</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.powerkeeper</span><br>package:com<span class="hljs-selector-class">.goodix</span><span class="hljs-selector-class">.fingerprint</span><br>package:com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.miplay_client</span><br>package:com<span class="hljs-selector-class">.unionpay</span><span class="hljs-selector-class">.tsmservice</span>.mi<br></code></pre></td></tr></table></figure><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><h5 id="f-显示应用关联的apk文件"><a href="#f-显示应用关联的apk文件" class="headerlink" title="-f 显示应用关联的apk文件"></a>-f 显示应用关联的apk文件</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list packages -f<br>package:/system/app/MiuiScreenRecorder/MiuiScreenRecorder.apk=com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:/system/priv-app/CtsShimPrivPrebuilt/CtsShimPrivPrebuilt.apk=com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:/system/vendor/app/SSGTelemetryService/SSGTelemetryService.apk=com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:/system/app/Perfdump/Perfdump.apk=com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:/data/app/com<span class="hljs-selector-class">.miui</span>.contentextension-ddZEz_WF2ToehMWnZ0dhzQ==/base.apk=com<span class="hljs-selector-class">.miui</span>.contentextension<br></code></pre></td></tr></table></figure><h5 id="d-只显示disabled的应用"><a href="#d-只显示disabled的应用" class="headerlink" title="-d 只显示disabled的应用"></a>-d 只显示disabled的应用</h5><h5 id="e-只显示enabled的应用"><a href="#e-只显示enabled的应用" class="headerlink" title="-e 只显示enabled的应用"></a>-e 只显示enabled的应用</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list package -e                                                                                     <br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:com<span class="hljs-selector-class">.miui</span>.contentextension<br></code></pre></td></tr></table></figure><h5 id="s-只显示系统应用"><a href="#s-只显示系统应用" class="headerlink" title="-s 只显示系统应用"></a>-s 只显示系统应用</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list package -s                                                                                     <br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.contentextension</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.corner</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.double</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.providers</span><span class="hljs-selector-class">.telephony</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.powerkeeper</span><br>package:com<span class="hljs-selector-class">.goodix</span><span class="hljs-selector-class">.fingerprint</span><br><br></code></pre></td></tr></table></figure><h5 id="3-只显示第三方应用"><a href="#3-只显示第三方应用" class="headerlink" title="-3 只显示第三方应用"></a>-3 只显示第三方应用</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list package -<span class="hljs-number">3</span>                                                                                     <br>package:com<span class="hljs-selector-class">.mi</span><span class="hljs-selector-class">.liveassistant</span><br>package:com<span class="hljs-selector-class">.vkontakte</span><span class="hljs-selector-class">.android</span><br>package:com<span class="hljs-selector-class">.jdd</span><span class="hljs-selector-class">.motorfans</span><br>package:com<span class="hljs-selector-class">.zhipuai</span><span class="hljs-selector-class">.qingyan</span><br>package:com<span class="hljs-selector-class">.iflytek</span><span class="hljs-selector-class">.spark</span><br>package:com<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.input_mi</span><br>package:com<span class="hljs-selector-class">.xingin</span><span class="hljs-selector-class">.xhs</span><br>package:com<span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.mm</span><br>package:com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.mibrain</span><span class="hljs-selector-class">.speech</span><br>package:com<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.duersdk</span><span class="hljs-selector-class">.opensdk</span><br>package:com<span class="hljs-selector-class">.shututek</span><span class="hljs-selector-class">.original</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.huanji</span><br>package:cn<span class="hljs-selector-class">.wps</span><span class="hljs-selector-class">.moffice_eng</span><span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.lite</span><br>package:org<span class="hljs-selector-class">.telegram</span><span class="hljs-selector-class">.messenger</span>.web<br></code></pre></td></tr></table></figure><h5 id="i-显示应用的-installer"><a href="#i-显示应用的-installer" class="headerlink" title="-i 显示应用的 installer"></a>-i 显示应用的 installer</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list package -<span class="hljs-number">3</span> -<span class="hljs-selector-tag">i</span>                                                                                  <br>package:com<span class="hljs-selector-class">.mi</span><span class="hljs-selector-class">.liveassistant</span>  installer=null<br>package:com<span class="hljs-selector-class">.vkontakte</span><span class="hljs-selector-class">.android</span>  installer=com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.packageinstaller</span><br>package:com<span class="hljs-selector-class">.jdd</span><span class="hljs-selector-class">.motorfans</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.zhipuai</span><span class="hljs-selector-class">.qingyan</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.iflytek</span><span class="hljs-selector-class">.spark</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.input_mi</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.xingin</span><span class="hljs-selector-class">.xhs</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.tencent</span><span class="hljs-selector-class">.mm</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.mibrain</span><span class="hljs-selector-class">.speech</span>  installer=com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.market</span><br>package:com<span class="hljs-selector-class">.baidu</span><span class="hljs-selector-class">.duersdk</span><span class="hljs-selector-class">.opensdk</span>  installer=null<br>package:com<span class="hljs-selector-class">.shututek</span><span class="hljs-selector-class">.original</span>  installer=com<span class="hljs-selector-class">.xiaomi</span>.market<br></code></pre></td></tr></table></figure><h5 id="u-包含已卸载的应用"><a href="#u-包含已卸载的应用" class="headerlink" title="-u 包含已卸载的应用"></a>-u 包含已卸载的应用</h5><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs stylus"><br>sagit:/ $ pm list package -u                                                                                     <br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.screenrecorder</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.cts</span><span class="hljs-selector-class">.priv</span><span class="hljs-selector-class">.ctsshim</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.qms</span><span class="hljs-selector-class">.service</span><span class="hljs-selector-class">.telemetry</span><br>package:com<span class="hljs-selector-class">.qualcomm</span><span class="hljs-selector-class">.qti</span><span class="hljs-selector-class">.perfdump</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.contentextension</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.corner</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.internal</span><span class="hljs-selector-class">.display</span><span class="hljs-selector-class">.cutout</span><span class="hljs-selector-class">.emulation</span><span class="hljs-selector-class">.double</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.providers</span><span class="hljs-selector-class">.telephony</span><br>package:com<span class="hljs-selector-class">.miui</span><span class="hljs-selector-class">.powerkeeper</span><br>package:com<span class="hljs-selector-class">.goodix</span><span class="hljs-selector-class">.fingerprint</span><br>package:com<span class="hljs-selector-class">.xiaomi</span><span class="hljs-selector-class">.miplay_client</span><br>package:com<span class="hljs-selector-class">.unionpay</span><span class="hljs-selector-class">.tsmservice</span><span class="hljs-selector-class">.mi</span><br>package:com<span class="hljs-selector-class">.mi</span><span class="hljs-selector-class">.liveassistant</span><br>package:com<span class="hljs-selector-class">.vkontakte</span><span class="hljs-selector-class">.android</span><br>package:com<span class="hljs-selector-class">.android</span><span class="hljs-selector-class">.providers</span>.calendar<br></code></pre></td></tr></table></figure><h4 id="过滤"><a href="#过滤" class="headerlink" title="过滤"></a>过滤</h4><p>参数后直接添加需要过滤的字符</p><p>pm list packages -i -u box 包名中包含 box</p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">sagit:</span>/ $ pm list packages -i -u box<br><span class="hljs-symbol">package:</span><span class="hljs-keyword">com</span>.android.quicksearchbox  installer=<span class="hljs-keyword">com</span>.xiaomi.market<br></code></pre></td></tr></table></figure><h2 id="查看设备信息"><a href="#查看设备信息" class="headerlink" title="查看设备信息"></a>查看设备信息</h2><h3 id="查看芯片类型"><a href="#查看芯片类型" class="headerlink" title="查看芯片类型"></a>查看芯片类型</h3><p><strong>getprop ro.product.cpu.abi</strong></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs stylus">sagit:/ $ getprop ro<span class="hljs-selector-class">.product</span><span class="hljs-selector-class">.cpu</span><span class="hljs-selector-class">.abi</span><br>arm64-v8a<br></code></pre></td></tr></table></figure><p>arm64-v8a  &#x3D;&#x3D;&#x3D;  64位</p><p>armeabi-v7a &#x3D;&#x3D;&#x3D; 32位</p><h3 id="查看系统版本"><a href="#查看系统版本" class="headerlink" title="查看系统版本"></a>查看系统版本</h3><p><strong>getprop ro.build.version.release</strong></p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs stylus">sagit:/ $ getprop ro<span class="hljs-selector-class">.build</span><span class="hljs-selector-class">.version</span><span class="hljs-selector-class">.release</span><br><span class="hljs-number">9</span><br>sagit:/ $ <br></code></pre></td></tr></table></figure><h3 id="查看系统信息"><a href="#查看系统信息" class="headerlink" title="查看系统信息"></a>查看系统信息</h3><p>需要root权限，也就是环境为 #</p><p><strong>cat &#x2F;system&#x2F;build.prop | grep product</strong></p><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs routeros">rk3399_box:/ $ cat /system/build.prop | grep product<br>ro.product.<span class="hljs-attribute">model</span>=rk3399-box<br>ro.product.<span class="hljs-attribute">brand</span>=rockchip<br>ro.product.<span class="hljs-attribute">name</span>=rk3399_box<br>ro.product.<span class="hljs-attribute">device</span>=rk3399_box<br>ro.product.<span class="hljs-attribute">board</span>=rk30sdk<br><span class="hljs-comment"># ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,</span><br><span class="hljs-comment"># use ro.product.cpu.abilist instead.</span><br>ro.product.cpu.<span class="hljs-attribute">abi</span>=arm64-v8a<br>ro.product.cpu.<span class="hljs-attribute">abilist</span>=arm64-v8a,armeabi-v7a,armeabi<br>ro.product.cpu.<span class="hljs-attribute">abilist32</span>=armeabi-v7a,armeabi<br>ro.product.cpu.<span class="hljs-attribute">abilist64</span>=arm64-v8a<br>ro.product.<span class="hljs-attribute">manufacturer</span>=rockchip<br><span class="hljs-comment"># ro.build.product is obsolete; use ro.product.device</span><br>ro.build.<span class="hljs-attribute">product</span>=rk3399_box<br>ro.product.<span class="hljs-attribute">usbfactory</span>=rockchip_usb<br><span class="hljs-comment">#set default lcd density for rk3399 box product</span><br>ro.product.locale.<span class="hljs-attribute">language</span>=zh<br>ro.product.locale.<span class="hljs-attribute">region</span>=CN<br>ro.product.<span class="hljs-attribute">first_api_level</span>=25<br></code></pre></td></tr></table></figure><h3 id="查看系统api版本"><a href="#查看系统api版本" class="headerlink" title="查看系统api版本"></a><strong>查看系统api版本</strong></h3><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c"><span class="hljs-number">127</span><span class="hljs-string">|sagit:/ $ getprop ro.build.version.sdk</span><br><span class="hljs-number">28</span><br></code></pre></td></tr></table></figure><h3 id="查看设备型号"><a href="#查看设备型号" class="headerlink" title="查看设备型号"></a><strong>查看设备型号</strong></h3><p><strong>getprop ro.product.mode</strong></p><h3 id="获取厂商名称"><a href="#获取厂商名称" class="headerlink" title="获取厂商名称"></a>获取厂商名称</h3><p><strong>getprop ro.product.brand</strong></p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">sagit:</span>/ $ getprop ro.product.brand<br>Xiaomi<br><span class="hljs-symbol">sagit:</span>/ $ <br></code></pre></td></tr></table></figure><h3 id="查看设备序列号"><a href="#查看设备序列号" class="headerlink" title="查看设备序列号"></a>查看设备序列号</h3><p><strong>getprop ro.serialno</strong></p><figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">sagit:</span>/ $ getprop ro.serialno<br><span class="hljs-number">347e5</span>e4<br><span class="hljs-symbol">sagit:</span>/ $<br></code></pre></td></tr></table></figure><h3 id="查看mac地址"><a href="#查看mac地址" class="headerlink" title="查看mac地址"></a>查看mac地址</h3><p><strong>cat &#x2F;sys&#x2F;class&#x2F;net&#x2F;wlan0&#x2F;address</strong></p><p>需要root权限，也就是环境为 #</p><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs angelscript">rk3399_box:/ $ cat /sys/<span class="hljs-keyword">class</span>/<span class="hljs-symbol">net</span>/<span class="hljs-symbol">wlan0</span>/<span class="hljs-symbol">address</span><br><span class="hljs-symbol">c0:<span class="hljs-symbol">84</span>:<span class="hljs-symbol">7d</span>:<span class="hljs-symbol">51</span>:<span class="hljs-symbol">73</span>:<span class="hljs-symbol">a8</span></span><br></code></pre></td></tr></table></figure><h3 id="查看内存信息"><a href="#查看内存信息" class="headerlink" title="查看内存信息"></a>查看内存信息</h3><p><strong>cat &#x2F;proc&#x2F;meminfo</strong>   </p><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol"></span><br><span class="hljs-symbol">sagit:</span>/ $ cat <span class="hljs-keyword">/proc/</span>meminfo                                                                                                                                         <br><span class="hljs-symbol">MemTotal:</span>        <span class="hljs-number">3815944</span> kB<br><span class="hljs-symbol">MemFree:</span>          <span class="hljs-number">188404</span> kB<br><span class="hljs-symbol">MemAvailable:</span>    <span class="hljs-number">1429284</span> kB<br><span class="hljs-symbol">Buffers:</span>           <span class="hljs-number">77324</span> kB<br><span class="hljs-symbol">Cached:</span>          <span class="hljs-number">1292048</span> kB<br><span class="hljs-symbol">SwapCached:</span>         <span class="hljs-number">7956</span> kB<br><span class="hljs-symbol">Active:</span>          <span class="hljs-number">1499888</span> kB<br></code></pre></td></tr></table></figure><h3 id="查看屏幕分辨率"><a href="#查看屏幕分辨率" class="headerlink" title="查看屏幕分辨率"></a>查看屏幕分辨率</h3><p><strong>adb -s 10.235.19.57:5555 shell “dumpsys window | grep mUnrestrictedScreen”</strong></p><p><strong>dumpsys window | grep mUnrestrictedScreen</strong></p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">sagit:/ $ dumpsys window <span class="hljs-string">| grep mUnrestrictedScreen                                                                                                                         </span><br><span class="hljs-number">1</span><span class="hljs-string">|sagit:/ $ </span><br></code></pre></td></tr></table></figure><h3 id="查看物理密度"><a href="#查看物理密度" class="headerlink" title="查看物理密度"></a>查看物理密度</h3><p>wm density</p><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crystal"><span class="hljs-number">130</span>|<span class="hljs-symbol">sagit:</span>/ <span class="hljs-variable">$ </span>wm density                                                                                                                                                    <br>Physical <span class="hljs-symbol">density:</span> <span class="hljs-number">480</span><br><span class="hljs-symbol">sagit:</span>/ <span class="hljs-variable">$ </span><br></code></pre></td></tr></table></figure><h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p><strong>adb push 源文件夹 目的文件夹</strong></p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PS</span> D:\tools\security\adb\platform-tools_r31.<span class="hljs-number">0</span>.<span class="hljs-number">2</span>-windows\platform-tools&gt; .\adb.exe push D:/tools/nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android/. /data/test/nmap<br><span class="hljs-attribute">D</span>:/tools/nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android/.\: <span class="hljs-number">745</span> files pushed, <span class="hljs-number">0</span> skipped. <span class="hljs-number">2</span>.<span class="hljs-number">4</span> MB/s (<span class="hljs-number">31952015</span> bytes in <span class="hljs-number">12</span>.<span class="hljs-number">761</span>s)<br></code></pre></td></tr></table></figure><h2 id="查看网络信息"><a href="#查看网络信息" class="headerlink" title="查看网络信息"></a>查看网络信息</h2><h3 id="ip-a"><a href="#ip-a" class="headerlink" title="ip a"></a>ip a</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sagit</span>:/ $ ip a<br><span class="hljs-attribute">1</span>: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="hljs-number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1</span><br>    <span class="hljs-attribute">link</span>/loopback <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> brd <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>/<span class="hljs-number">8</span> scope host lo<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br>    <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>/<span class="hljs-number">128</span> scope host <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><span class="hljs-attribute">2</span>: bond0: &lt;BROADCAST,MULTICAST,MASTER&gt; mtu <span class="hljs-number">1500</span> qdisc noop state DOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ce:<span class="hljs-number">28</span>:<span class="hljs-number">04</span>:b9:<span class="hljs-number">4</span>e:f0 brd ff:ff:ff:ff:ff:ff<br><span class="hljs-attribute">3</span>: dummy0: &lt;BROADCAST,NOARP,UP,LOWER_UP&gt; mtu <span class="hljs-number">1500</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ca:<span class="hljs-number">2</span>d:d3:<span class="hljs-number">49</span>:f7:<span class="hljs-number">3</span>f brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-attribute">inet6</span> fe80::c82d:d3ff:fe49:f73f/<span class="hljs-number">64</span> scope link <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><br></code></pre></td></tr></table></figure><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h2 id="连接设备-1"><a href="#连接设备-1" class="headerlink" title="连接设备"></a>连接设备</h2><h3 id="本地连接（USB）"><a href="#本地连接（USB）" class="headerlink" title="本地连接（USB）"></a>本地连接（USB）</h3><p>前提条件</p><p>1、USB连接</p><p>2、开启USB调试模式</p><p><strong>adb devices</strong>查看本地连接设备状态</p><h3 id="远程连接"><a href="#远程连接" class="headerlink" title="远程连接"></a>远程连接</h3><p>adb connect ip:5555</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PS</span> D:\tools\security\adb\platform-tools_r31.<span class="hljs-number">0</span>.<span class="hljs-number">2</span>-windows\platform-tools&gt; .\adb.exe connect ip:<span class="hljs-number">5555</span><br><span class="hljs-attribute">connected</span> to ip:<span class="hljs-number">5555</span><br></code></pre></td></tr></table></figure><h4 id="设备发现"><a href="#设备发现" class="headerlink" title="设备发现"></a>设备发现</h4><p>常用端口：5555</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PS</span> D:\tools\security\nmap&gt; .\nmap.exe -p5555 -sS -sV <span class="hljs-number">192.168.1.18</span><br><span class="hljs-attribute">Starting</span> Nmap <span class="hljs-number">7</span>.<span class="hljs-number">91</span> ( https://nmap.org ) at <span class="hljs-number">2021</span>-<span class="hljs-number">06</span>-<span class="hljs-number">24</span> <span class="hljs-number">17</span>:<span class="hljs-number">15</span> ?D1ú±ê×?ê±??<br><span class="hljs-attribute">Nmap</span> scan report for <span class="hljs-number">192.168.1.18</span><br><span class="hljs-attribute">Host</span> is up (<span class="hljs-number">0</span>.<span class="hljs-number">0059</span>s latency).<br><br><span class="hljs-attribute">PORT</span>     STATE SERVICE VERSION<br><span class="hljs-attribute">5555</span>/tcp open  adb     Android Debug Bridge device (name: petrel_fvd_p1; model: OTT-<span class="hljs-number">21</span>; device: petrel-p1; features: cmd,shell_v2)<br><span class="hljs-attribute">Service</span> Info: OS: Android; CPE: cpe:/o:linux:linux_kernel<br><br><span class="hljs-attribute">Service</span> detection performed. Please report any incorrect results at https://nmap.org/submit/ .<br><span class="hljs-attribute">Nmap</span> done: <span class="hljs-number">1</span> IP address (<span class="hljs-number">1</span> host up) scanned in <span class="hljs-number">12</span>.<span class="hljs-number">03</span> seconds<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>mobilesec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>sectools</tag>
+      
+      <tag>mobilesec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>adb_error</title>
+    <link href="/2024/10/29/security/mobilesec/mobilesectools/adb/adb_error/"/>
+    <url>/2024/10/29/security/mobilesec/mobilesectools/adb/adb_error/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="文件上传后权限问题"><a href="#文件上传后权限问题" class="headerlink" title="文件上传后权限问题"></a>文件上传后权限问题</h2><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs subunit">上传上去之后权限为666，导致无法执行<br>petrel-p1:/data/test/nmap<span class="hljs-string">-7</span>.31-android-arm-bin/nmap<span class="hljs-string">-7</span>.31/bin # ls -lat<br>ls -lat<br>total 21920<br>drwxrwxrwx 2 root root    4096 2021<span class="hljs-string">-08</span><span class="hljs-string">-26</span> 17:24 .<br>drwxrwxrwx 5 root root    4096 2021<span class="hljs-string">-08</span><span class="hljs-string">-26</span> 17:24 ..<br>-rw-rw-rw- 1 root root 2292960 2016<span class="hljs-string">-10</span><span class="hljs-string">-25</span> 16:37 ncat<br>-rw-rw-rw- 1 root root    2608 2016<span class="hljs-string">-10</span><span class="hljs-string">-25</span> 16:37 ndiff<br>-rw-rw-rw- 1 root root 6279108 2016<span class="hljs-string">-10</span><span class="hljs-string">-25</span> 16:37 nmap<br>-rw-rw-rw- 1 root root 2633124 2016<span class="hljs-string">-10</span><span class="hljs-string">-25</span> 16:37 nping<br>-rw-rw-rw- 1 root root    1538 2016<span class="hljs-string">-10</span><span class="hljs-string">-25</span> 16:37 uninstall_ndiff<br>执行会报错<br>petrel-p1:/data/test/nmap<span class="hljs-string">-7</span>.31-android-arm-bin/nmap<span class="hljs-string">-7</span>.31/bin # ./nmap -sS -T4 10.222.28.12 --open<br>./nmap -sS -T4 10.222.28.12 --open<br>sh: ./nmap: can&#x27;t execute: Permission denied<br></code></pre></td></tr></table></figure><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">petrel</span>-p1:/data/test # chmod <span class="hljs-number">0777</span> nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android-arm-bin/ -R<br><span class="hljs-attribute">chmod</span> <span class="hljs-number">0777</span> nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android-arm-bin/ -R<br></code></pre></td></tr></table></figure><h2 id="more-than-one-device-and-emulator"><a href="#more-than-one-device-and-emulator" class="headerlink" title="more than one device and emulator"></a>more than one device and emulator</h2><h3 id="问题现象"><a href="#问题现象" class="headerlink" title="问题现象"></a>问题现象</h3><p>有多个设备连接电脑，adb无法识别具体操作那台设备</p><h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="查看当前连接的设备"><a href="#查看当前连接的设备" class="headerlink" title="查看当前连接的设备"></a>查看当前连接的设备</h4><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">PS C:\WINDOWS\system32&gt; adb devices<br>List of devices attached<br><span class="hljs-number">10.235.131.11:5555</span>      device<br>emulator-<span class="hljs-number">5554</span>   offline<br></code></pre></td></tr></table></figure><h4 id="连接指定设备"><a href="#连接指定设备" class="headerlink" title="连接指定设备"></a>连接指定设备</h4><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">adb</span> -s <span class="hljs-number">10.235.131.11:5555</span> shell<br></code></pre></td></tr></table></figure><h5 id="参考连接："><a href="#参考连接：" class="headerlink" title="参考连接："></a>参考连接：</h5><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">https:<span class="hljs-regexp">//</span>blog.csdn.net<span class="hljs-regexp">/yuemingxingxing/</span>article<span class="hljs-regexp">/details/</span><span class="hljs-number">86590989</span><br></code></pre></td></tr></table></figure><h1 id="Read-only-file-system"><a href="#Read-only-file-system" class="headerlink" title="Read-only file system"></a>Read-only file system</h1><h3 id="问题现象-1"><a href="#问题现象-1" class="headerlink" title="问题现象"></a>问题现象</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs vim"><span class="hljs-number">1</span>|petrel-p1:/data/test # <span class="hljs-keyword">cp</span> bash /<span class="hljs-built_in">system</span>/bin/bash<br><span class="hljs-keyword">cp</span>: /<span class="hljs-built_in">system</span>/bin/bash: Read-<span class="hljs-keyword">only</span> <span class="hljs-keyword">file</span> <span class="hljs-built_in">system</span><br><br>petrel-p1:/data/test # <span class="hljs-keyword">ls</span> -<span class="hljs-keyword">lat</span> /<span class="hljs-built_in">system</span> -d<br>drwxr-xr-<span class="hljs-keyword">x</span> <span class="hljs-number">17</span> root root <span class="hljs-number">4096</span> <span class="hljs-number">2021</span>-<span class="hljs-number">04</span>-<span class="hljs-number">25</span> <span class="hljs-number">19</span>:<span class="hljs-number">48</span> /<span class="hljs-built_in">system</span><br><br></code></pre></td></tr></table></figure><h3 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>security</category>
+      
+      <category>mobilesec</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>security</tag>
+      
+      <tag>sectools</tag>
+      
+      <tag>mobilesec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>weibo视频下载</title>
     <link href="/2024/10/28/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/"/>
     <url>/2024/10/28/yunwei/tips/weibo%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
@@ -158,8 +386,8 @@
   
   <entry>
     <title>查看服务器出口IP</title>
-    <link href="/2024/10/25/yunwei/tips/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/"/>
-    <url>/2024/10/25/yunwei/tips/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/</url>
+    <link href="/2024/10/25/yunwei/tips/Linux/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/"/>
+    <url>/2024/10/25/yunwei/tips/Linux/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/</url>
     
     <content type="html"><![CDATA[<span id="more"></span><p><strong>curl ifconfig.me</strong></p><p>(base) [root@aliyun-1_1_1_1 ~]# curl ifconfig.me 1.1.1.1(base) [root@aliyun-1_1_1_1 ~]#</p>]]></content>
     
@@ -565,35 +793,6 @@
   
   
   <entry>
-    <title>linux_ransfer_file</title>
-    <link href="/2024/05/16/yunwei/tips/linux_ransfer_file/"/>
-    <url>/2024/05/16/yunwei/tips/linux_ransfer_file/</url>
-    
-    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>1、需要将1台Linux服务器的数据迁移到另1台Linux服务器</p><p>2、服务器登录通过堡垒机登录，无法使用 scp 或 rsync</p><p>考虑使用 tar 和 nc 命令进行传输</p><h2 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h2><h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>unix下常用的压缩命令</p><p>本次传输所需的参数如下</p><p>-a ：archive 压缩保持权限在内的属性</p><p>-r ：recursive 递归压缩目录</p><h3 id="nc（netcat）"><a href="#nc（netcat）" class="headerlink" title="nc（netcat）"></a>nc（netcat）</h3><p>本次传输所需的参数如下</p><p>-l ： 开启监听</p><p>-u：指定协议为UDP</p><p>-p：指定监听端口</p><p>需要注意的：</p><p>不同版本的nc，命令不同，nc -lp port 和 nc -l port 哪个可用就用哪个</p><h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><h3 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h3><p>命令</p><p>nc -l -p 9999 | tar xf -</p><p>解释</p><p>监听端口 9999</p><p>接受到文件后解压到本地（因为是以数据流的形式），如果不解压，只会传输不会保存</p><p>文件接受完成后会自动断开连接，结束监听</p><p>示例</p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> sec_ftp]<span class="hljs-meta"># nc -l -p 9999 | tar xf -</span><br></code></pre></td></tr></table></figure><h3 id="发送端"><a href="#发送端" class="headerlink" title="发送端"></a>发送端</h3><p>命令</p><p>tar cf - 目录名 | nc serverip 9999</p><p>tar cf - rcracki_mt_0.7.0_linux_x86_64.zip | nc 10.235.151.11 9999</p><p>解释</p><p>将需要传输的目录压缩转换为字节流</p><p>示例</p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@webscan</span><span class="hljs-number">-54</span> sec_ftp]<span class="hljs-meta"># tar -cf - music | nc 10.211.222.33 9999</span><br></code></pre></td></tr></table></figure><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] 使用 tar、nc 在 Linux 机器之间传文件和目录 编程木子</p><p><a href="https://zhuanlan.zhihu.com/p/351095535">https://zhuanlan.zhihu.com/p/351095535</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>yunwei</category>
-      
-      <category>tips</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>yunwei</tag>
-      
-      <tag>tips</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>spf</title>
     <link href="/2024/05/16/security/mailsec/spf/"/>
     <url>/2024/05/16/security/mailsec/spf/</url>
@@ -644,6 +843,35 @@
       <tag>security</tag>
       
       <tag>mailsec</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>linux_ransfer_file</title>
+    <link href="/2024/05/16/yunwei/tips/Linux/linux_ransfer_file/"/>
+    <url>/2024/05/16/yunwei/tips/Linux/linux_ransfer_file/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>1、需要将1台Linux服务器的数据迁移到另1台Linux服务器</p><p>2、服务器登录通过堡垒机登录，无法使用 scp 或 rsync</p><p>考虑使用 tar 和 nc 命令进行传输</p><h2 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h2><h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>unix下常用的压缩命令</p><p>本次传输所需的参数如下</p><p>-a ：archive 压缩保持权限在内的属性</p><p>-r ：recursive 递归压缩目录</p><h3 id="nc（netcat）"><a href="#nc（netcat）" class="headerlink" title="nc（netcat）"></a>nc（netcat）</h3><p>本次传输所需的参数如下</p><p>-l ： 开启监听</p><p>-u：指定协议为UDP</p><p>-p：指定监听端口</p><p>需要注意的：</p><p>不同版本的nc，命令不同，nc -lp port 和 nc -l port 哪个可用就用哪个</p><h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><h3 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h3><p>命令</p><p>nc -l -p 9999 | tar xf -</p><p>解释</p><p>监听端口 9999</p><p>接受到文件后解压到本地（因为是以数据流的形式），如果不解压，只会传输不会保存</p><p>文件接受完成后会自动断开连接，结束监听</p><p>示例</p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> sec_ftp]<span class="hljs-meta"># nc -l -p 9999 | tar xf -</span><br></code></pre></td></tr></table></figure><h3 id="发送端"><a href="#发送端" class="headerlink" title="发送端"></a>发送端</h3><p>命令</p><p>tar cf - 目录名 | nc serverip 9999</p><p>tar cf - rcracki_mt_0.7.0_linux_x86_64.zip | nc 10.235.151.11 9999</p><p>解释</p><p>将需要传输的目录压缩转换为字节流</p><p>示例</p><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@webscan</span><span class="hljs-number">-54</span> sec_ftp]<span class="hljs-meta"># tar -cf - music | nc 10.211.222.33 9999</span><br></code></pre></td></tr></table></figure><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] 使用 tar、nc 在 Linux 机器之间传文件和目录 编程木子</p><p><a href="https://zhuanlan.zhihu.com/p/351095535">https://zhuanlan.zhihu.com/p/351095535</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>tips</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
       
     </tags>
     
@@ -1010,97 +1238,6 @@
   
   
   <entry>
-    <title>rm删除大量文件</title>
-    <link href="/2024/04/03/yunwei/tips/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/"/>
-    <url>/2024/04/03/yunwei/tips/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</url>
-    
-    <content type="html"><![CDATA[<span id="more"></span><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long”</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>ls | xargs -n 10 rm -rf ls</p><h3 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h3><p>ls | xargs -n 10 </p><p>xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">sinascan__2022-<span class="hljs-number">07</span>-<span class="hljs-number">26</span>_08_37_39_1797228_352146754_report.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_38_49_1797154_843999317_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_06_1797156_332961206_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_19_1797158_1181784302_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_50_1797230_1152914597_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_04_1797160_1423651559_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_05_1797232_1217770757_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_17_1797162_1951926594_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_17_1797234_228010804_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_28_1797236_1981428778_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_43_39_1797238_1372310064_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_50_1797240_573416805_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_46_05_1797242_757152036_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_16_1797244_1169277424_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_27_1797246_1802228788_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_49_39_1797248_1935995942_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_17_1797164_448377307_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_40_1797166_1835940497_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_42_1797250_975410091_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_56_1797168_825602496_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_55_11_1797170_1727778636_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_24_1797172_1340605402_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_57_1797252_1891633674_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_58_1797254_899866426_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_57_10_1797256_1505960702_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_22_1797258_2052556085_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_34_1797260_1222102546_report</span>.xml<br></code></pre></td></tr></table></figure><p>将分割的结果作为参数传递给 rm -rf 进行删除</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="http://blog.chinaunix.net/uid-631981-id-3764070.html">http://blog.chinaunix.net/uid-631981-id-3764070.html</a></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>yunwei</category>
-      
-      <category>commands</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>yunwei</tag>
-      
-      <tag>commands</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>windows2022_localuser_allowremote</title>
-    <link href="/2024/04/03/yunwei/tips/windows2022_localuser_allowremote/"/>
-    <url>/2024/04/03/yunwei/tips/windows2022_localuser_allowremote/</url>
-    
-    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在Windows Server 2022 Standard 系统中新增本地用户后无法远程登录</p><h2 id="远程报错信息"><a href="#远程报错信息" class="headerlink" title="远程报错信息"></a>远程报错信息</h2><p>要远程登录，你需要具有通过远程桌面服务进行登录的权限。默认情况下，远程桌面用户组的成员有这项权限。如果你所属的组没有这项权限，或者远程桌面用户组中已经删除了这项权限，那么需要手动为你授予这一权限</p><h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>本地用户默认没有远程登录的权限，需要单独设置权限，管理员用户默认拥有远程登录权限</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="“本地用户和组”增加权限"><a href="#“本地用户和组”增加权限" class="headerlink" title="“本地用户和组”增加权限"></a>“本地用户和组”增加权限</h3><p>1、Win+R 输入 “lusrmgr.msc”进入用户和组配置界面</p><p>2、组-&gt;Remote Desktop Users 右击选择“属性”，在成员中增加对应的用户名</p><p>备注：</p><p>该权限增加后远程登录还是会提示同样的错误，需要进行下一步配置</p><h3 id="“本地组策略”增加权限"><a href="#“本地组策略”增加权限" class="headerlink" title="“本地组策略”增加权限"></a>“本地组策略”增加权限</h3><p>1、Win+R 输入 “gpedit.msc”进入本地组策略编辑器界面</p><p>2、计算机配置-&gt;Windows设置-&gt;安全设置-&gt;本地策略-&gt;用户权限分配-&gt;允许通过远程桌面服务登录 右击选择“属性”，添加用户或组，添加对应的用户即可</p><p>备注：</p><p>默认只有Administrators</p><p>如果没有上一步，直接执行这一步，会出现“拒绝请求的会话访问”</p><p>完成以上两步操作后，即可远程登录</p>]]></content>
-    
-    
-    <categories>
-      
-      <category>yunwei</category>
-      
-      <category>tips</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>yunwei</tag>
-      
-      <tag>tips</tag>
-      
-      <tag>windwos</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>查看目录归属磁盘</title>
-    <link href="/2024/04/03/yunwei/tips/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/"/>
-    <url>/2024/04/03/yunwei/tips/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/</url>
-    
-    <content type="html"><![CDATA[<span id="more"></span><h2 id="查看目录归属磁盘"><a href="#查看目录归属磁盘" class="headerlink" title="查看目录归属磁盘"></a>查看目录归属磁盘</h2><p>df -h [目录]</p><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nsis">[root@localhost opt]<span class="hljs-comment"># df -h /opt/</span><br><span class="hljs-keyword">File</span><span class="hljs-params">system</span>      Size  Used Avail Use% Mounted <span class="hljs-literal">on</span><br>/dev/sda6       <span class="hljs-number">236</span>G  <span class="hljs-number">125</span>G   <span class="hljs-number">99</span>G  <span class="hljs-number">56</span>% /opt<br></code></pre></td></tr></table></figure>]]></content>
-    
-    
-    <categories>
-      
-      <category>yunwei</category>
-      
-      <category>commands</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>yunwei</tag>
-      
-      <tag>tips</tag>
-      
-      <tag>commands</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>data&amp;time</title>
     <link href="/2024/04/03/yunwei/commands/date&amp;time/"/>
     <url>/2024/04/03/yunwei/commands/date&amp;time/</url>
@@ -1414,6 +1551,97 @@
       <tag>secvulns</tag>
       
       <tag>oss</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>rm删除大量文件</title>
+    <link href="/2024/04/03/yunwei/tips/Linux/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/"/>
+    <url>/2024/04/03/yunwei/tips/Linux/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long”</p><h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>ls | xargs -n 10 rm -rf ls</p><h3 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h3><p>ls | xargs -n 10 </p><p>xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割</p><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">sinascan__2022-<span class="hljs-number">07</span>-<span class="hljs-number">26</span>_08_37_39_1797228_352146754_report.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_38_49_1797154_843999317_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_06_1797156_332961206_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_19_1797158_1181784302_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_50_1797230_1152914597_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_04_1797160_1423651559_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_05_1797232_1217770757_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_17_1797162_1951926594_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_17_1797234_228010804_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_28_1797236_1981428778_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_43_39_1797238_1372310064_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_50_1797240_573416805_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_46_05_1797242_757152036_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_16_1797244_1169277424_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_27_1797246_1802228788_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_49_39_1797248_1935995942_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_17_1797164_448377307_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_40_1797166_1835940497_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_42_1797250_975410091_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_56_1797168_825602496_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_55_11_1797170_1727778636_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_24_1797172_1340605402_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_57_1797252_1891633674_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_58_1797254_899866426_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_57_10_1797256_1505960702_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_22_1797258_2052556085_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_34_1797260_1222102546_report</span>.xml<br></code></pre></td></tr></table></figure><p>将分割的结果作为参数传递给 rm -rf 进行删除</p><h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="http://blog.chinaunix.net/uid-631981-id-3764070.html">http://blog.chinaunix.net/uid-631981-id-3764070.html</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>commands</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>查看目录归属磁盘</title>
+    <link href="/2024/04/03/yunwei/tips/Linux/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/"/>
+    <url>/2024/04/03/yunwei/tips/Linux/%E6%9F%A5%E7%9C%8B%E7%9B%AE%E5%BD%95%E5%BD%92%E5%B1%9E%E7%A3%81%E7%9B%98/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="查看目录归属磁盘"><a href="#查看目录归属磁盘" class="headerlink" title="查看目录归属磁盘"></a>查看目录归属磁盘</h2><p>df -h [目录]</p><figure class="highlight nsis"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs nsis">[root@localhost opt]<span class="hljs-comment"># df -h /opt/</span><br><span class="hljs-keyword">File</span><span class="hljs-params">system</span>      Size  Used Avail Use% Mounted <span class="hljs-literal">on</span><br>/dev/sda6       <span class="hljs-number">236</span>G  <span class="hljs-number">125</span>G   <span class="hljs-number">99</span>G  <span class="hljs-number">56</span>% /opt<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>commands</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>commands</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>windows2022_localuser_allowremote</title>
+    <link href="/2024/04/03/yunwei/tips/Windows/windows2022_localuser_allowremote/"/>
+    <url>/2024/04/03/yunwei/tips/Windows/windows2022_localuser_allowremote/</url>
+    
+    <content type="html"><![CDATA[<span id="more"></span><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在Windows Server 2022 Standard 系统中新增本地用户后无法远程登录</p><h2 id="远程报错信息"><a href="#远程报错信息" class="headerlink" title="远程报错信息"></a>远程报错信息</h2><p>要远程登录，你需要具有通过远程桌面服务进行登录的权限。默认情况下，远程桌面用户组的成员有这项权限。如果你所属的组没有这项权限，或者远程桌面用户组中已经删除了这项权限，那么需要手动为你授予这一权限</p><h2 id="报错原因"><a href="#报错原因" class="headerlink" title="报错原因"></a>报错原因</h2><p>本地用户默认没有远程登录的权限，需要单独设置权限，管理员用户默认拥有远程登录权限</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="“本地用户和组”增加权限"><a href="#“本地用户和组”增加权限" class="headerlink" title="“本地用户和组”增加权限"></a>“本地用户和组”增加权限</h3><p>1、Win+R 输入 “lusrmgr.msc”进入用户和组配置界面</p><p>2、组-&gt;Remote Desktop Users 右击选择“属性”，在成员中增加对应的用户名</p><p>备注：</p><p>该权限增加后远程登录还是会提示同样的错误，需要进行下一步配置</p><h3 id="“本地组策略”增加权限"><a href="#“本地组策略”增加权限" class="headerlink" title="“本地组策略”增加权限"></a>“本地组策略”增加权限</h3><p>1、Win+R 输入 “gpedit.msc”进入本地组策略编辑器界面</p><p>2、计算机配置-&gt;Windows设置-&gt;安全设置-&gt;本地策略-&gt;用户权限分配-&gt;允许通过远程桌面服务登录 右击选择“属性”，添加用户或组，添加对应的用户即可</p><p>备注：</p><p>默认只有Administrators</p><p>如果没有上一步，直接执行这一步，会出现“拒绝请求的会话访问”</p><p>完成以上两步操作后，即可远程登录</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>yunwei</category>
+      
+      <category>tips</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>yunwei</tag>
+      
+      <tag>tips</tag>
+      
+      <tag>windwos</tag>
       
     </tags>
     
@@ -2774,7 +3002,7 @@
     <link href="/2024/02/06/hexoblog/hexo_command/"/>
     <url>/2024/02/06/hexoblog/hexo_command/</url>
     
-    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>上传命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g <br>hexo d<br></code></pre></td></tr></table></figure><p>文件路径</p><p>&#x2F;Users&#x2F;admin&#x2F;10000hours&#x2F;Hexo</p>]]></content>
+    <content type="html"><![CDATA[<span id="more"></span><h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><h1 id=""><a href="#" class="headerlink" title=""></a></h1><p>上传命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo g <br>hexo d<br></code></pre></td></tr></table></figure><p>文件路径</p><p>&#x2F;Users&#x2F;admin&#x2F;10000hours&#x2F;Hexo</p><p><img src="/image-20241028142042207.png" alt="image-20241028142042207"></p><p><img src="/image-20241028142056544.png" alt="image-20241028142056544"></p><p><img src="/image-20241028142107951.png" alt="image-20241028142107951"></p><p><a href="https://juejin.cn/post/7306723921717198899">https://juejin.cn/post/7306723921717198899</a></p>]]></content>
     
     
     <categories>

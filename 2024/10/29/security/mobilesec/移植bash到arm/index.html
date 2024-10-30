@@ -16,23 +16,23 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="现象目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long” 解决方案ls | xargs -n 10 rm -rf ls 命令解释ls | xargs -n 10  xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割 123sinascan__2022-07-26">
+    <meta name="description" content="前言Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用arm32(armeabi-v7a)1、下载bash源码包 1https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;bash&#x2F;bash-5.1.tar.gz  2、配置 123456789101112131415161718192021222324252">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rm删除大量文件">
-<meta property="og:url" content="https://10000hours6.github.io/2024/04/03/yunwei/tips/rm%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:title" content="移植bash到arm">
+<meta property="og:url" content="https://10000hours6.github.io/2024/10/29/security/mobilesec/%E7%A7%BB%E6%A4%8Dbash%E5%88%B0arm/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="现象目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long” 解决方案ls | xargs -n 10 rm -rf ls 命令解释ls | xargs -n 10  xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割 123sinascan__2022-07-26">
+<meta property="og:description" content="前言Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用arm32(armeabi-v7a)1、下载bash源码包 1https:&#x2F;&#x2F;ftp.gnu.org&#x2F;gnu&#x2F;bash&#x2F;bash-5.1.tar.gz  2、配置 123456789101112131415161718192021222324252">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-04-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-04-03T07:00:10.226Z">
+<meta property="article:published_time" content="2024-10-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-29T09:36:23.756Z">
 <meta property="article:author" content="10000hours">
-<meta property="article:tag" content="yunwei">
-<meta property="article:tag" content="commands">
+<meta property="article:tag" content="security">
+<meta property="article:tag" content="mobilesec">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>rm删除大量文件 - 10000hours</title>
+  <title>移植bash到arm - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="rm删除大量文件"></span>
+            <span id="subtitle" data-typed-text="移植bash到arm"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-04-03 00:00" pubdate>
-          2024年4月3日 凌晨
+        <time datetime="2024-10-29 00:00" pubdate>
+          2024年10月29日 凌晨
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          180 字
+          509 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          2 分钟
+          5 分钟
         
       </span>
     
@@ -269,12 +269,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">rm删除大量文件</h1>
+            <h1 id="seo-header">移植bash到arm</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-04-03T15:00:10+08:00
+                    本文最后更新于 2024-10-29T17:36:23+08:00
                   
                   
 
@@ -286,16 +286,23 @@
                 
                 <span id="more"></span>
 
-<h3 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h3><p>目录下存在很多文件，使用 rm -rf * 命令删除时出现报错信息“-bash: &#x2F;bin&#x2F;rm: Argument list too long”</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>ls | xargs -n 10 rm -rf ls</p>
-<h3 id="命令解释"><a href="#命令解释" class="headerlink" title="命令解释"></a>命令解释</h3><p>ls | xargs -n 10 </p>
-<p>xargs 将 ls 的输出以10个为一组进行划分，每一组中以空格分割</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs crmsh">sinascan__2022-<span class="hljs-number">07</span>-<span class="hljs-number">26</span>_08_37_39_1797228_352146754_report.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_38_49_1797154_843999317_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_06_1797156_332961206_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_19_1797158_1181784302_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_39_50_1797230_1152914597_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_04_1797160_1423651559_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_05_1797232_1217770757_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_42_17_1797162_1951926594_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_17_1797234_228010804_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_28_1797236_1981428778_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_43_39_1797238_1372310064_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_43_50_1797240_573416805_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_46_05_1797242_757152036_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_16_1797244_1169277424_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_47_27_1797246_1802228788_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_49_39_1797248_1935995942_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_17_1797164_448377307_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_40_1797166_1835940497_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_42_1797250_975410091_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_54_56_1797168_825602496_report</span>.<span class="hljs-keyword">xml</span><br><span class="hljs-title">sinascan__2022-07-26_08_55_11_1797170_1727778636_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_24_1797172_1340605402_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_57_1797252_1891633674_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_55_58_1797254_899866426_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_57_10_1797256_1505960702_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_22_1797258_2052556085_report</span>.<span class="hljs-keyword">xml</span> <span class="hljs-title">sinascan__2022-07-26_08_58_34_1797260_1222102546_report</span>.xml<br></code></pre></td></tr></table></figure>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h5 id="Android中默认的shell是mksh，不支持-dev-tcp伪文件，所以需要编译静态bash到Android环境中使用"><a href="#Android中默认的shell是mksh，不支持-dev-tcp伪文件，所以需要编译静态bash到Android环境中使用" class="headerlink" title="Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用"></a>Android中默认的shell是mksh，不支持&#x2F;dev&#x2F;tcp伪文件，所以需要编译静态bash到Android环境中使用</h5><h3 id="arm32-armeabi-v7a"><a href="#arm32-armeabi-v7a" class="headerlink" title="arm32(armeabi-v7a)"></a>arm32(armeabi-v7a)</h3><p>1、下载bash源码包</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">https</span>://ftp.gnu.org/gnu/bash/bash-<span class="hljs-number">5</span>.<span class="hljs-number">1</span>.tar.gz<br></code></pre></td></tr></table></figure>
 
+<p>2、配置</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs awk">.<span class="hljs-regexp">/configure CC=/u</span>sr<span class="hljs-regexp">/bin/</span>arm-linux-gnueabihf-gcc --prefix=<span class="hljs-regexp">/opt/</span>bash --host=arm-linux --enable-static-link --without-bash-malloc<br><br>备注：<br>CC:指定编译器，需要安装arm交叉编译器<br>--profix:安装路径前缀，也就是make install 后安装到那个目录<br>--host:<br>--enable-static-link:指定bash为静态编译<br>--without-bash-malloc:指定bash不使用自带的malloc，而使用glibc的malloc,如不开启此会报错<br>    collect2: error: ld returned <span class="hljs-number">1</span> <span class="hljs-keyword">exit</span> status<br>    Makefile:<span class="hljs-number">582</span>: recipe <span class="hljs-keyword">for</span> target <span class="hljs-string">&#x27;bash&#x27;</span> failed<br>    make: *** [bash] Error <span class="hljs-number">1</span><br>--host:指定需要允许的位置，默认build，也就是说本机编译在本地运行；如果需要运行在arm环境下，需要指定为arm-linux<br><br>错误处理：<br><span class="hljs-number">1</span>、gcc command not found<br>    root@ubuntu18:~/bash-<span class="hljs-number">5.1</span><span class="hljs-comment"># make</span><br>    rm -f mksyntax<br>    gcc -DPROGRAM=<span class="hljs-string">&#x27;&quot;bash&quot;&#x27;</span> -DCONF_HOSTTYPE=<span class="hljs-string">&#x27;&quot;arm&quot;&#x27;</span> -DCONF_OSTYPE=<span class="hljs-string">&#x27;&quot;linux-gnu&quot;&#x27;</span> -DCONF_MACHTYPE=<span class="hljs-string">&#x27;&quot;arm-unknown-linux-gnu&quot;&#x27;</span> -DCONF_VENDOR=<span class="hljs-string">&#x27;&quot;unknown&quot;&#x27;</span> -DLOCALEDIR=<span class="hljs-string">&#x27;&quot;/opt/bash/share/locale&quot;&#x27;</span> -DPACKAGE=<span class="hljs-string">&#x27;&quot;bash&quot;&#x27;</span> -DSHELL -DHAVE_CONFIG_H   -I.  -I. -I.<span class="hljs-regexp">/include -I./</span>lib   -g -DCROSS_COMPILING -rdynamic -g -DCROSS_COMPILING -o mksyntax ./mksyntax.c<br>    make: gcc: Command not found<br>    Makefile:<span class="hljs-number">719</span>: recipe <span class="hljs-keyword">for</span> target <span class="hljs-string">&#x27;mksyntax&#x27;</span> failed<br>    make: *** [mksyntax] Error <span class="hljs-number">127</span><br><br>    解决方案：<br>    apt install gcc<br><br>参考链接：<br>https:<span class="hljs-regexp">//</span>www.cnblogs.com<span class="hljs-regexp">/lifexy/</span>p/<span class="hljs-number">7866453</span>.html<br></code></pre></td></tr></table></figure>
 
+<p>3、编译</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs tap">make &amp;&amp; make install<br><br>编译之后生成的bash目录，常用的bash就是bin/bash<br>root@ubuntu:~/bash-5.1<span class="hljs-comment"># ls /opt/bash -lat</span><br>total 16<br>drwxr-xr-x<span class="hljs-number"> 2 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 bin<br>drwxr-xr-x<span class="hljs-number"> 6 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 share<br>drwxr-xr-x<span class="hljs-number"> 4 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 .<br>drwxr-xr-x<span class="hljs-number"> 4 </span>root root<span class="hljs-number"> 4096 </span>Aug<span class="hljs-number"> 30 </span>18:38 ..<br><br>root@ubuntu:~/bash-5.1<span class="hljs-comment"># ls /opt/bash/bin/bash -l</span><br>-rwxr-xr-x<span class="hljs-number"> 1 </span>root root<span class="hljs-number"> 3781200 </span>Aug<span class="hljs-number"> 30 </span>18:38 /opt/bash/bin/bash<br></code></pre></td></tr></table></figure>
 
-<p>将分割的结果作为参数传递给 rm -rf 进行删除</p>
-<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="http://blog.chinaunix.net/uid-631981-id-3764070.html">http://blog.chinaunix.net/uid-631981-id-3764070.html</a></p>
+<p>4、导入arm环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash">adb -s 10.235.74.18:5555 push .\bash /data/security<br>push到设备的bash文件默认权限为666，没有执行权限<br>petrel-p1:/data/test <span class="hljs-comment"># ls -lat bash32</span><br>-rw-rw-rw- 1 root root 3781200 2021-08-30 18:39 bash32<br><br>直接执行会存在报错<br>/system/bin/sh: ./bash/bin/bash: can<span class="hljs-string">&#x27;t execute: Permission denied</span><br><span class="hljs-string"></span><br><span class="hljs-string">增加执行权限</span><br><span class="hljs-string">chmod +x bash32</span><br></code></pre></td></tr></table></figure>
+
+<p>5、查看版本</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">petrel-p1:/data/test # /data/test/bash <span class="hljs-comment">--version</span><br>GNU bash, <span class="hljs-keyword">version</span> <span class="hljs-number">5.1</span><span class="hljs-number">.0</span>(<span class="hljs-number">2</span>)-<span class="hljs-keyword">release</span> (arm-<span class="hljs-type">unknown</span>-linux-gnu)<br>Copyright (C) <span class="hljs-number">2020</span> Free Software Foundation, Inc.<br>License GPLv3+: GNU GPL <span class="hljs-keyword">version</span> <span class="hljs-number">3</span> <span class="hljs-keyword">or</span> later &lt;http://gnu.org/licenses/gpl.html&gt;<br><br>This <span class="hljs-keyword">is</span> free software; you are free <span class="hljs-keyword">to</span> change <span class="hljs-keyword">and</span> redistribute it.<br>There <span class="hljs-keyword">is</span> <span class="hljs-keyword">NO</span> WARRANTY, <span class="hljs-keyword">to</span> the extent permitted <span class="hljs-keyword">by</span> law.<br></code></pre></td></tr></table></figure>
+
+<h3 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h3><p>1、 arm not executable: 64-bit ELF file 当前可执行文件为64位，在本地环境32位无法运行，不兼容。</p>
+<p>2、</p>
 
                 
               </div>
@@ -314,12 +321,12 @@
     
       <span class="category-chain">
         
-  <a href="/categories/yunwei/" class="category-chain-item">yunwei</a>
+  <a href="/categories/security/" class="category-chain-item">security</a>
   
   
     <span>></span>
     
-  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
+  <a href="/categories/security/mobilesec/" class="category-chain-item">mobilesec</a>
   
   
 
@@ -336,9 +343,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/yunwei/" class="print-no-link">#yunwei</a>
+        <a href="/tags/security/" class="print-no-link">#security</a>
       
-        <a href="/tags/commands/" class="print-no-link">#commands</a>
+        <a href="/tags/mobilesec/" class="print-no-link">#mobilesec</a>
       
     </div>
   
@@ -350,8 +357,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>rm删除大量文件</div>
-      <div>https://10000hours6.github.io/2024/04/03/yunwei/tips/rm删除大量文件/</div>
+      <div>移植bash到arm</div>
+      <div>https://10000hours6.github.io/2024/10/29/security/mobilesec/移植bash到arm/</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +370,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年4月3日</div>
+          <div>2024年10月29日</div>
         </div>
       
       
@@ -388,9 +395,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/04/03/yunwei/errors/error_userdel_creating_mailbox_file_File_exists/" title="error_userdel_creating_mailbox_file_File_exists">
+                      <a href="/2024/10/29/yunwei/applications/excel/exceltips/" title="exceltips">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">error_userdel_creating_mailbox_file_File_exists</span>
+                        <span class="hidden-mobile">exceltips</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -398,8 +405,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/04/03/yunwei/tips/windows2022_localuser_allowremote/" title="windows2022_localuser_allowremote">
-                        <span class="hidden-mobile">windows2022_localuser_allowremote</span>
+                      <a href="/2024/10/29/yunwei/applications/tmux/tmux/" title="tmux">
+                        <span class="hidden-mobile">tmux</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,23 +16,24 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="背景1、需要将1台Linux服务器的数据迁移到另1台Linux服务器 2、服务器登录通过堡垒机登录，无法使用 scp 或 rsync 考虑使用 tar 和 nc 命令进行传输 命令说明tarunix下常用的压缩命令 本次传输所需的参数如下 -a ：archive 压缩保持权限在内的属性 -r ：recursive 递归压缩目录 nc（netcat）本次传输所需的参数如下 -l ： 开启监听 -">
+    <meta name="description" content="curl ifconfig.me (base) [root@aliyun-1_1_1_1 ~]# curl ifconfig.me 1.1.1.1(base) [root@aliyun-1_1_1_1 ~]#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux_ransfer_file">
-<meta property="og:url" content="https://10000hours6.github.io/2024/05/16/yunwei/tips/linux_ransfer_file/index.html">
+<meta property="og:title" content="查看服务器出口IP">
+<meta property="og:url" content="https://10000hours6.github.io/2024/10/25/yunwei/tips/Linux/%E6%9F%A5%E7%9C%8B%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%87%BA%E5%8F%A3IP/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="背景1、需要将1台Linux服务器的数据迁移到另1台Linux服务器 2、服务器登录通过堡垒机登录，无法使用 scp 或 rsync 考虑使用 tar 和 nc 命令进行传输 命令说明tarunix下常用的压缩命令 本次传输所需的参数如下 -a ：archive 压缩保持权限在内的属性 -r ：recursive 递归压缩目录 nc（netcat）本次传输所需的参数如下 -l ： 开启监听 -">
+<meta property="og:description" content="curl ifconfig.me (base) [root@aliyun-1_1_1_1 ~]# curl ifconfig.me 1.1.1.1(base) [root@aliyun-1_1_1_1 ~]#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-05-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-05-16T11:29:16.807Z">
+<meta property="article:published_time" content="2024-10-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-10-25T12:20:02.369Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="yunwei">
 <meta property="article:tag" content="tips">
+<meta property="article:tag" content="commands">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>linux_ransfer_file - 10000hours</title>
+  <title>查看服务器出口IP - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="linux_ransfer_file"></span>
+            <span id="subtitle" data-typed-text="查看服务器出口IP"></span>
           
         </div>
 
@@ -209,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-05-16 00:00" pubdate>
-          2024年5月16日 凌晨
+        <time datetime="2024-10-25 00:00" pubdate>
+          2024年10月25日 凌晨
         </time>
       </span>
     
@@ -221,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          310 字
+          15 字
         
       </span>
     
@@ -232,7 +233,7 @@
         
         
         
-          3 分钟
+          1 分钟
         
       </span>
     
@@ -269,12 +270,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">linux_ransfer_file</h1>
+            <h1 id="seo-header">查看服务器出口IP</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-05-16T19:29:16+08:00
+                    本文最后更新于 2024-10-25T20:20:02+08:00
                   
                   
 
@@ -286,44 +287,8 @@
                 
                 <span id="more"></span>
 
-<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>1、需要将1台Linux服务器的数据迁移到另1台Linux服务器</p>
-<p>2、服务器登录通过堡垒机登录，无法使用 scp 或 rsync</p>
-<p>考虑使用 tar 和 nc 命令进行传输</p>
-<h2 id="命令说明"><a href="#命令说明" class="headerlink" title="命令说明"></a>命令说明</h2><h3 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h3><p>unix下常用的压缩命令</p>
-<p>本次传输所需的参数如下</p>
-<p>-a ：archive 压缩保持权限在内的属性</p>
-<p>-r ：recursive 递归压缩目录</p>
-<h3 id="nc（netcat）"><a href="#nc（netcat）" class="headerlink" title="nc（netcat）"></a>nc（netcat）</h3><p>本次传输所需的参数如下</p>
-<p>-l ： 开启监听</p>
-<p>-u：指定协议为UDP</p>
-<p>-p：指定监听端口</p>
-<p>需要注意的：</p>
-<p>不同版本的nc，命令不同，nc -lp port 和 nc -l port 哪个可用就用哪个</p>
-<h2 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h2><h3 id="接收端"><a href="#接收端" class="headerlink" title="接收端"></a>接收端</h3><p>命令</p>
-<p>nc -l -p 9999 | tar xf -</p>
-<p>解释</p>
-<p>监听端口 9999</p>
-<p>接受到文件后解压到本地（因为是以数据流的形式），如果不解压，只会传输不会保存</p>
-<p>文件接受完成后会自动断开连接，结束监听</p>
-<p>示例</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@localhost</span> sec_ftp]<span class="hljs-meta"># nc -l -p 9999 | tar xf -</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h3 id="发送端"><a href="#发送端" class="headerlink" title="发送端"></a>发送端</h3><p>命令</p>
-<p>tar cf - 目录名 | nc serverip 9999</p>
-<p>tar cf - rcracki_mt_0.7.0_linux_x86_64.zip | nc 10.235.151.11 9999</p>
-<p>解释</p>
-<p>将需要传输的目录压缩转换为字节流</p>
-<p>示例</p>
-<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs autoit">[root<span class="hljs-symbol">@webscan</span><span class="hljs-number">-54</span> sec_ftp]<span class="hljs-meta"># tar -cf - music | nc 10.211.222.33 9999</span><br></code></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] 使用 tar、nc 在 Linux 机器之间传文件和目录 编程木子</p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/351095535">https://zhuanlan.zhihu.com/p/351095535</a></p>
+<p><strong>curl ifconfig.me</strong></p>
+<p>(base) [root@aliyun-1_1_1_1 ~]# curl ifconfig.me 1.1.1.1(base) [root@aliyun-1_1_1_1 ~]#</p>
 
                 
               </div>
@@ -347,7 +312,7 @@
   
     <span>></span>
     
-  <a href="/categories/yunwei/tips/" class="category-chain-item">tips</a>
+  <a href="/categories/yunwei/commands/" class="category-chain-item">commands</a>
   
   
 
@@ -368,6 +333,8 @@
       
         <a href="/tags/tips/" class="print-no-link">#tips</a>
       
+        <a href="/tags/commands/" class="print-no-link">#commands</a>
+      
     </div>
   
 </div>
@@ -378,8 +345,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>linux_ransfer_file</div>
-      <div>https://10000hours6.github.io/2024/05/16/yunwei/tips/linux_ransfer_file/</div>
+      <div>查看服务器出口IP</div>
+      <div>https://10000hours6.github.io/2024/10/25/yunwei/tips/Linux/查看服务器出口IP/</div>
     </div>
     <div class="license-meta">
       
@@ -391,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年5月16日</div>
+          <div>2024年10月25日</div>
         </div>
       
       
@@ -416,9 +383,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/05/17/yunwei/errors/error_almalinux_no_init.d/" title="error_almalinux_no_init.d">
+                      <a href="/2024/10/28/yunwei/tips/%E5%B8%B8%E8%A7%81%E8%AE%BE%E5%A4%87TTL/" title="ttl">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">error_almalinux_no_init.d</span>
+                        <span class="hidden-mobile">ttl</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -426,8 +393,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/05/16/security/mailsec/spf/" title="spf">
-                        <span class="hidden-mobile">spf</span>
+                      <a href="/2024/07/26/security/netSec/ddos/tcp_finrst_flood/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
