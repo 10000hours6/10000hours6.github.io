@@ -16,16 +16,16 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="基础信息权限$ 普通权限 # root权限 端口常用端口：5555 安装下载工具包下载地址https:&#x2F;&#x2F;developer.android.google.cn&#x2F;studio&#x2F;releases&#x2F;platform-tools 解压到指定目录  配置添加环境变量WindowsWindows path 中添加路径 D:\tools\security\adb\platform-tools cmd 中执">
+    <meta name="description" content="基础信息权限$ 普通权限 # root权限 常见模拟器ADB端口   模拟器 端口号    网易mumu模拟器 7555   夜神模拟器 62001   逍遥模拟器 21503   蓝叠模拟器 5555   雷电模拟器 5555   天天模拟器 5037   安卓模拟器大师 54001   腾讯手游助手 5555   工作原理工具组件客户端：用于发送命令，通过adb命令从命令行终端调用客户端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="adb_base">
 <meta property="og:url" content="https://10000hours6.github.io/2024/10/29/security/mobilesec/mobilesectools/adb/adb_base/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="基础信息权限$ 普通权限 # root权限 端口常用端口：5555 安装下载工具包下载地址https:&#x2F;&#x2F;developer.android.google.cn&#x2F;studio&#x2F;releases&#x2F;platform-tools 解压到指定目录  配置添加环境变量WindowsWindows path 中添加路径 D:\tools\security\adb\platform-tools cmd 中执">
+<meta property="og:description" content="基础信息权限$ 普通权限 # root权限 常见模拟器ADB端口   模拟器 端口号    网易mumu模拟器 7555   夜神模拟器 62001   逍遥模拟器 21503   蓝叠模拟器 5555   雷电模拟器 5555   天天模拟器 5037   安卓模拟器大师 54001   腾讯手游助手 5555   工作原理工具组件客户端：用于发送命令，通过adb命令从命令行终端调用客户端">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://10000hours6.github.io/image-20241029160255214.png">
 <meta property="article:published_time" content="2024-10-28T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-10-29T10:59:16.390Z">
+<meta property="article:modified_time" content="2024-10-30T09:22:45.129Z">
 <meta property="article:author" content="10000hours">
 <meta property="article:tag" content="security">
 <meta property="article:tag" content="sectools">
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1.7k 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          10 分钟
+          15 分钟
         
       </span>
     
@@ -277,7 +277,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-29T18:59:16+08:00
+                    本文最后更新于 2024-10-30T17:22:45+08:00
                   
                   
 
@@ -291,7 +291,62 @@
 
 <h1 id="基础信息"><a href="#基础信息" class="headerlink" title="基础信息"></a>基础信息</h1><h2 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h2><p>$ 普通权限</p>
 <p># root权限</p>
-<h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>常用端口：5555</p>
+<h2 id="常见模拟器ADB端口"><a href="#常见模拟器ADB端口" class="headerlink" title="常见模拟器ADB端口"></a>常见模拟器ADB端口</h2><table>
+<thead>
+<tr>
+<th>模拟器</th>
+<th>端口号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网易mumu模拟器</td>
+<td>7555</td>
+</tr>
+<tr>
+<td>夜神模拟器</td>
+<td>62001</td>
+</tr>
+<tr>
+<td>逍遥模拟器</td>
+<td>21503</td>
+</tr>
+<tr>
+<td>蓝叠模拟器</td>
+<td>5555</td>
+</tr>
+<tr>
+<td>雷电模拟器</td>
+<td>5555</td>
+</tr>
+<tr>
+<td>天天模拟器</td>
+<td>5037</td>
+</tr>
+<tr>
+<td>安卓模拟器大师</td>
+<td>54001</td>
+</tr>
+<tr>
+<td>腾讯手游助手</td>
+<td>5555</td>
+</tr>
+</tbody></table>
+<h1 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h1><h2 id="工具组件"><a href="#工具组件" class="headerlink" title="工具组件"></a>工具组件</h2><p><strong>客户端</strong>：用于发送命令，通过adb命令从命令行终端调用客户端</p>
+<p>**守护程序(adbd)**：用于在设备上运行命令，作为后台进程运行</p>
+<p><strong>服务器</strong>：用于管理客户端与守护程序之间的通信，作为后台进程运行</p>
+<h2 id="工作原理-1"><a href="#工作原理-1" class="headerlink" title="工作原理"></a>工作原理</h2><p>启动adb客户端时，客户端会先检查是否有 adb 服务器进程在运行，如果没有，则会启动服务器。服务器启动后与本地TCP端口5037绑定</p>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-symbol">C:</span>\Users\a<span class="hljs-built_in">dmin</span>&gt;adb devices<br>adb server version (<span class="hljs-number">36</span>) doesn&#x27;<span class="hljs-built_in">t</span> <span class="hljs-built_in">match</span> this client (<span class="hljs-number">41</span>); killing...<br>* daemon started successfully<br>List of devices attached<br></code></pre></td></tr></table></figure>
+
+<p><strong>注意</strong>：所有adb客户端均适用端口5037与adb服务器通信</p>
+<p>之后，服务器会通过扫描5555到5585之间的奇数号端口查找模拟器，如果发现adb守护程序adbd，便会与相应的端口建立连接</p>
+<p>模拟器端口号说明</p>
+<p>每个模拟器都使用一对按照顺序排列的端口：一个用于控制台连接的偶数号端口，另一个用于adb连接的奇数号端口。</p>
+<p>例如：</p>
+<p>模拟器1，控制台：5554</p>
+<p>模拟器1，adb：5555</p>
+<p>模拟器2，控制台：5556</p>
+<p>模拟器2，adb：5557</p>
+<p>在端口5555处与adb连接的模拟器与控制台监听端口为5554的模拟器为同一个</p>
 <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><h3 id="工具包下载地址"><a href="#工具包下载地址" class="headerlink" title="工具包下载地址"></a>工具包下载地址</h3><p><a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools">https://developer.android.google.cn/studio/releases/platform-tools</a></p>
 <p>解压到指定目录</p>
 <p><img src="/image-20241029160255214.png" srcset="/img/loading.gif" lazyload alt="image-20241029160255214"></p>
@@ -378,7 +433,17 @@
 <h2 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h2><h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><p><strong>adb push 源文件夹 目的文件夹</strong></p>
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PS</span> D:\tools\security\adb\platform-tools_r31.<span class="hljs-number">0</span>.<span class="hljs-number">2</span>-windows\platform-tools&gt; .\adb.exe push D:/tools/nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android/. /data/test/nmap<br><span class="hljs-attribute">D</span>:/tools/nmap-<span class="hljs-number">7</span>.<span class="hljs-number">31</span>-android/.\: <span class="hljs-number">745</span> files pushed, <span class="hljs-number">0</span> skipped. <span class="hljs-number">2</span>.<span class="hljs-number">4</span> MB/s (<span class="hljs-number">31952015</span> bytes in <span class="hljs-number">12</span>.<span class="hljs-number">761</span>s)<br></code></pre></td></tr></table></figure>
 
-<h2 id="查看网络信息"><a href="#查看网络信息" class="headerlink" title="查看网络信息"></a>查看网络信息</h2><h3 id="ip-a"><a href="#ip-a" class="headerlink" title="ip a"></a>ip a</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sagit</span>:/ $ ip a<br><span class="hljs-attribute">1</span>: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="hljs-number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1</span><br>    <span class="hljs-attribute">link</span>/loopback <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> brd <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>/<span class="hljs-number">8</span> scope host lo<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br>    <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>/<span class="hljs-number">128</span> scope host <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><span class="hljs-attribute">2</span>: bond0: &lt;BROADCAST,MULTICAST,MASTER&gt; mtu <span class="hljs-number">1500</span> qdisc noop state DOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ce:<span class="hljs-number">28</span>:<span class="hljs-number">04</span>:b9:<span class="hljs-number">4</span>e:f0 brd ff:ff:ff:ff:ff:ff<br><span class="hljs-attribute">3</span>: dummy0: &lt;BROADCAST,NOARP,UP,LOWER_UP&gt; mtu <span class="hljs-number">1500</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ca:<span class="hljs-number">2</span>d:d3:<span class="hljs-number">49</span>:f7:<span class="hljs-number">3</span>f brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-attribute">inet6</span> fe80::c82d:d3ff:fe49:f73f/<span class="hljs-number">64</span> scope link <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><br></code></pre></td></tr></table></figure>
+<h2 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h2><h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><p><strong>adb pull 源文件 目的文件夹</strong></p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">D</span>:\NoX\bin&gt;adb.exe pull /data/<span class="hljs-keyword">app</span>/<span class="hljs-keyword">test</span>/lib/arm/libsecurity.<span class="hljs-keyword">so</span> ./pulldata<br>[100%] /data/<span class="hljs-keyword">app</span>/<span class="hljs-keyword">test</span>/lib/arm/libsecurity.<span class="hljs-keyword">so</span><br><br><span class="hljs-keyword">D</span>:\NoX\bin&gt;<span class="hljs-keyword">dir</span> pulldata<br> 驱动器 <span class="hljs-keyword">D</span> 中的卷是 新加卷<br> 卷的序列号是 4E4E-3120<br><br> <span class="hljs-keyword">D</span>:\NoX\bin\pulldata 的目录<br><br>2024/10/30  17:21    &lt;<span class="hljs-keyword">DIR</span>&gt;          .<br>2024/10/30  17:21    &lt;<span class="hljs-keyword">DIR</span>&gt;          ..<br>2024/10/30  17:21            28,612 libsecurity.<span class="hljs-keyword">so</span><br>               1 个文件         28,612 字节<br>               2 个目录 37,636,243,456 可用字节<br></code></pre></td></tr></table></figure>
+
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="查看网络信息"><a href="#查看网络信息" class="headerlink" title="查看网络信息"></a>查看网络信息</h2><h3 id="ip-a"><a href="#ip-a" class="headerlink" title="ip a"></a>ip a</h3><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sagit</span>:/ $ ip a<br><span class="hljs-attribute">1</span>: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu <span class="hljs-number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1</span><br>    <span class="hljs-attribute">link</span>/loopback <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span> brd <span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span>:<span class="hljs-number">00</span><br>    <span class="hljs-attribute">inet</span> <span class="hljs-number">127.0.0.1</span>/<span class="hljs-number">8</span> scope host lo<br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br>    <span class="hljs-attribute">inet6</span> ::<span class="hljs-number">1</span>/<span class="hljs-number">128</span> scope host <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><span class="hljs-attribute">2</span>: bond0: &lt;BROADCAST,MULTICAST,MASTER&gt; mtu <span class="hljs-number">1500</span> qdisc noop state DOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ce:<span class="hljs-number">28</span>:<span class="hljs-number">04</span>:b9:<span class="hljs-number">4</span>e:f0 brd ff:ff:ff:ff:ff:ff<br><span class="hljs-attribute">3</span>: dummy0: &lt;BROADCAST,NOARP,UP,LOWER_UP&gt; mtu <span class="hljs-number">1500</span> qdisc noqueue state UNKNOWN group default qlen <span class="hljs-number">1000</span><br>    <span class="hljs-attribute">link</span>/ether ca:<span class="hljs-number">2</span>d:d3:<span class="hljs-number">49</span>:f7:<span class="hljs-number">3</span>f brd ff:ff:ff:ff:ff:ff<br>    <span class="hljs-attribute">inet6</span> fe80::c82d:d3ff:fe49:f73f/<span class="hljs-number">64</span> scope link <br>       <span class="hljs-attribute">valid_lft</span> forever preferred_lft forever<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="adb-shell-“命令”-执行命令"><a href="#adb-shell-“命令”-执行命令" class="headerlink" title="adb shell “命令” 执行命令"></a>adb shell “命令” 执行命令</h2><p>adb shell “命令”</p>
+<p>adb shell “chmod 755 &#x2F;data&#x2F;local&#x2F;tmp&#x2F;frida-server”</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm">D:\NoX\Nox\<span class="hljs-keyword">bin&gt;adb </span><span class="hljs-keyword">shell </span><span class="hljs-string">&quot;chmod 755 /data/local/tmp/frida-server&quot;</span><br><br>D:\NoX\Nox\<span class="hljs-keyword">bin&gt;adb </span><span class="hljs-keyword">shell </span><span class="hljs-string">&quot;ls -lat /data/local/tmp&quot;</span><br>total <span class="hljs-number">50384</span><br>drwxrwxrwx <span class="hljs-number">2</span> <span class="hljs-keyword">shell </span><span class="hljs-keyword">shell </span>    <span class="hljs-number">4096</span> <span class="hljs-number">2023</span><span class="hljs-number">-07</span><span class="hljs-number">-03</span> <span class="hljs-number">17</span>:<span class="hljs-number">32</span> .<br>-rwxr-xr-x <span class="hljs-number">1</span> root  root  <span class="hljs-number">51583612</span> <span class="hljs-number">2023</span><span class="hljs-number">-07</span><span class="hljs-number">-03</span> <span class="hljs-number">17</span>:<span class="hljs-number">26</span> frida-server<br>drwxr-x--x <span class="hljs-number">3</span> root  root      <span class="hljs-number">4096</span> <span class="hljs-number">2023</span><span class="hljs-number">-03</span><span class="hljs-number">-28</span> <span class="hljs-number">16</span>:<span class="hljs-number">19</span> ..<br><br></code></pre></td></tr></table></figure>
+
+<h2 id="查看工具版本"><a href="#查看工具版本" class="headerlink" title="查看工具版本"></a>查看工具版本</h2><p>adb version</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">PS</span> C:\Users\admin&gt; adb version<br><span class="hljs-attribute">Android</span> Debug Bridge version <span class="hljs-number">1</span>.<span class="hljs-number">0</span>.<span class="hljs-number">41</span><br><span class="hljs-attribute">Version</span> <span class="hljs-number">35</span>.<span class="hljs-number">0</span>.<span class="hljs-number">2</span>-<span class="hljs-number">12147458</span><br><span class="hljs-attribute">Installed</span> as D:\platform-tools\adb.exe<br><span class="hljs-attribute">Running</span> <span class="hljs-literal">on</span> Windows <span class="hljs-number">10</span>.<span class="hljs-number">0</span>.<span class="hljs-number">19045</span><br><br><span class="hljs-attribute">D</span>:\NoX\bin&gt;adb.exe version<br><span class="hljs-attribute">Android</span> Debug Bridge version <span class="hljs-number">1</span>.<span class="hljs-number">0</span>.<span class="hljs-number">36</span><br><span class="hljs-attribute">Revision</span> <span class="hljs-number">0</span>e9850346394-android<br></code></pre></td></tr></table></figure>
 
 
 
