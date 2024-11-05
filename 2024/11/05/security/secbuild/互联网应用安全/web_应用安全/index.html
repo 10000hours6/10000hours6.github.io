@@ -16,23 +16,23 @@
   <meta name="author" content="10000hours">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SDK可能存在的安全风险：私钥或对称密钥硬编码 webView不规范使用 违规采集用户的个人隐私数据 绕过沙盒限制，访问应用私有组件 敏感数据明文传输 下载并安装恶意程序 不安全的证书校验 权限滥用  https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;terminal&#x2F;263869.html">
+    <meta name="description" content="Web应用防火墙Web Application Firewall  工作在应用层 基于规则 对来自Web应用程序客户端的各类请求进行内容检测和验证 硬件WAF 支持桥接模式、旁路模式、反向代理等部署模式 优先选择 负载均衡设备F5也支持SSL卸载和应用防护 CheckPoint防火墙的IPS模块具备一定的WAF功能 软件WAF 基于成本考虑或不重要区域 ModSecurity： 基础规则集 包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="10000hours">
-<meta property="og:url" content="https://10000hours6.github.io/2024/10/30/security/mobilesec/%E7%A7%BB%E5%8A%A8SDK%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E5%88%97%E8%A1%A8/index.html">
+<meta property="og:title" content="web_应用安全">
+<meta property="og:url" content="https://10000hours6.github.io/2024/11/05/security/secbuild/%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/web_%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/index.html">
 <meta property="og:site_name" content="10000hours">
-<meta property="og:description" content="SDK可能存在的安全风险：私钥或对称密钥硬编码 webView不规范使用 违规采集用户的个人隐私数据 绕过沙盒限制，访问应用私有组件 敏感数据明文传输 下载并安装恶意程序 不安全的证书校验 权限滥用  https:&#x2F;&#x2F;www.freebuf.com&#x2F;articles&#x2F;terminal&#x2F;263869.html">
+<meta property="og:description" content="Web应用防火墙Web Application Firewall  工作在应用层 基于规则 对来自Web应用程序客户端的各类请求进行内容检测和验证 硬件WAF 支持桥接模式、旁路模式、反向代理等部署模式 优先选择 负载均衡设备F5也支持SSL卸载和应用防护 CheckPoint防火墙的IPS模块具备一定的WAF功能 软件WAF 基于成本考虑或不重要区域 ModSecurity： 基础规则集 包">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://10000hours6.github.io/%E7%A7%BB%E5%8A%A8SDK%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E5%88%97%E8%A1%A8/SDK.png">
-<meta property="article:published_time" content="2024-10-30T06:45:56.354Z">
-<meta property="article:modified_time" content="2024-10-30T06:47:31.852Z">
+<meta property="article:published_time" content="2024-11-04T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-05T14:59:22.301Z">
 <meta property="article:author" content="10000hours">
+<meta property="article:tag" content="security">
+<meta property="article:tag" content="secbuild">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://10000hours6.github.io/%E7%A7%BB%E5%8A%A8SDK%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E5%88%97%E8%A1%A8/SDK.png">
   
   
   
-  <title>10000hours</title>
+  <title>web_应用安全 - 10000hours</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="web_应用安全"></span>
           
         </div>
 
@@ -209,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-30 14:45" pubdate>
-          2024年10月30日 下午
+        <time datetime="2024-11-05 00:00" pubdate>
+          2024年11月5日 凌晨
         </time>
       </span>
     
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          90 字
+          208 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -269,12 +269,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">web_应用安全</h1>
             
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2024-10-30T14:47:31+08:00
+                    本文最后更新于 2024-11-05T22:59:22+08:00
                   
                   
 
@@ -284,16 +284,31 @@
             
               <div class="markdown-body">
                 
-                <h2 id="SDK"><a href="#SDK" class="headerlink" title="SDK"></a>SDK</h2><h3 id="可能存在的安全风险："><a href="#可能存在的安全风险：" class="headerlink" title="可能存在的安全风险："></a>可能存在的安全风险：</h3><p>私钥或对称密钥硬编码</p>
-<p>webView不规范使用</p>
-<p>违规采集用户的个人隐私数据</p>
-<p>绕过沙盒限制，访问应用私有组件</p>
-<p>敏感数据明文传输</p>
-<p>下载并安装恶意程序</p>
-<p>不安全的证书校验</p>
-<p>权限滥用</p>
-<p><img src="/%E7%A7%BB%E5%8A%A8SDK%E5%AE%89%E5%85%A8%E9%A3%8E%E9%99%A9%E5%88%97%E8%A1%A8/SDK.png" srcset="/img/loading.gif" lazyload alt="SDK"></p>
-<p><a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/terminal/263869.html">https://www.freebuf.com/articles/terminal/263869.html</a></p>
+                <span id="more"></span>
+
+<h2 id="Web应用防火墙"><a href="#Web应用防火墙" class="headerlink" title="Web应用防火墙"></a>Web应用防火墙</h2><p>Web Application Firewall </p>
+<p>工作在应用层</p>
+<p>基于规则</p>
+<p>对来自Web应用程序客户端的各类请求进行内容检测和验证</p>
+<p>硬件WAF</p>
+<p>支持桥接模式、旁路模式、反向代理等部署模式</p>
+<p>优先选择</p>
+<p>负载均衡设备F5也支持SSL卸载和应用防护</p>
+<p>CheckPoint防火墙的IPS模块具备一定的WAF功能</p>
+<p>软件WAF</p>
+<p>基于成本考虑或不重要区域</p>
+<p>ModSecurity：</p>
+<p>基础规则集</p>
+<p>包括与HTTP协议规范相关的一些规则，例如SQL注入、XSS、目录遍历、Webshell等</p>
+<p>SLR规则集</p>
+<p>针对特定应用（例如Joomla、PHPBB、WordPress等）的漏洞利用规则</p>
+<p>可选规则集</p>
+<p>实验性规则集</p>
+<p>云WAF</p>
+<p>本质还是软件WAF</p>
+<h2 id="入侵检测-防御系统"><a href="#入侵检测-防御系统" class="headerlink" title="入侵检测&#x2F;防御系统"></a>入侵检测&#x2F;防御系统</h2><p>入侵检测系统 IDS  Intrusion Detection System</p>
+<p>入侵防御系统 IPS Intrusion Prevention System</p>
+<p>开源产品 Snort</p>
 
                 
               </div>
@@ -302,6 +317,43 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/security/" class="category-chain-item">security</a>
+  
+  
+    <span>></span>
+    
+  <a href="/categories/security/secbuild/" class="category-chain-item">secbuild</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/security/" class="print-no-link">#security</a>
+      
+        <a href="/tags/secbuild/" class="print-no-link">#secbuild</a>
+      
+    </div>
   
 </div>
 
@@ -311,8 +363,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>https://10000hours6.github.io/2024/10/30/security/mobilesec/移动SDK安全风险列表/</div>
+      <div>web_应用安全</div>
+      <div>https://10000hours6.github.io/2024/11/05/security/secbuild/互联网应用安全/web_应用安全/</div>
     </div>
     <div class="license-meta">
       
@@ -324,7 +376,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月30日</div>
+          <div>2024年11月5日</div>
         </div>
       
       
@@ -353,8 +405,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/30/yunwei/tips/Windows/Windows%E6%89%93%E5%BC%80%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE/" title="Windows打开环境变量设置">
-                        <span class="hidden-mobile">Windows打开环境变量设置</span>
+                      <a href="/2024/11/04/yunwei/tips/%E8%A7%86%E9%A2%91%E9%BB%91%E8%BE%B9%E5%A4%84%E7%90%86/" title="视频黑边处理">
+                        <span class="hidden-mobile">视频黑边处理</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
